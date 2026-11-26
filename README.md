@@ -220,8 +220,3 @@ Penggunaan fitur WhatsApp memerlukan konfigurasi layanan dan proses penautan aku
 
 **Repository:** [GitHub - Sistem Pendukung Anggota Perpustakaan Digital2](https://github.com/dintafani/Sistem-Pendukung-Anggota-Perpustakaan-Digital2)
 
-## Catatan
-
-Repository ini berisi source code aplikasi dan file migrasi basis data. Data asli anggota, nomor telepon, riwayat transaksi, serta informasi internal perpustakaan tidak disertakan.
-
-Konfigurasi lingkungan aplikasi harus disesuaikan dengan perangkat atau server yang digunakan sebelum aplikasi dijalankan.
