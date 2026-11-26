@@ -1,0 +1,2499 @@
+
+
+/* ============================================================
+   FONT
+============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+/* ============================================================
+   ROOT
+============================================================ */
+
+:root {
+    --orange: #F97316;
+    --orange-dark: #EA580C;
+    --orange-light: #FB923C;
+    --orange-soft: #FFF7ED;
+    --orange-soft-2: #FFF3E8;
+
+    --border: #FDBA74;
+    --border-light: #FED7AA;
+
+    --green: #16A34A;
+    --green-dark: #15803D;
+    --green-soft: #ECFDF5;
+
+    --red: #DC2626;
+    --red-dark: #B91C1C;
+    --red-soft: #FEF2F2;
+
+    --yellow: #D97706;
+    --yellow-soft: #FFFBEB;
+
+    --blue: #2563EB;
+    --blue-soft: #EFF6FF;
+
+    --white: #FFFFFF;
+
+    --gray-50: #F8FAFC;
+    --gray-100: #F1F5F9;
+    --gray-200: #E2E8F0;
+    --gray-300: #CBD5E1;
+    --gray-400: #94A3B8;
+    --gray-500: #64748B;
+    --gray-600: #475569;
+    --gray-700: #334155;
+    --gray-800: #1E293B;
+    --gray-900: #111827;
+
+    --shadow-sm:
+        0 2px 4px -2px rgba(0, 0, 0, .10),
+        0 4px 6px -1px rgba(0, 0, 0, .08);
+
+    --shadow-md:
+        0 8px 18px rgba(0, 0, 0, .08);
+
+    --shadow-lg:
+        0 15px 35px rgba(0, 0, 0, .10);
+
+    --font-main: "Nunito", sans-serif;
+    --font-title: "Poppins", sans-serif;
+}
+
+
+/* ============================================================
+   RESET
+============================================================ */
+
+.history-page,
+.history-page *,
+.history-page *::before,
+.history-page *::after {
+    box-sizing: border-box;
+}
+
+.history-page {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+
+    color: var(--gray-900);
+    font-family: var(--font-main);
+}
+
+.history-page img {
+    display: block;
+    max-width: 100%;
+}
+
+.history-page button,
+.history-page input,
+.history-page select,
+.history-page textarea {
+    font-family: inherit;
+}
+
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.history-hero {
+    position: relative;
+    overflow: hidden;
+
+    padding: 36px 42px;
+
+    border: 2px solid rgba(255, 255, 255, .35);
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #FB923C 0%,
+            #F97316 55%,
+            #EA580C 100%
+        );
+
+    color: #FFFFFF;
+
+    box-shadow: var(--shadow-lg);
+}
+
+.history-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    right: -100px;
+    top: -130px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .10);
+}
+
+.history-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    left: -80px;
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .07);
+}
+
+.history-hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ============================================================
+   HERO BADGE
+============================================================ */
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-bottom: 12px;
+    padding: 7px 13px;
+
+    border: 1px solid rgba(255, 255, 255, .35);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, .14);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* ============================================================
+   HERO TITLE
+============================================================ */
+
+.history-hero h1 {
+    margin: 0 0 8px;
+
+    font-family: var(--font-title);
+    font-size: 34px;
+    line-height: 1.25;
+    font-weight: 800;
+}
+
+.history-hero h1 span {
+    color: #FFE4B5;
+}
+
+.history-hero p {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, .90);
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   MEMBER CARD
+============================================================ */
+
+.member-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 20px;
+    padding: 10px 16px 10px 10px;
+
+    border: 1px solid rgba(255, 255, 255, .35);
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, .13);
+
+    backdrop-filter: blur(8px);
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 13px;
+
+    background: #FFFFFF;
+    color: var(--orange);
+
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.member-card small {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: rgba(255, 255, 255, .75);
+
+    font-size: 10px;
+}
+
+.member-card h4 {
+    margin: 0;
+
+    color: #FFFFFF;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.online-dot {
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+
+    margin-left: 5px;
+
+    border-radius: 50%;
+
+    background: #22C55E;
+}
+
+
+/* ============================================================
+   MAIN LAYOUT
+============================================================ */
+
+.history-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        290px;
+
+    gap: 22px;
+
+    margin-top: 22px;
+
+    align-items: start;
+}
+
+.history-left,
+.history-right {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* ============================================================
+   STATISTICS
+============================================================ */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+.stats-card {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 125px;
+
+    padding: 17px;
+
+    border: 2px solid var(--border);
+    border-radius: 17px;
+
+    background: #FFFFFF;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.stats-card:hover {
+    border-color: var(--orange);
+
+    transform: translateY(-2px);
+
+    box-shadow: var(--shadow-md);
+}
+
+.stats-card .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 10px;
+
+    border-radius: 11px;
+
+    font-size: 16px;
+}
+
+.icon.orange {
+    background: var(--orange-soft);
+    color: var(--orange);
+}
+
+.icon.yellow {
+    background: var(--yellow-soft);
+    color: var(--yellow);
+}
+
+.icon.green {
+    background: var(--green-soft);
+    color: var(--green);
+}
+
+.icon.red {
+    background: var(--red-soft);
+    color: var(--red);
+}
+
+.stats-card h2 {
+    margin: 0 0 2px;
+
+    font-family: var(--font-title);
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.stats-card span {
+    color: var(--gray-500);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ============================================================
+   TOOLBAR
+============================================================ */
+
+.history-toolbar {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+
+    flex: 1;
+
+    min-height: 45px;
+
+    padding: 0 14px;
+
+    border: 2px solid var(--border);
+    border-radius: 13px;
+
+    background: #FFFFFF;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.search-box:focus-within {
+    border-color: var(--orange);
+
+    box-shadow:
+        0 0 0 3px rgba(249, 115, 22, .10);
+}
+
+.search-box i {
+    margin-right: 9px;
+
+    color: var(--orange);
+
+    font-size: 14px;
+}
+
+.search-box input {
+    width: 100%;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: var(--gray-900);
+
+    font-size: 12px;
+}
+
+.search-box input::placeholder {
+    color: var(--gray-400);
+}
+
+
+/* ============================================================
+   FILTER
+============================================================ */
+
+.filter-group {
+    display: flex;
+
+    gap: 6px;
+
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 9px 12px;
+
+    border: 2px solid var(--gray-200);
+    border-radius: 999px;
+
+    background: #FFFFFF;
+
+    color: var(--gray-600);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        border-color .2s ease,
+        background .2s ease,
+        color .2s ease;
+}
+
+.filter-btn:hover {
+    border-color: var(--orange);
+
+    background: var(--orange-soft);
+
+    color: var(--orange-dark);
+}
+
+.filter-btn.active {
+    border-color: var(--orange);
+
+    background: var(--orange);
+
+    color: #FFFFFF;
+}
+
+
+/* ============================================================
+   HISTORY LIST
+============================================================ */
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+/* ============================================================
+   BOOK CARD
+============================================================ */
+
+.book-history-card {
+    width: 100%;
+
+    overflow: hidden;
+
+    border: 2px solid var(--border);
+    border-radius: 20px;
+
+    background: #FFFFFF;
+
+    box-shadow:
+        0 2px 4px -2px rgba(0, 0, 0, .10),
+        0 4px 6px -1px rgba(0, 0, 0, .08);
+
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+.book-history-card:hover {
+    border-color: var(--orange);
+
+    box-shadow:
+        0 8px 20px rgba(249, 115, 22, .10);
+}
+
+
+/* ============================================================
+   BOOK HEADER
+============================================================ */
+
+.book-header {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    gap: 15px;
+
+    padding: 16px 18px;
+}
+
+
+/* ============================================================
+   BOOK COVER
+============================================================ */
+
+.book-cover {
+    position: relative;
+
+    width: 64px;
+    height: 88px;
+
+    flex: 0 0 64px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: transparent;
+
+    box-shadow:
+        0 2px 4px -2px rgba(0, 0, 0, .10),
+        0 4px 6px -1px rgba(0, 0, 0, .10);
+}
+
+.book-cover img {
+    display: block;
+
+    width: 64px;
+    height: 88px;
+
+    object-fit: cover;
+
+    border: 0;
+
+    border-radius: 12px;
+}
+
+.book-cover::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            0deg,
+            rgba(0, 0, 0, .30) 0%,
+            rgba(0, 0, 0, 0) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   BOOK INFO
+============================================================ */
+
+.book-info {
+    min-width: 0;
+
+    flex: 1;
+}
+
+.book-info h3 {
+    margin: 0 0 4px;
+
+    color: var(--gray-900);
+
+    font-family: var(--font-title);
+
+    font-size: 16px;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.author {
+    margin: 0 0 8px;
+
+    color: var(--gray-500);
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+
+/* ============================================================
+   BOOK META
+============================================================ */
+
+.book-meta {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    flex-wrap: wrap;
+}
+
+.book-meta span {
+    padding: 4px 7px;
+
+    border-radius: 999px;
+
+    background: #F8FAFC;
+
+    color: var(--gray-500);
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.book-meta .genre {
+    border: 1px solid #FED7AA;
+
+    background: var(--orange-soft);
+
+    color: var(--orange-dark);
+}
+
+
+/* ============================================================
+   RATING
+============================================================ */
+
+.rating-row {
+    display: flex;
+    align-items: center;
+
+    gap: 2px;
+
+    margin-top: 7px;
+
+    color: #F59E0B;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ============================================================
+   BOOK STATUS
+============================================================ */
+
+.book-status {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+    gap: 9px;
+
+    flex: 0 0 auto;
+}
+
+
+/* ============================================================
+   STATUS BADGE
+============================================================ */
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 6px 11px;
+
+    border: 2px solid transparent;
+    border-radius: 999px;
+
+    white-space: nowrap;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.status.borrowed {
+    border-color: #F59E0B;
+
+    background: #FFF7ED;
+
+    color: #EA580C;
+}
+
+.status.returned {
+    border-color: #22C55E;
+
+    background: #ECFDF5;
+
+    color: #16A34A;
+}
+
+.status.waiting {
+    border-color: #F59E0B;
+
+    background: #FFFBEB;
+
+    color: #D97706;
+}
+
+.status.returning {
+    border-color: #60A5FA;
+
+    background: #EFF6FF;
+
+    color: #2563EB;
+}
+
+.status.reject {
+    border-color: #F87171;
+
+    background: #FEF2F2;
+
+    color: #DC2626;
+}
+
+
+/* ============================================================
+   BOOK ACTIONS
+============================================================ */
+
+.book-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+/* ============================================================
+   TOGGLE DETAIL
+============================================================ */
+
+.toggle-detail {
+    position: relative;
+    z-index: 30;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    padding: 0;
+
+    border: 2px solid transparent;
+    border-radius: 10px;
+
+    background: var(--orange-soft);
+
+    color: var(--orange);
+
+    cursor: pointer !important;
+
+    pointer-events: auto !important;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        color .2s ease,
+        transform .3s ease;
+}
+
+.toggle-detail:hover {
+    border-color: var(--border);
+
+    background: var(--orange-soft-2);
+
+    color: var(--orange-dark);
+}
+
+.book-history-card.open .toggle-detail {
+    transform: rotate(180deg);
+}
+
+
+/* ============================================================
+   DETAIL
+============================================================ */
+
+.book-detail {
+    display: none;
+
+    width: 100%;
+
+    padding: 18px 18px 20px;
+
+    border-top: 2px solid var(--border-light);
+
+    background: #FFFCF9;
+}
+
+.book-history-card.open .book-detail {
+    display: block;
+
+    animation: detailOpen .25s ease;
+}
+
+@keyframes detailOpen {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ============================================================
+   DETAIL GRID
+============================================================ */
+
+.detail-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ============================================================
+   DETAIL ITEM
+============================================================ */
+
+.detail-item {
+    min-height: 77px;
+
+    padding: 12px;
+
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+
+    background: #FFF9F3;
+}
+
+.detail-item small {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--orange);
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.detail-item strong {
+    display: block;
+
+    color: #9A3412;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+
+/* ============================================================
+   LATE ALERT
+============================================================ */
+
+.late-alert {
+    margin-bottom: 15px;
+
+    padding: 12px 14px;
+
+    border: 2px solid #FCA5A5;
+    border-radius: 12px;
+
+    background: var(--red-soft);
+
+    color: var(--red);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* ============================================================
+   RETURN FORM
+============================================================ */
+
+.return-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.form-group label {
+    color: var(--gray-700);
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+
+    outline: none;
+
+    background: #FFFFFF;
+
+    color: var(--gray-700);
+
+    font-size: 12px;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.form-group select {
+    padding: 10px 12px;
+}
+
+.form-group textarea {
+    min-height: 90px;
+
+    padding: 11px 12px;
+
+    resize: vertical;
+}
+
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--orange);
+
+    box-shadow:
+        0 0 0 3px rgba(249, 115, 22, .10);
+}
+
+
+/* ============================================================
+   BUTTON GROUP
+============================================================ */
+
+.button-group {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* ============================================================
+   BUTTON KEMBALIKAN
+============================================================ */
+
+.btn-return {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 17px;
+
+    border: 2px solid var(--green);
+    border-radius: 11px;
+
+    background: var(--green);
+
+    color: #FFFFFF;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        border-color .2s ease,
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.btn-return:hover {
+    border-color: var(--green-dark);
+
+    background: var(--green-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px rgba(22, 163, 74, .20);
+}
+
+
+/* ============================================================
+   RETURNED BOX
+============================================================ */
+
+.returned-box {
+    padding: 14px;
+
+    border: 2px solid #86EFAC;
+    border-radius: 13px;
+
+    background: #F0FDF4;
+}
+
+.success-text {
+    margin-bottom: 10px;
+
+    color: var(--green);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* ============================================================
+   REVIEW
+============================================================ */
+
+.review-box {
+    padding: 13px;
+
+    border: 2px solid #BBF7D0;
+    border-radius: 11px;
+
+    background: #FFFFFF;
+}
+
+.review-box strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--gray-700);
+
+    font-size: 11px;
+}
+
+.review-box div {
+    margin-bottom: 5px;
+
+    font-size: 15px;
+}
+
+.review-box p {
+    margin: 0;
+
+    color: var(--gray-500);
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+.review-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 12px;
+
+}
+
+
+.review-actions form {
+
+    margin: 0;
+
+}
+
+
+.btn-edit-review,
+.btn-delete-review {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    min-height: 30px;
+
+    padding: 0 10px;
+
+    border-radius: 7px;
+
+    font-family: inherit;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+}
+
+
+.btn-edit-review {
+
+    border: 1px solid #fed7aa;
+
+    background: #fff7ed;
+
+    color: #ea580c;
+
+}
+
+
+.btn-edit-review:hover {
+
+    background: #f97316;
+
+    color: #ffffff;
+
+}
+
+
+.btn-delete-review {
+
+    border: 1px solid #fecaca;
+
+    background: #fef2f2;
+
+    color: #dc2626;
+
+}
+
+
+.btn-delete-review:hover {
+
+    background: #dc2626;
+
+    color: #ffffff;
+
+}
+
+
+/* ============================================================
+   WAITING
+============================================================ */
+
+.waiting-box {
+    padding: 12px 14px;
+
+    border: 2px solid #FCD34D;
+    border-radius: 12px;
+
+    background: var(--yellow-soft);
+
+    color: var(--yellow);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.waiting-box.orange {
+    border-color: var(--border);
+
+    background: var(--orange-soft);
+
+    color: var(--orange-dark);
+}
+
+
+/* ============================================================
+   REJECT
+============================================================ */
+
+.reject-box {
+    padding: 12px 14px;
+
+    border: 2px solid #FCA5A5;
+    border-radius: 12px;
+
+    background: var(--red-soft);
+
+    color: var(--red);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ============================================================
+   SIDEBAR CARD
+============================================================ */
+
+.sidebar-card {
+    padding: 18px;
+
+    border: 2px solid var(--border);
+    border-radius: 18px;
+
+    background: #FFFFFF;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.sidebar-card:hover {
+    border-color: var(--orange);
+
+    box-shadow: var(--shadow-md);
+}
+
+.sidebar-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 8px;
+
+    margin-bottom: 14px;
+
+    color: var(--gray-900);
+
+    font-family: var(--font-title);
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.sidebar-title span {
+    padding: 4px 8px;
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    background: var(--orange-soft);
+
+    color: var(--orange-dark);
+
+    font-size: 9px;
+    font-weight: 800;
+}
+
+
+/* ============================================================
+   POINT CARD
+============================================================ */
+
+.point-card {
+    position: relative;
+    overflow: hidden;
+
+    padding: 20px;
+
+    border: 2px solid var(--border);
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #FB923C,
+            #F97316
+        );
+
+    color: #FFFFFF;
+
+    box-shadow: var(--shadow-md);
+}
+
+.point-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    top: -80px;
+    right: -60px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .10);
+}
+
+.point-title {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: rgba(255, 255, 255, .80);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.point-card h2 {
+    margin: 0 0 4px;
+
+    font-family: var(--font-title);
+
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.point-card p {
+    margin: 0 0 15px;
+
+    color: rgba(255, 255, 255, .90);
+
+    font-size: 11px;
+}
+
+.progress {
+    width: 100%;
+    height: 7px;
+
+    margin-bottom: 7px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, .25);
+}
+
+.progress-bar {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: #FFFFFF;
+}
+
+.point-card small {
+    color: rgba(255, 255, 255, .85);
+
+    font-size: 9px;
+}
+
+
+/* ============================================================
+   REWARD
+============================================================ */
+
+.reward-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.reward-item:last-child {
+    border-bottom: 0;
+}
+
+.reward-item strong {
+    color: var(--gray-700);
+
+    font-size: 11px;
+}
+
+.reward-item span {
+    padding: 4px 7px;
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    background: var(--orange-soft);
+
+    color: var(--orange-dark);
+
+    font-size: 9px;
+    font-weight: 800;
+}
+
+
+/* ============================================================
+   HISTORI POIN
+============================================================ */
+
+.history-point-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+
+    min-height: 320px;
+    max-height: 390px;
+
+    overflow-y: auto;
+
+    padding-right: 5px;
+}
+
+
+/* ============================================================
+   SCROLL HISTORI POIN
+============================================================ */
+
+.history-point-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.history-point-list::-webkit-scrollbar-track {
+    background: #FFF7ED;
+
+    border-radius: 999px;
+}
+
+.history-point-list::-webkit-scrollbar-thumb {
+    background: #FDBA74;
+
+    border-radius: 999px;
+}
+
+.history-point-list::-webkit-scrollbar-thumb:hover {
+    background: #F97316;
+}
+
+
+/* ============================================================
+   POINT ITEM
+============================================================ */
+
+.point-item {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 11px;
+
+    min-height: 82px;
+
+    padding: 12px 4px;
+
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.point-item:first-child {
+    padding-top: 4px;
+}
+
+.point-item:last-child {
+    border-bottom: none;
+
+    padding-bottom: 4px;
+}
+
+
+/* ============================================================
+   POINT ICON
+============================================================ */
+
+.point-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    flex: 0 0 38px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.point-icon.success {
+    background: var(--green-soft);
+
+    color: var(--green);
+}
+
+.point-icon.danger {
+    background: var(--red-soft);
+
+    color: var(--red);
+}
+
+
+/* ============================================================
+   POINT INFO
+============================================================ */
+
+.point-info {
+    min-width: 0;
+
+    flex: 1;
+
+    padding-top: 1px;
+}
+
+.point-info strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--gray-800);
+
+    font-size: 11px;
+    line-height: 1.4;
+    font-weight: 800;
+}
+
+.point-info small {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--gray-500);
+
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+.point-info small:last-child {
+    margin-bottom: 0;
+
+    color: var(--gray-400);
+}
+
+
+/* ============================================================
+   POINT VALUE
+============================================================ */
+
+.point-value {
+    min-width: 40px;
+
+    padding-top: 3px;
+
+    text-align: right;
+
+    font-size: 12px;
+    font-weight: 900;
+
+    white-space: nowrap;
+}
+
+.point-value.green {
+    color: var(--green);
+}
+
+.point-value.red {
+    color: var(--red);
+}
+
+
+/* ============================================================
+   EMPTY POINT
+============================================================ */
+
+.empty-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 280px;
+
+    color: var(--gray-400);
+
+    font-size: 11px;
+
+    text-align: center;
+}
+
+
+/* ============================================================
+   STREAK
+============================================================ */
+
+.streak-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    gap: 5px;
+
+    margin: 15px 0 8px;
+}
+
+.streak-box {
+    height: 10px;
+
+    border: 1px solid var(--gray-300);
+    border-radius: 4px;
+
+    background: var(--gray-200);
+}
+
+.streak-box.active {
+    border-color: var(--orange);
+
+    background: var(--orange);
+}
+
+.streak-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    color: var(--gray-400);
+
+    font-size: 8px;
+}
+
+
+/* ============================================================
+   EMPTY HISTORY
+============================================================ */
+
+.empty-history {
+    padding: 45px 20px;
+
+    border: 2px solid var(--border);
+    border-radius: 18px;
+
+    background: #FFFFFF;
+
+    text-align: center;
+
+    box-shadow: var(--shadow-sm);
+}
+
+.empty-history img {
+    width: 130px;
+
+    margin: 0 auto 15px;
+}
+
+.empty-history h3 {
+    margin: 0 0 6px;
+
+    font-family: var(--font-title);
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.empty-history p {
+    max-width: 450px;
+
+    margin: 0 auto;
+
+    color: var(--gray-500);
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* ============================================================
+   BATASI DATA HISTORI
+   DEFAULT:
+   - 3 HISTORI PEMINJAMAN
+   - 4 HISTORI POIN
+============================================================ */
+
+.book-history-card.hidden-history {
+    display: none;
+}
+
+.point-item.point-hidden {
+    display: none;
+}
+
+
+/* ============================================================
+   DATA YANG DIHAPUS DARI TAMPILAN
+============================================================ */
+
+.book-history-card.deleted-from-view {
+    display: none !important;
+}
+
+.point-item.deleted-from-view {
+    display: none !important;
+}
+
+
+/* ============================================================
+   TOMBOL LIHAT SEMUA
+============================================================ */
+
+.history-more,
+.point-history-footer {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 20px;
+}
+
+.btn-see-all {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 22px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #F97316;
+
+    color: #FFFFFF;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.btn-see-all:hover {
+    background: #EA580C;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px rgba(249, 115, 22, .20);
+}
+
+.btn-see-all.show-all {
+    background: #64748B;
+}
+
+.btn-see-all.show-all:hover {
+    background: #475569;
+}
+
+.btn-see-all i {
+    transition: transform .2s ease;
+}
+
+.btn-see-all.show-all i {
+    transform: rotate(180deg);
+}
+
+
+/* ============================================================
+   DELETE HISTORY BUTTON
+============================================================ */
+
+.delete-history-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    padding: 0;
+
+    border: 2px solid #FECACA;
+    border-radius: 10px;
+
+    background: #FEF2F2;
+
+    color: #DC2626;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        color .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.delete-history-btn:hover {
+    border-color: #F87171;
+
+    background: #DC2626;
+
+    color: #FFFFFF;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px rgba(220, 38, 38, .18);
+}
+
+.delete-history-btn:active {
+    transform: scale(.94);
+}
+
+.delete-history-btn i {
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   ANIMASI HAPUS BUKU
+============================================================ */
+
+.book-history-card.history-deleted {
+    animation:
+        deleteBookAnimation .25s ease forwards;
+}
+
+@keyframes deleteBookAnimation {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    60% {
+        opacity: .4;
+        transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+
+
+/* ============================================================
+   DELETE POINT BUTTON
+============================================================ */
+
+.delete-point-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    flex: 0 0 28px;
+
+    padding: 0;
+
+    border: 1px solid #FECACA;
+    border-radius: 8px;
+
+    background: #FEF2F2;
+
+    color: #DC2626;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    opacity: .75;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        color .2s ease,
+        opacity .2s ease,
+        transform .2s ease;
+}
+
+.delete-point-btn:hover {
+    opacity: 1;
+
+    border-color: #F87171;
+
+    background: #DC2626;
+
+    color: #FFFFFF;
+
+    transform: translateY(-1px);
+}
+
+.delete-point-btn:active {
+    transform: scale(.92);
+}
+
+.delete-point-btn i {
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   ANIMASI HAPUS POINT
+============================================================ */
+
+.point-item.point-deleted {
+    animation:
+        deletePointAnimation .25s ease forwards;
+}
+
+@keyframes deletePointAnimation {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    60% {
+        opacity: .4;
+        transform: translateX(15px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+}
+
+
+/* ============================================================
+   FADE IN
+============================================================ */
+
+.fade-in {
+    animation: fadeIn .4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 1200px) {
+
+    .history-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .history-right {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .history-point-list {
+        min-height: 280px;
+        max-height: 350px;
+    }
+}
+
+
+/* ============================================================
+   TABLET SMALL
+============================================================ */
+
+@media (max-width: 850px) {
+
+    .history-page {
+        padding: 0 15px 30px;
+    }
+
+    .history-hero {
+        padding: 30px;
+    }
+
+    .history-layout {
+        gap: 18px;
+    }
+
+    .history-right {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .history-point-list {
+        min-height: auto;
+        max-height: none;
+
+        overflow-y: visible;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 650px) {
+
+    .history-page {
+        padding: 0 10px 25px;
+    }
+
+    .history-hero {
+        padding: 25px 20px;
+
+        border-radius: 18px;
+    }
+
+    .history-hero h1 {
+        font-size: 27px;
+    }
+
+    .history-hero p {
+        font-size: 12px;
+    }
+
+    .member-card {
+        width: 100%;
+    }
+
+
+    /* ========================================================
+       STATISTIK
+    ======================================================== */
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 9px;
+    }
+
+    .stats-card {
+        min-height: 110px;
+
+        padding: 14px;
+    }
+
+    .stats-card h2 {
+        font-size: 22px;
+    }
+
+
+    /* ========================================================
+       TOOLBAR
+    ======================================================== */
+
+    .history-toolbar {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .filter-group {
+        width: 100%;
+
+        overflow-x: auto;
+
+        flex-wrap: nowrap;
+
+        padding-bottom: 4px;
+    }
+
+    .filter-btn {
+        flex: 0 0 auto;
+
+        white-space: nowrap;
+    }
+
+
+    /* ========================================================
+       BOOK CARD
+    ======================================================== */
+
+    .book-header {
+        align-items: flex-start;
+
+        gap: 12px;
+
+        padding: 14px;
+    }
+
+    .book-cover {
+        width: 64px;
+        height: 88px;
+
+        flex: 0 0 64px;
+    }
+
+    .book-cover img {
+        width: 64px;
+        height: 88px;
+    }
+
+    .book-info h3 {
+        font-size: 15px;
+    }
+
+    .author {
+        font-size: 10px;
+    }
+
+    .book-meta span {
+        font-size: 9px;
+    }
+
+    .book-status {
+        gap: 7px;
+    }
+
+    .status {
+        padding: 5px 8px;
+
+        font-size: 9px;
+    }
+
+    .toggle-detail {
+        width: 31px;
+        height: 31px;
+    }
+
+    .book-detail {
+        padding: 15px;
+    }
+
+    .detail-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+    }
+
+    .detail-item {
+        min-height: 70px;
+
+        padding: 10px;
+    }
+
+    .detail-item small {
+        font-size: 9px;
+    }
+
+    .detail-item strong {
+        font-size: 11px;
+    }
+
+    .btn-return {
+        width: 100%;
+    }
+
+
+    /* ========================================================
+       HISTORI POIN
+    ======================================================== */
+
+    .history-point-list {
+        min-height: auto;
+        max-height: none;
+
+        overflow-y: visible;
+    }
+
+    .point-item {
+        min-height: 76px;
+
+        padding: 11px 2px;
+    }
+
+    .point-icon {
+        width: 36px;
+        height: 36px;
+
+        flex-basis: 36px;
+    }
+
+    .point-info strong {
+        font-size: 10px;
+    }
+
+    .point-info small {
+        font-size: 9px;
+    }
+
+    .point-value {
+        font-size: 11px;
+    }
+
+
+    /* ========================================================
+       DELETE BUTTON
+    ======================================================== */
+
+    .book-actions {
+        gap: 5px;
+    }
+
+    .delete-history-btn {
+        width: 31px;
+        height: 31px;
+
+        border-radius: 9px;
+
+        font-size: 11px;
+    }
+
+    .delete-point-btn {
+        width: 27px;
+        height: 27px;
+
+        flex-basis: 27px;
+
+        font-size: 9px;
+    }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+============================================================ */
+
+@media (max-width: 450px) {
+
+    .history-hero {
+        padding: 22px 16px;
+    }
+
+    .history-hero h1 {
+        font-size: 24px;
+    }
+
+
+    /* ========================================================
+       STATISTIK
+    ======================================================== */
+
+    .stats-grid {
+        gap: 7px;
+    }
+
+    .stats-card {
+        padding: 12px;
+    }
+
+    .stats-card .icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .stats-card h2 {
+        font-size: 20px;
+    }
+
+    .stats-card span {
+        font-size: 9px;
+    }
+
+
+    /* ========================================================
+       HEADER BUKU
+    ======================================================== */
+
+    .book-header {
+        display: grid;
+
+        grid-template-columns:
+            64px minmax(0, 1fr) auto;
+
+        gap: 9px;
+    }
+
+    .book-cover {
+        grid-column: 1;
+        grid-row: 1;
+
+        width: 64px;
+        height: 88px;
+    }
+
+    .book-info {
+        grid-column: 2;
+        grid-row: 1;
+
+        min-width: 0;
+    }
+
+    .book-status {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .book-info h3 {
+        font-size: 14px;
+    }
+
+    .book-meta {
+        gap: 4px;
+    }
+
+    .book-meta span {
+        padding: 3px 6px;
+
+        font-size: 8px;
+    }
+
+    .rating-row {
+        font-size: 10px;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .button-group {
+        width: 100%;
+    }
+
+    .btn-return {
+        width: 100%;
+
+        padding: 10px;
+    }
+
+
+    /* ========================================================
+       SIDEBAR
+    ======================================================== */
+
+    .sidebar-card {
+        padding: 15px;
+    }
+
+
+    /* ========================================================
+       HISTORI POIN
+    ======================================================== */
+
+    .point-item {
+        gap: 8px;
+
+        min-height: 72px;
+    }
+
+    .point-icon {
+        width: 34px;
+        height: 34px;
+
+        flex-basis: 34px;
+    }
+
+    .point-value {
+        font-size: 10px;
+    }
+
+
+    /* ========================================================
+       DELETE BUTTON
+    ======================================================== */
+
+    .book-actions {
+        gap: 4px;
+    }
+
+    .delete-history-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .delete-point-btn {
+        width: 25px;
+        height: 25px;
+
+        flex-basis: 25px;
+
+        font-size: 9px;
+    }
+}

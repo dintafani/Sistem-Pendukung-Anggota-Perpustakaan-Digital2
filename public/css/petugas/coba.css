@@ -1,0 +1,966 @@
+
+/* =========================================================
+   RESET KHUSUS HALAMAN
+   ========================================================= */
+
+.inventory-create-page,
+.inventory-create-page * {
+    box-sizing: border-box;
+}
+
+.inventory-create-page {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 10px 0 40px;
+    color: #263238;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.inventory-create-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    padding: 30px 34px;
+    margin-bottom: 25px;
+
+    border-radius: 20px;
+    background: linear-gradient(
+        135deg,
+        #fff7ed 0%,
+        #fffaf5 55%,
+        #f0fdf4 100%
+    );
+
+    border: 1px solid #f3e8dc;
+    box-shadow: 0 8px 25px rgba(91, 72, 54, 0.06);
+}
+
+.inventory-create-header-content {
+    min-width: 0;
+}
+
+.inventory-create-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 8px;
+
+    color: #e66a16;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.inventory-create-label i {
+    font-size: 15px;
+}
+
+.inventory-create-header h1 {
+    margin: 0 0 7px;
+
+    color: #263238;
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 800;
+}
+
+.inventory-create-header p {
+    margin: 0;
+
+    color: #78828a;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.inventory-create-header-icon {
+    flex-shrink: 0;
+}
+
+.inventory-create-icon-circle {
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+    color: #e66a16;
+
+    border: 1px solid #f1dfcf;
+    box-shadow: 0 8px 20px rgba(230, 106, 22, 0.10);
+
+    font-size: 28px;
+}
+
+
+/* =========================================================
+   FORM CARD
+   ========================================================= */
+
+.inventory-create-card {
+    width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #ece8e3;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(41, 37, 36, 0.07);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.inventory-create-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 27px 32px;
+
+    border-bottom: 1px solid #eee9e4;
+    background: #fffdfb;
+}
+
+.inventory-create-card-header > div {
+    min-width: 0;
+}
+
+.inventory-create-section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 7px;
+
+    color: #e66a16;
+
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+.inventory-create-section-label i {
+    font-size: 13px;
+}
+
+.inventory-create-card-header h2 {
+    margin: 0 0 5px;
+
+    color: #263238;
+
+    font-size: 21px;
+    line-height: 1.4;
+    font-weight: 750;
+}
+
+.inventory-create-card-header p {
+    margin: 0;
+
+    color: #8a9298;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   TOMBOL KEMBALI
+   ========================================================= */
+
+.inventory-create-back {
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    min-height: 42px;
+    padding: 0 17px;
+
+    border-radius: 10px;
+
+    color: #68737a;
+    background: #ffffff;
+
+    border: 1px solid #ddd8d2;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.inventory-create-back:hover {
+    color: #e66a16;
+    background: #fff7ed;
+    border-color: #f0c49f;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 5px 14px rgba(230, 106, 22, 0.08);
+}
+
+.inventory-create-back i {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   ALERT VALIDASI
+   ========================================================= */
+
+.inventory-create-alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    margin: 25px 32px 0;
+    padding: 16px 18px;
+
+    border-radius: 12px;
+
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    color: #9a3412;
+}
+
+.inventory-create-alert-icon {
+    width: 35px;
+    height: 35px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #ffedd5;
+    color: #ea580c;
+
+    font-size: 15px;
+}
+
+.inventory-create-alert-content {
+    min-width: 0;
+}
+
+.inventory-create-alert-content strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #9a3412;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.inventory-create-alert-content ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.inventory-create-alert-content li {
+    margin-bottom: 3px;
+
+    color: #a34b25;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.inventory-create-alert-content li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.inventory-create-form {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 22px 24px;
+
+    padding: 30px 32px 32px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.inventory-form-group {
+    width: 100%;
+    min-width: 0;
+}
+
+.inventory-form-group label {
+    display: block;
+
+    margin: 0 0 8px;
+
+    color: #3f474c;
+
+    font-size: 13px;
+    font-weight: 650;
+    line-height: 1.5;
+}
+
+.inventory-form-group label span {
+    margin-left: 2px;
+
+    color: #ef4444;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   INPUT WRAPPER
+   ========================================================= */
+
+.inventory-input {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 49px;
+
+    border: 1px solid #ddd9d4;
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.inventory-input:hover {
+    border-color: #cfc7bf;
+}
+
+.inventory-input:focus-within {
+    border-color: #e66a16;
+
+    background: #fffdfb;
+
+    box-shadow: 0 0 0 3px rgba(230, 106, 22, 0.10);
+}
+
+.inventory-input > i {
+    width: 46px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #a4a09b;
+
+    font-size: 14px;
+
+    pointer-events: none;
+}
+
+.inventory-input:focus-within > i {
+    color: #e66a16;
+}
+
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+.inventory-input input,
+.inventory-input select {
+    width: 100%;
+    min-width: 0;
+    height: 47px;
+
+    padding: 0 14px 0 0;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    color: #333b40;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.inventory-input input::placeholder {
+    color: #b3b0ac;
+    opacity: 1;
+}
+
+.inventory-input input:focus,
+.inventory-input select:focus {
+    outline: none;
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.inventory-input select {
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    padding-right: 38px;
+
+    background-image:
+        linear-gradient(45deg, transparent 50%, #8b8b8b 50%),
+        linear-gradient(135deg, #8b8b8b 50%, transparent 50%);
+
+    background-position:
+        calc(100% - 17px) 20px,
+        calc(100% - 12px) 20px;
+
+    background-size:
+        5px 5px,
+        5px 5px;
+
+    background-repeat: no-repeat;
+}
+
+.inventory-input select option {
+    color: #333b40;
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   DATE INPUT
+   ========================================================= */
+
+.inventory-input input[type="date"] {
+    cursor: pointer;
+}
+
+.inventory-input input[type="date"]::-webkit-calendar-picker-indicator {
+    margin-right: 3px;
+
+    cursor: pointer;
+
+    opacity: 0.55;
+}
+
+.inventory-input input[type="date"]:focus::-webkit-calendar-picker-indicator {
+    opacity: 0.85;
+}
+
+
+/* =========================================================
+   NUMBER INPUT
+   ========================================================= */
+
+.inventory-input input[type="number"]::-webkit-inner-spin-button,
+.inventory-input input[type="number"]::-webkit-outer-spin-button {
+    opacity: 0.6;
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+.inventory-full {
+    grid-column: 1 / -1;
+}
+
+.inventory-textarea {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+
+    width: 100%;
+
+    min-height: 135px;
+
+    border: 1px solid #ddd9d4;
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.inventory-textarea:hover {
+    border-color: #cfc7bf;
+}
+
+.inventory-textarea:focus-within {
+    border-color: #e66a16;
+
+    background: #fffdfb;
+
+    box-shadow: 0 0 0 3px rgba(230, 106, 22, 0.10);
+}
+
+.inventory-textarea > i {
+    width: 46px;
+
+    flex-shrink: 0;
+
+    padding-top: 16px;
+
+    display: flex;
+    justify-content: center;
+
+    color: #a4a09b;
+
+    font-size: 14px;
+
+    pointer-events: none;
+}
+
+.inventory-textarea:focus-within > i {
+    color: #e66a16;
+}
+
+.inventory-textarea textarea {
+    width: 100%;
+    min-width: 0;
+
+    min-height: 133px;
+
+    padding: 14px 16px 14px 0;
+
+    resize: vertical;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    color: #333b40;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    line-height: 1.65;
+    font-weight: 500;
+}
+
+.inventory-textarea textarea::placeholder {
+    color: #b3b0ac;
+    opacity: 1;
+}
+
+.inventory-textarea textarea:focus {
+    outline: none;
+}
+
+
+/* =========================================================
+   ACTION BUTTON
+   ========================================================= */
+
+.inventory-create-actions {
+    grid-column: 1 / -1;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    padding-top: 8px;
+
+    margin-top: 2px;
+
+    border-top: 1px solid #eee9e4;
+}
+
+.inventory-btn {
+    min-height: 46px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 19px;
+
+    border-radius: 10px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+    font-weight: 650;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* =========================================================
+   CANCEL
+   ========================================================= */
+
+.inventory-btn-cancel {
+    color: #68737a;
+
+    background: #ffffff;
+
+    border: 1px solid #ddd8d2;
+}
+
+.inventory-btn-cancel:hover {
+    color: #555e64;
+
+    background: #f8f7f5;
+
+    border-color: #ccc6bf;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SUBMIT
+   ========================================================= */
+
+.inventory-btn-submit {
+    border: 1px solid #e66a16;
+
+    background: #e66a16;
+    color: #ffffff;
+
+    box-shadow: 0 6px 15px rgba(230, 106, 22, 0.18);
+}
+
+.inventory-btn-submit:hover {
+    background: #d85f10;
+    border-color: #d85f10;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 8px 18px rgba(230, 106, 22, 0.23);
+}
+
+.inventory-btn-submit:active,
+.inventory-btn-cancel:active,
+.inventory-create-back:active {
+    transform: translateY(0);
+}
+
+.inventory-btn i {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+   ========================================================= */
+
+.inventory-create-page input:focus-visible,
+.inventory-create-page select:focus-visible,
+.inventory-create-page textarea:focus-visible,
+.inventory-create-page button:focus-visible,
+.inventory-create-page a:focus-visible {
+    outline: 2px solid rgba(230, 106, 22, 0.35);
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .inventory-create-page {
+        padding: 5px 0 30px;
+    }
+
+    .inventory-create-header {
+        padding: 25px 27px;
+    }
+
+    .inventory-create-header h1 {
+        font-size: 26px;
+    }
+
+    .inventory-create-card-header {
+        padding: 24px 27px;
+    }
+
+    .inventory-create-form {
+        padding: 27px;
+        gap: 20px;
+    }
+
+    .inventory-create-alert {
+        margin-left: 27px;
+        margin-right: 27px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .inventory-create-page {
+        width: 100%;
+        padding: 0 0 25px;
+    }
+
+    .inventory-create-header {
+        align-items: flex-start;
+
+        padding: 22px 20px;
+
+        border-radius: 16px;
+
+        gap: 18px;
+    }
+
+    .inventory-create-header h1 {
+        font-size: 23px;
+    }
+
+    .inventory-create-header p {
+        font-size: 12px;
+    }
+
+    .inventory-create-icon-circle {
+        width: 55px;
+        height: 55px;
+
+        border-radius: 15px;
+
+        font-size: 21px;
+    }
+
+    .inventory-create-card {
+        border-radius: 16px;
+    }
+
+    .inventory-create-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+
+        padding: 21px 20px;
+
+        gap: 17px;
+    }
+
+    .inventory-create-card-header h2 {
+        font-size: 18px;
+    }
+
+    .inventory-create-back {
+        width: 100%;
+    }
+
+    .inventory-create-alert {
+        margin: 20px 20px 0;
+    }
+
+    .inventory-create-form {
+        grid-template-columns: 1fr;
+
+        padding: 22px 20px 25px;
+
+        gap: 19px;
+    }
+
+    .inventory-full {
+        grid-column: auto;
+    }
+
+    .inventory-create-actions {
+        grid-column: auto;
+
+        flex-direction: column-reverse;
+
+        align-items: stretch;
+
+        padding-top: 18px;
+    }
+
+    .inventory-btn {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+    .inventory-create-header {
+        padding: 19px 16px;
+    }
+
+    .inventory-create-header h1 {
+        font-size: 21px;
+    }
+
+    .inventory-create-header p {
+        font-size: 11.5px;
+    }
+
+    .inventory-create-label {
+        font-size: 11px;
+    }
+
+    .inventory-create-icon-circle {
+        width: 48px;
+        height: 48px;
+
+        border-radius: 13px;
+
+        font-size: 18px;
+    }
+
+    .inventory-create-card-header {
+        padding: 19px 16px;
+    }
+
+    .inventory-create-form {
+        padding: 20px 16px 22px;
+    }
+
+    .inventory-create-alert {
+        margin-left: 16px;
+        margin-right: 16px;
+
+        padding: 13px;
+    }
+
+    .inventory-input {
+        min-height: 46px;
+    }
+
+    .inventory-input input,
+    .inventory-input select {
+        height: 44px;
+
+        font-size: 12px;
+    }
+
+    .inventory-input > i {
+        width: 42px;
+        font-size: 13px;
+    }
+
+    .inventory-textarea > i {
+        width: 42px;
+    }
+
+    .inventory-textarea textarea {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   DARK / UNEXPECTED INHERITED STYLES PROTECTION
+   ========================================================= */
+
+.inventory-create-page input,
+.inventory-create-page select,
+.inventory-create-page textarea {
+    box-shadow: none;
+}
+
+.inventory-create-page button {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.inventory-create-page a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+    .inventory-create-header-icon,
+    .inventory-create-back,
+    .inventory-create-actions {
+        display: none !important;
+    }
+
+    .inventory-create-header,
+    .inventory-create-card {
+        box-shadow: none;
+    }
+
+    .inventory-create-page {
+        max-width: 100%;
+    }
+
+}

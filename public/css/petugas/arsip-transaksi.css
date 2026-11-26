@@ -1,0 +1,1681 @@
+/* =========================================================
+   ARSIP TRANSAKSI PETUGAS
+========================================================= */
+
+.arsip-transaksi-page {
+    --orange: #f97316;
+    --orange-dark: #c2410c;
+    --orange-deep: #9a3412;
+    --orange-light: #fff7ed;
+    --orange-soft: #ffedd5;
+    --orange-border: #fdba74;
+
+    --green: #16a34a;
+    --green-dark: #15803d;
+    --green-light: #dcfce7;
+    --green-border: #86efac;
+
+    --yellow: #d97706;
+    --yellow-light: #fef3c7;
+    --yellow-border: #fcd34d;
+
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --red-border: #fca5a5;
+
+    --blue: #2563eb;
+    --blue-light: #dbeafe;
+    --blue-border: #93c5fd;
+
+    --text: #29211c;
+    --text-dark: #1c1917;
+    --text-muted: #6b625b;
+    --text-light: #9a918a;
+
+    --white: #ffffff;
+    --page-bg: #fffaf5;
+
+    --border: #d6cec7;
+    --border-dark: #a8a098;
+    --border-light: #e8e1db;
+
+    --radius: 16px;
+
+    width: 100%;
+    min-height: 100%;
+
+    padding: 26px;
+
+    box-sizing: border-box;
+
+    color: var(--text);
+
+    background:
+        linear-gradient(
+            180deg,
+            #fffaf5 0%,
+            #fffdfb 45%,
+            #ffffff 100%
+        );
+
+    font-family:
+        "Poppins",
+        "Nunito",
+        Arial,
+        sans-serif;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.arsip-transaksi-page *,
+.arsip-transaksi-page *::before,
+.arsip-transaksi-page *::after {
+    box-sizing: border-box;
+}
+
+.arsip-transaksi-page a {
+    text-decoration: none;
+}
+
+.arsip-transaksi-page button,
+.arsip-transaksi-page input,
+.arsip-transaksi-page select {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.arsip-transaksi-header {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    width: 100%;
+    min-height: 145px;
+
+    margin-bottom: 20px;
+    padding: 27px 30px;
+
+    overflow: hidden;
+
+    border: 2px solid var(--orange-border);
+    border-radius: var(--radius);
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #fff7ed 100%
+        );
+
+    box-shadow:
+        0 5px 0 rgba(194, 65, 12, 0.06),
+        0 10px 25px rgba(90, 52, 27, 0.07);
+}
+
+
+/* ORANGE BAR */
+
+.arsip-transaksi-header::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 7px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #fb923c,
+            #f97316,
+            #ea580c
+        );
+}
+
+
+/* DECORATION */
+
+.arsip-transaksi-header::after {
+    content: "";
+
+    position: absolute;
+
+    right: -55px;
+    bottom: -90px;
+
+    width: 210px;
+    height: 210px;
+
+    border: 20px solid rgba(249, 115, 22, 0.07);
+    border-radius: 50%;
+}
+
+
+.arsip-transaksi-header-content {
+    position: relative;
+    z-index: 2;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.arsip-transaksi-label {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 7px;
+    padding: 6px 11px;
+
+    color: var(--orange-dark);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: .7px;
+    text-transform: uppercase;
+
+    border: 2px solid var(--orange-border);
+    border-radius: 8px;
+
+    background: var(--orange-soft);
+}
+
+.arsip-transaksi-label i {
+    color: var(--orange);
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.arsip-transaksi-header h3 {
+    margin: 0;
+
+    color: var(--text-dark);
+
+    font-size: 25px;
+    font-weight: 850;
+
+    line-height: 1.25;
+}
+
+.arsip-transaksi-header p {
+    max-width: 700px;
+
+    margin: 7px 0 0;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+    font-weight: 500;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   KEMBALI
+========================================================= */
+
+.arsip-transaksi-back {
+    position: relative;
+    z-index: 5;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+
+    height: 40px;
+
+    padding: 0 15px;
+
+    color: var(--orange-dark);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    border: 2px solid var(--border-dark);
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 3px 0 rgba(60, 42, 30, .06);
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        color .2s ease,
+        box-shadow .2s ease;
+}
+
+.arsip-transaksi-back:hover {
+    color: #ffffff;
+
+    background: var(--orange);
+
+    border-color: var(--orange-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 0 rgba(194, 65, 12, .15);
+}
+
+
+/* =========================================================
+   FILTER CARD
+========================================================= */
+
+.arsip-transaksi-filter-card {
+    width: 100%;
+
+    margin-bottom: 20px;
+
+    padding: 13px;
+
+    border: 2px solid #efc19a;
+    border-radius: 13px;
+
+    background: #fffdfb;
+
+    box-shadow:
+        0 4px 0 rgba(60, 42, 30, .04),
+        0 8px 18px rgba(60, 42, 30, .05);
+}
+
+
+/* =========================================================
+   FILTER FORM
+========================================================= */
+
+.arsip-transaksi-filter-form {
+    display: grid;
+
+    grid-template-columns:
+        minmax(250px, 2.2fr)
+        minmax(125px, 1fr)
+        minmax(120px, 1fr)
+        minmax(145px, 1.1fr)
+        78px
+        70px;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   FILTER GROUP
+========================================================= */
+
+.arsip-transaksi-filter-group {
+    min-width: 0;
+    width: 100%;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.arsip-transaksi-filter-form label {
+    display: none;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.arsip-transaksi-search-box {
+    position: relative;
+
+    width: 100%;
+}
+
+.arsip-transaksi-search-box > i {
+    position: absolute;
+
+    left: 12px;
+    top: 50%;
+
+    z-index: 2;
+
+    color: var(--orange);
+
+    font-size: 13px;
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+}
+
+.arsip-transaksi-search-box input {
+    display: block;
+
+    width: 100%;
+    height: 38px;
+
+    padding: 0 12px 0 34px;
+
+    color: var(--text-dark);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    border: 2px solid #c9c1ba;
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+.arsip-transaksi-search-box input::placeholder {
+    color: #aaa19a;
+}
+
+.arsip-transaksi-search-box input:hover {
+    border-color: var(--orange-border);
+}
+
+.arsip-transaksi-search-box input:focus {
+    border-color: var(--orange);
+
+    box-shadow:
+        0 0 0 3px rgba(249, 115, 22, .12);
+}
+
+
+/* =========================================================
+   SELECT + DATE
+========================================================= */
+
+.arsip-transaksi-select,
+.arsip-transaksi-date-input {
+    display: block;
+
+    width: 100%;
+    height: 38px;
+
+    padding: 0 9px;
+
+    color: var(--text-dark);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    border: 2px solid #c9c1ba;
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+.arsip-transaksi-select:hover,
+.arsip-transaksi-date-input:hover {
+    border-color: var(--orange-border);
+}
+
+.arsip-transaksi-select:focus,
+.arsip-transaksi-date-input:focus {
+    border-color: var(--orange);
+
+    box-shadow:
+        0 0 0 3px rgba(249, 115, 22, .12);
+}
+
+
+/* =========================================================
+   JENIS BUKU
+========================================================= */
+
+.arsip-transaksi-jenis-literasi {
+    color: var(--orange-dark);
+}
+
+.arsip-transaksi-jenis-paket {
+    color: var(--green-dark);
+}
+
+
+/* =========================================================
+   BUTTON FILTER
+========================================================= */
+
+.arsip-transaksi-filter-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    width: 100%;
+    height: 38px;
+
+    padding: 0 8px;
+
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    border: 2px solid var(--orange-dark);
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fb923c,
+            #f97316,
+            #ea580c
+        );
+
+    cursor: pointer;
+
+    box-shadow:
+        0 3px 0 #c2410c;
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease;
+}
+
+.arsip-transaksi-filter-button:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 4px 0 #c2410c;
+}
+
+.arsip-transaksi-filter-button:active {
+    transform: translateY(2px);
+
+    box-shadow:
+        0 1px 0 #c2410c;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.arsip-transaksi-reset-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    width: 100%;
+    height: 38px;
+
+    padding: 0 6px;
+
+    color: #57504a;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    border: 2px solid #c9c1ba;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        color .2s ease,
+        border-color .2s ease,
+        background .2s ease,
+        transform .2s ease;
+}
+
+.arsip-transaksi-reset-button i {
+    font-size: 9px;
+}
+
+.arsip-transaksi-reset-button:hover {
+    color: var(--orange-dark);
+
+    border-color: var(--orange-border);
+
+    background: var(--orange-light);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   HASIL FILTER
+========================================================= */
+
+.arsip-transaksi-filter-result {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin-top: 11px;
+
+    padding: 9px 12px;
+
+    color: var(--text-muted);
+
+    font-size: 10px;
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    border: 2px solid #fed7aa;
+    border-left: 4px solid var(--orange);
+
+    border-radius: 8px;
+
+    background: #fffaf5;
+}
+
+.arsip-transaksi-filter-result > i {
+    color: var(--orange);
+
+    margin-top: 1px;
+}
+
+.arsip-transaksi-filter-result strong {
+    color: var(--text-dark);
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   TABLE CARD
+========================================================= */
+
+.arsip-transaksi-table-card {
+    width: 100%;
+
+    overflow: hidden;
+
+    border: 2px solid var(--border-dark);
+    border-radius: var(--radius);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 6px 0 rgba(60, 42, 30, .05),
+        0 10px 24px rgba(60, 42, 30, .06);
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.arsip-transaksi-table-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 17px 20px;
+
+    border-bottom: 2px solid var(--border-dark);
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff7ed,
+            #ffffff
+        );
+}
+
+.arsip-transaksi-section-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-bottom: 4px;
+
+    color: var(--orange-dark);
+
+    font-size: 9px;
+    font-weight: 900;
+
+    letter-spacing: .7px;
+
+    text-transform: uppercase;
+}
+
+.arsip-transaksi-table-header h4 {
+    margin: 0;
+
+    color: var(--text-dark);
+
+    font-size: 17px;
+    font-weight: 850;
+}
+
+
+/* =========================================================
+   HEADER ACTION
+========================================================= */
+
+.arsip-transaksi-header-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TOTAL
+========================================================= */
+
+.arsip-transaksi-total {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    min-height: 38px;
+
+    padding: 0 11px;
+
+    border: 2px solid var(--orange-border);
+    border-radius: 8px;
+
+    background: var(--orange-light);
+}
+
+.arsip-transaksi-total span {
+    color: var(--text-muted);
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.arsip-transaksi-total strong {
+    color: var(--orange-dark);
+
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.arsip-transaksi-total small {
+    color: var(--text-light);
+
+    font-size: 8px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   DOWNLOAD
+========================================================= */
+
+.arsip-transaksi-download-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    min-height: 38px;
+
+    padding: 0 12px;
+
+    color: var(--green-dark);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    border: 2px solid var(--green-border);
+    border-radius: 8px;
+
+    background: var(--green-light);
+
+    transition: .2s ease;
+}
+
+.arsip-transaksi-download-button:hover {
+    color: #ffffff;
+
+    background: var(--green);
+
+    border-color: var(--green-dark);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.arsip-transaksi-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        var(--orange)
+        #fff7ed;
+}
+
+.arsip-transaksi-table-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.arsip-transaksi-table-wrapper::-webkit-scrollbar-track {
+    background: #fff7ed;
+}
+
+.arsip-transaksi-table-wrapper::-webkit-scrollbar-thumb {
+    background: var(--orange);
+
+    border-radius: 5px;
+}
+
+.arsip-transaksi-table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: var(--orange-dark);
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.arsip-transaksi-table {
+    width: 100%;
+
+    min-width: 1050px;
+
+    border-collapse: collapse;
+
+    table-layout: auto;
+}
+
+
+/* =========================================================
+   TABLE HEAD
+========================================================= */
+
+.arsip-transaksi-table thead {
+    background:
+        linear-gradient(
+            135deg,
+            #f97316,
+            #ea580c
+        );
+}
+
+.arsip-transaksi-table th {
+    height: 48px;
+
+    padding: 0 12px;
+
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: 850;
+
+    letter-spacing: .4px;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    border-right: 2px solid rgba(255,255,255,.28);
+
+    border-bottom: 3px solid #9a3412;
+
+    white-space: nowrap;
+}
+
+.arsip-transaksi-table th:last-child {
+    border-right: none;
+}
+
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+.arsip-transaksi-table td {
+    padding: 12px;
+
+    color: var(--text);
+
+    font-size: 10px;
+    font-weight: 500;
+
+    border-right: 2px solid #eee7e1;
+
+    border-bottom: 2px solid #e5ded8;
+
+    vertical-align: middle;
+}
+
+.arsip-transaksi-table td:last-child {
+    border-right: none;
+}
+
+.arsip-transaksi-table tbody tr {
+    background: #ffffff;
+
+    transition:
+        background .18s ease,
+        box-shadow .18s ease;
+}
+
+.arsip-transaksi-table tbody tr:nth-child(even) {
+    background: #fffaf6;
+}
+
+.arsip-transaksi-table tbody tr:hover {
+    background: #fff0e2;
+
+    box-shadow:
+        inset 5px 0 0 var(--orange);
+}
+
+.arsip-transaksi-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.arsip-transaksi-number {
+    width: 45px;
+
+    color: var(--orange-dark) !important;
+
+    font-weight: 900 !important;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   PERSON
+========================================================= */
+
+.arsip-transaksi-person {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    min-width: 155px;
+}
+
+.arsip-transaksi-avatar {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 33px;
+    height: 33px;
+
+    color: var(--orange-dark);
+
+    font-size: 11px;
+
+    border: 2px solid var(--orange-border);
+
+    border-radius: 8px;
+
+    background: var(--orange-light);
+}
+
+.arsip-transaksi-person > span:last-child {
+    color: var(--text-dark);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   BOOK
+========================================================= */
+
+.arsip-transaksi-book-name {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    min-width: 200px;
+}
+
+.arsip-transaksi-book-name > i {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 32px;
+    height: 32px;
+
+    color: var(--orange-dark);
+
+    font-size: 11px;
+
+    border: 2px solid var(--orange-border);
+
+    border-radius: 8px;
+
+    background: var(--orange-light);
+}
+
+.arsip-transaksi-book-name > span {
+    max-width: 280px;
+
+    overflow: hidden;
+
+    color: var(--text-dark);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TYPE
+========================================================= */
+
+.arsip-transaksi-type {
+    min-width: 90px;
+
+    text-align: center;
+}
+
+.arsip-transaksi-type-badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    min-width: 72px;
+    min-height: 27px;
+
+    padding: 4px 8px;
+
+    font-size: 8px;
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    border: 2px solid transparent;
+
+    border-radius: 7px;
+
+    white-space: nowrap;
+}
+
+.arsip-transaksi-type-badge.literasi {
+    color: var(--orange-dark);
+
+    border-color: var(--orange-border);
+
+    background: var(--orange-light);
+}
+
+.arsip-transaksi-type-badge.paket {
+    color: var(--green-dark);
+
+    border-color: var(--green-border);
+
+    background: var(--green-light);
+}
+
+.arsip-transaksi-type-badge.default {
+    color: #57534e;
+
+    border-color: #d6d3d1;
+
+    background: #f5f5f4;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.arsip-transaksi-date {
+    white-space: nowrap;
+}
+
+.date-icon {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    margin-right: 5px;
+
+    border: 2px solid transparent;
+
+    border-radius: 7px;
+
+    vertical-align: middle;
+}
+
+.date-icon.orange {
+    color: var(--orange-dark);
+
+    border-color: var(--orange-border);
+
+    background: var(--orange-light);
+}
+
+.date-icon.green {
+    color: var(--green-dark);
+
+    border-color: var(--green-border);
+
+    background: var(--green-light);
+}
+
+.date-empty {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: var(--text-muted);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.date-empty i {
+    color: var(--yellow);
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.arsip-transaksi-status {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    min-height: 27px;
+
+    padding: 4px 8px;
+
+    font-size: 8px;
+    font-weight: 900;
+
+    line-height: 1.2;
+
+    border: 2px solid transparent;
+
+    border-radius: 7px;
+
+    white-space: nowrap;
+}
+
+.arsip-transaksi-status i {
+    font-size: 7px;
+}
+
+.arsip-transaksi-status.waiting {
+    color: #92400e;
+
+    border-color: var(--yellow-border);
+
+    background: var(--yellow-light);
+}
+
+.arsip-transaksi-status.success {
+    color: var(--green-dark);
+
+    border-color: var(--green-border);
+
+    background: var(--green-light);
+}
+
+.arsip-transaksi-status.warning {
+    color: #9a3412;
+
+    border-color: #fdba74;
+
+    background: #ffedd5;
+}
+
+.arsip-transaksi-status.info {
+    color: #1d4ed8;
+
+    border-color: var(--blue-border);
+
+    background: var(--blue-light);
+}
+
+.arsip-transaksi-status.danger {
+    color: #b91c1c;
+
+    border-color: var(--red-border);
+
+    background: var(--red-light);
+}
+
+.arsip-transaksi-status.default {
+    color: #57534e;
+
+    border-color: #d6d3d1;
+
+    background: #f5f5f4;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.arsip-transaksi-empty {
+    height: 250px;
+
+    padding: 35px 20px !important;
+
+    text-align: center !important;
+
+    background: #ffffff;
+}
+
+.arsip-transaksi-empty-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 14px;
+
+    color: var(--orange);
+
+    font-size: 22px;
+
+    border: 2px solid var(--orange-border);
+
+    border-radius: 13px;
+
+    background: var(--orange-light);
+}
+
+.arsip-transaksi-empty strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--text-dark);
+
+    font-size: 14px;
+    font-weight: 850;
+}
+
+.arsip-transaksi-empty span:last-child {
+    display: block;
+
+    color: var(--text-muted);
+
+    font-size: 10px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes arsipTransaksiIn {
+    from {
+        opacity: 0;
+        transform: translateY(7px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.arsip-transaksi-page > * {
+    animation:
+        arsipTransaksiIn
+        .3s
+        ease
+        both;
+}
+
+.arsip-transaksi-page > *:nth-child(2) {
+    animation-delay: .04s;
+}
+
+.arsip-transaksi-page > *:nth-child(3) {
+    animation-delay: .08s;
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.arsip-transaksi-page
+button:focus-visible,
+.arsip-transaksi-page
+input:focus-visible,
+.arsip-transaksi-page
+select:focus-visible,
+.arsip-transaksi-page
+a:focus-visible {
+    outline: 3px solid rgba(249,115,22,.25);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 1101px) {
+
+    .arsip-transaksi-filter-form {
+        grid-template-columns:
+            minmax(240px, 2.1fr)
+            minmax(125px, 1fr)
+            minmax(120px, .95fr)
+            minmax(140px, 1.05fr)
+            78px
+            70px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .arsip-transaksi-page {
+        padding: 20px;
+    }
+
+    .arsip-transaksi-filter-form {
+        grid-template-columns:
+            minmax(220px, 2fr)
+            minmax(130px, 1fr)
+            minmax(120px, 1fr);
+
+        gap: 9px;
+    }
+
+    .arsip-transaksi-filter-search {
+        grid-column: 1 / -1;
+    }
+
+    .arsip-transaksi-filter-button,
+    .arsip-transaksi-reset-button {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   TABLET KECIL
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .arsip-transaksi-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        min-height: auto;
+
+        padding: 25px;
+    }
+
+    .arsip-transaksi-back {
+        width: 100%;
+    }
+
+    .arsip-transaksi-filter-form {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+    }
+
+    .arsip-transaksi-filter-search {
+        grid-column: 1 / -1;
+    }
+
+    .arsip-transaksi-table-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .arsip-transaksi-header-actions {
+        width: 100%;
+    }
+
+    .arsip-transaksi-total,
+    .arsip-transaksi-download-button {
+        flex: 1;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .arsip-transaksi-page {
+        padding: 12px;
+    }
+
+    .arsip-transaksi-header {
+        margin-bottom: 15px;
+
+        padding: 21px 18px;
+
+        border-radius: 14px;
+    }
+
+    .arsip-transaksi-header::before {
+        width: 6px;
+    }
+
+    .arsip-transaksi-label {
+        font-size: 9px;
+    }
+
+    .arsip-transaksi-header h3 {
+        font-size: 21px;
+    }
+
+    .arsip-transaksi-header p {
+        font-size: 11px;
+    }
+
+    .arsip-transaksi-back {
+        height: 40px;
+    }
+
+
+    /* FILTER */
+
+    .arsip-transaksi-filter-card {
+        padding: 12px;
+
+        border-radius: 13px;
+    }
+
+    .arsip-transaksi-filter-form {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .arsip-transaksi-filter-search {
+        grid-column: auto;
+    }
+
+    .arsip-transaksi-filter-button,
+    .arsip-transaksi-reset-button {
+        width: 100%;
+    }
+
+
+    /* TABLE */
+
+    .arsip-transaksi-table-card {
+        border-radius: 14px;
+    }
+
+    .arsip-transaksi-table-header {
+        padding: 16px;
+    }
+
+    .arsip-transaksi-table-header h4 {
+        font-size: 15px;
+    }
+
+    .arsip-transaksi-header-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+    }
+
+    .arsip-transaksi-total,
+    .arsip-transaksi-download-button {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .arsip-transaksi-table {
+        min-width: 1050px;
+    }
+}
+
+
+/* =========================================================
+ MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .arsip-transaksi-page {
+        padding: 8px;
+    }
+
+    .arsip-transaksi-header {
+        padding: 18px 15px;
+    }
+
+    .arsip-transaksi-header h3 {
+        font-size: 19px;
+    }
+
+    .arsip-transaksi-filter-card {
+        padding: 10px;
+    }
+
+    .arsip-transaksi-table-header {
+        padding: 13px;
+    }
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+
+    .arsip-transaksi-page {
+        padding: 0;
+
+        background: #ffffff;
+    }
+
+    .arsip-transaksi-header,
+    .arsip-transaksi-filter-card {
+        box-shadow: none;
+    }
+
+    .arsip-transaksi-back,
+    .arsip-transaksi-filter-card,
+    .arsip-transaksi-download-button {
+        display: none !important;
+    }
+
+    .arsip-transaksi-table-card {
+        border: 2px solid #000;
+
+        box-shadow: none;
+    }
+
+    .arsip-transaksi-table-wrapper {
+        overflow: visible;
+    }
+
+    .arsip-transaksi-table {
+        min-width: 0;
+    }
+
+    .arsip-transaksi-table th {
+        color: #000;
+
+        background: #eeeeee !important;
+
+        border: 1px solid #000;
+    }
+
+    .arsip-transaksi-table td {
+        border: 1px solid #000;
+    }
+}
+/* =========================================================
+   FILTER TANGGAL - TANGGAL, BULAN, TAHUN SEJAJAR
+========================================================= */
+
+.arsip-transaksi-page .arsip-transaksi-date-group {
+    min-width: 0;
+    width: 100%;
+}
+
+.arsip-transaksi-page .arsip-transaksi-date-inputs {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.arsip-transaksi-page .arsip-transaksi-date-inputs select {
+    display: block;
+    flex: 1 1 0 !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: none;
+    margin: 0 !important;
+}
+
+/* Tampilan layar kecil */
+@media (max-width: 600px) {
+    .arsip-transaksi-page .arsip-transaksi-date-inputs {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 6px;
+    }
+
+    .arsip-transaksi-page .arsip-transaksi-date-inputs select {
+        flex: 1 1 0 !important;
+        width: 0 !important;
+        min-width: 0 !important;
+    }
+}

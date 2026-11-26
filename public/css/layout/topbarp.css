@@ -1,0 +1,746 @@
+/* ======================================================
+   TOPBAR
+   Perpustakaan Digital - Petugas
+   Theme: Cream • Orange • Terracotta
+====================================================== */
+
+.topbar {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 95px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf5 0%,
+            #fff4eb 55%,
+            #ffeadb 100%
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+    padding: 22px 34px;
+
+    border-bottom: 1px solid #f1d9c8;
+
+    position: sticky;
+    top: 0;
+    z-index: 50;
+
+    box-sizing: border-box;
+    overflow: visible;
+
+    box-shadow:
+        0 4px 18px rgba(112, 72, 45, 0.06);
+}
+
+
+/* ======================================================
+   TOPBAR LEFT
+====================================================== */
+
+.topbar-left {
+    min-width: 0;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/* ======================================================
+   JUDUL
+====================================================== */
+
+.topbar-left h2 {
+    font-size: 18px;
+    font-weight: 700;
+
+    color: #3d2c22;
+
+    margin: 0;
+    line-height: 1.2;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.topbar-left p {
+    margin-top: 6px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    color: #a17d68;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* ======================================================
+   HAMBURGER
+====================================================== */
+
+.page-hamburger {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+
+    flex-shrink: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    margin: 0;
+
+    border: 1px solid #f1c7aa;
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fff1e6
+        );
+
+    color: #e96716;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 6px 16px rgba(220, 100, 35, 0.10);
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.page-hamburger:hover {
+    background:
+        linear-gradient(
+            145deg,
+            #ff8a3d,
+            #f36b18
+        );
+
+    border-color: #f36b18;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(239, 108, 29, 0.25);
+}
+
+
+.page-hamburger:active {
+    transform: scale(0.95);
+}
+
+
+.page-hamburger i {
+    pointer-events: none;
+}
+
+
+/* ======================================================
+   HAMBURGER HIDDEN
+====================================================== */
+
+.page-hamburger.hidden {
+    display: none !important;
+}
+
+
+/* ======================================================
+   HAMBURGER DESKTOP VISIBLE
+   Dipakai ketika sidebar desktop ditutup
+====================================================== */
+
+.page-hamburger.desktop-visible {
+    display: flex !important;
+}
+
+
+/* ======================================================
+   TOPBAR RIGHT
+====================================================== */
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 14px;
+
+    flex-shrink: 0;
+    min-width: 0;
+}
+
+
+/* ======================================================
+   SEARCH
+====================================================== */
+
+.search-box {
+    width: 320px;
+    max-width: 320px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 18px;
+
+    background: rgba(255, 255, 255, 0.90);
+
+    border: 1px solid #f0ddd1;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(112, 72, 45, 0.06);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+
+    box-sizing: border-box;
+
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+
+.search-box:hover {
+    border-color: #f3c3a4;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 28px rgba(112, 72, 45, 0.09);
+}
+
+
+.search-box:focus-within {
+    border-color: #ff7a1a;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 28px rgba(255, 122, 26, 0.16);
+}
+
+
+.search-box i {
+    flex-shrink: 0;
+
+    color: #d28a60;
+
+    font-size: 15px;
+
+    transition: color 0.2s ease;
+}
+
+
+.search-box:focus-within i {
+    color: #ff7418;
+}
+
+
+.search-box input {
+    width: 100%;
+    min-width: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 13px;
+
+    color: #4a372c;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.search-box input::placeholder {
+    color: #b8a196;
+}
+
+
+/* ======================================================
+   NOTIFICATION
+====================================================== */
+
+.notif {
+    position: relative;
+
+    width: 44px;
+    height: 44px;
+
+    min-width: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid #efd9cc;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fff6f0
+        );
+
+    color: #665349;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 16px rgba(112, 72, 45, 0.06);
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.notif:hover {
+    background:
+        linear-gradient(
+            145deg,
+            #ff8a3d,
+            #f36b18
+        );
+
+    border-color: #f36b18;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(239, 108, 29, 0.20);
+}
+
+
+/* ======================================================
+   BADGE NOTIFIKASI
+====================================================== */
+
+.notif-badge {
+    position: absolute;
+
+    top: -5px;
+    right: -5px;
+
+    min-width: 20px;
+    height: 20px;
+
+    padding: 0 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff5b4d,
+            #e93636
+        );
+
+    color: #ffffff;
+
+    border: 2px solid #fffaf5;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    line-height: 1;
+
+    z-index: 100;
+
+    box-shadow:
+        0 3px 8px rgba(220, 55, 45, 0.20);
+}
+
+
+/* ======================================================
+   TABLET
+====================================================== */
+
+@media (max-width: 992px) {
+
+    .topbar {
+        min-height: 82px;
+
+        padding: 16px 18px;
+
+        gap: 12px;
+
+        flex-wrap: nowrap;
+    }
+
+
+    /* ==================================================
+       HAMBURGER TABLET
+    ================================================== */
+
+    .page-hamburger {
+        display: flex;
+
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+
+        border-radius: 13px;
+
+        font-size: 19px;
+
+        order: -1;
+    }
+
+
+    .topbar-left {
+        flex: 1;
+        min-width: 0;
+    }
+
+
+    .topbar-left h2 {
+        font-size: 16px;
+    }
+
+
+    .topbar-left p {
+        font-size: 11px;
+        margin-top: 4px;
+    }
+
+
+    .topbar-right {
+        gap: 8px;
+        flex-shrink: 0;
+    }
+
+
+    .search-box {
+        width: 230px;
+        max-width: 230px;
+
+        height: 42px;
+
+        padding: 0 13px;
+
+        border-radius: 14px;
+    }
+
+
+    .notif {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+
+        border-radius: 12px;
+    }
+}
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 768px) {
+
+    .topbar {
+        width: 100%;
+
+        min-height: 76px;
+
+        padding: 12px;
+
+        gap: 8px;
+
+        overflow: visible;
+    }
+
+
+    /* ==================================================
+       HAMBURGER MOBILE
+    ================================================== */
+
+    .page-hamburger {
+        width: 42px;
+        height: 42px;
+
+        min-width: 42px;
+
+        border-radius: 12px;
+
+        font-size: 18px;
+    }
+
+
+    .topbar-left {
+        min-width: 0;
+        flex: 1;
+    }
+
+
+    .topbar-left h2 {
+        font-size: 14px;
+        line-height: 1.25;
+    }
+
+
+    .topbar-left p {
+        font-size: 10px;
+        margin-top: 3px;
+    }
+
+
+    .topbar-right {
+        gap: 6px;
+        flex-shrink: 0;
+    }
+
+
+    .search-box {
+        width: 145px;
+        max-width: 145px;
+
+        height: 38px;
+
+        padding: 0 10px;
+
+        gap: 7px;
+
+        border-radius: 12px;
+    }
+
+
+    .search-box i {
+        font-size: 12px;
+    }
+
+
+    .search-box input {
+        font-size: 10px;
+        min-width: 0;
+    }
+
+
+    .notif {
+        width: 38px;
+        height: 38px;
+
+        min-width: 38px;
+
+        border-radius: 10px;
+    }
+
+
+    .notif-badge {
+        min-width: 17px;
+        height: 17px;
+
+        top: -4px;
+        right: -4px;
+
+        padding: 0 4px;
+
+        font-size: 8px;
+    }
+}
+
+
+/* ======================================================
+   SMALL MOBILE
+====================================================== */
+
+@media (max-width: 576px) {
+
+    .topbar {
+        min-height: 70px;
+
+        padding: 10px;
+
+        gap: 6px;
+    }
+
+
+    /* ==================================================
+       HAMBURGER SMALL MOBILE
+    ================================================== */
+
+    .page-hamburger {
+        width: 39px;
+        height: 39px;
+
+        min-width: 39px;
+
+        border-radius: 11px;
+
+        font-size: 17px;
+    }
+
+
+    .topbar-left h2 {
+        font-size: 12px;
+    }
+
+
+    .topbar-left p {
+        font-size: 9px;
+    }
+
+
+    .topbar-right {
+        gap: 5px;
+    }
+
+
+    .search-box {
+        width: 120px;
+        max-width: 120px;
+
+        height: 35px;
+
+        padding: 0 9px;
+
+        gap: 6px;
+
+        border-radius: 10px;
+    }
+
+
+    .search-box i {
+        font-size: 11px;
+    }
+
+
+    .search-box input {
+        font-size: 9px;
+    }
+
+
+    .search-box input::placeholder {
+        font-size: 9px;
+    }
+
+
+    .notif {
+        width: 35px;
+        height: 35px;
+
+        min-width: 35px;
+
+        border-radius: 9px;
+    }
+}
+
+
+/* ======================================================
+   VERY SMALL MOBILE
+====================================================== */
+
+@media (max-width: 400px) {
+
+    .topbar {
+        padding: 9px 8px;
+
+        gap: 5px;
+    }
+
+
+    /* ==================================================
+       HAMBURGER VERY SMALL
+    ================================================== */
+
+    .page-hamburger {
+        width: 36px;
+        height: 36px;
+
+        min-width: 36px;
+
+        border-radius: 9px;
+
+        font-size: 16px;
+    }
+
+
+    .topbar-left h2 {
+        font-size: 11px;
+    }
+
+
+    .topbar-left p {
+        font-size: 8px;
+    }
+
+
+    .search-box {
+        width: 105px;
+        max-width: 105px;
+
+        height: 33px;
+
+        padding: 0 8px;
+    }
+
+
+    .search-box input {
+        font-size: 8px;
+    }
+
+
+    .search-box input::placeholder {
+        font-size: 8px;
+    }
+
+
+    .notif {
+        width: 33px;
+        height: 33px;
+
+        min-width: 33px;
+    }
+}

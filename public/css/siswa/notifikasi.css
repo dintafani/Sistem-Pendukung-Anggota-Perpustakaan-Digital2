@@ -1,0 +1,1333 @@
+
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+.notification-page,
+.notification-page *{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+.notification-page{
+
+    --primary:#F59E0B;
+    --primary-dark:#D97706;
+    --blue:#3B82F6;
+    --green:#22C55E;
+    --yellow:#FBBF24;
+    --red:#EF4444;
+
+    --bg:#FFF9F2;
+    --card:#FFFFFF;
+
+    --text:#1F2937;
+    --muted:#6B7280;
+
+    width:100%;
+
+    padding:35px;
+
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+
+}
+
+
+/* ==========================================================
+   ALERT
+========================================================== */
+
+.alert-success,
+.alert-error{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    margin-bottom:25px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.alert-success{
+
+    background:#DCFCE7;
+
+    color:#166534;
+
+    border-left:5px solid #22C55E;
+
+}
+
+.alert-error{
+
+    background:#FEE2E2;
+
+    color:#991B1B;
+
+    border-left:5px solid #EF4444;
+
+}
+
+.alert-success i,
+.alert-error i{
+
+    font-size:22px;
+
+}
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.notification-hero{
+
+    background:
+    linear-gradient(
+        135deg,
+        #F59E0B,
+        #FB923C
+    );
+
+    border-radius:30px;
+
+    padding:40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:#fff;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 18px 40px rgba(245,158,11,.25);
+
+}
+
+.notification-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+    height:280px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    right:-70px;
+    top:-70px;
+
+}
+
+.hero-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:28px;
+
+    position:relative;
+    z-index:2;
+
+}
+
+.hero-icon{
+
+    width:90px;
+    height:90px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    backdrop-filter:blur(10px);
+
+    font-size:42px;
+
+    flex-shrink:0;
+
+}
+
+.hero-left h1{
+
+    font-size:42px;
+
+    margin-bottom:10px;
+
+}
+
+.hero-left p{
+
+    max-width:620px;
+
+    line-height:1.8;
+
+    color:rgba(255,255,255,.95);
+
+}
+
+.hero-right{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero-count{
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:24px;
+
+    padding:25px 35px;
+
+    text-align:center;
+
+    min-width:170px;
+
+}
+
+.hero-count span{
+
+    font-size:14px;
+
+    opacity:.9;
+
+}
+
+.hero-count h2{
+
+    font-size:46px;
+
+    margin:8px 0;
+
+}
+
+.hero-count small{
+
+    opacity:.9;
+
+}
+
+
+/* ==========================================================
+   STATISTIK
+========================================================== */
+
+.notification-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+}
+
+.stat-card{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:28px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    box-shadow:
+        0 12px 28px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 18px 35px rgba(0,0,0,.10);
+
+}
+
+.stat-icon{
+
+    width:62px;
+    height:62px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:26px;
+
+    color:#fff;
+
+}
+
+.stat-card.blue .stat-icon{
+
+    background:#3B82F6;
+
+}
+
+.stat-card.green .stat-icon{
+
+    background:#22C55E;
+
+}
+
+.stat-card.yellow .stat-icon{
+
+    background:#F59E0B;
+
+}
+
+.stat-card.red .stat-icon{
+
+    background:#EF4444;
+
+}
+
+.stat-card h3{
+
+    font-size:30px;
+
+    color:#111827;
+
+    margin-bottom:6px;
+
+}
+
+.stat-card span{
+
+    color:#6B7280;
+
+    font-size:15px;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE AWAL
+========================================================== */
+
+@media(max-width:1100px){
+
+    .notification-stats{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .notification-page{
+
+        padding:20px;
+
+    }
+
+    .notification-hero{
+
+        flex-direction:column;
+
+        gap:25px;
+
+        text-align:center;
+
+    }
+
+    .hero-left{
+
+        flex-direction:column;
+
+    }
+
+    .hero-left h1{
+
+        font-size:34px;
+
+    }
+
+    .hero-count{
+
+        width:100%;
+
+    }
+
+    .notification-stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+/* ==========================================================
+   HEADER LIST
+========================================================== */
+
+.notification-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+
+}
+
+.notification-header h2{
+
+    font-size:30px;
+    color:#1F2937;
+    margin-bottom:8px;
+
+}
+
+.notification-header p{
+
+    color:#6B7280;
+    line-height:1.6;
+
+}
+
+
+/* ==========================================================
+   DELETE ALL BUTTON
+========================================================== */
+
+.delete-all-btn{
+
+    border:none;
+
+    background:linear-gradient(
+        135deg,
+        #EF4444,
+        #DC2626
+    );
+
+    color:#fff;
+
+    padding:14px 24px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:15px;
+    font-weight:600;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    transition:.3s;
+
+}
+
+.delete-all-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(239,68,68,.28);
+
+}
+
+
+
+/* ==========================================================
+   LIST
+========================================================== */
+
+.notification-list{
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+}
+
+
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.notification-card{
+
+    position:relative;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:24px;
+
+    border-left:6px solid #3B82F6;
+
+    box-shadow:
+        0 10px 28px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+}
+
+.notification-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.10);
+
+}
+
+
+
+/* ==========================================================
+   JENIS
+========================================================== */
+
+.notification-card.success{
+
+    border-left-color:#22C55E;
+
+}
+
+.notification-card.warning{
+
+    border-left-color:#F59E0B;
+
+}
+
+.notification-card.danger{
+
+    border-left-color:#EF4444;
+
+}
+
+
+
+/* ==========================================================
+   BADGE BARU
+========================================================== */
+
+.new-badge{
+
+    position:absolute;
+
+    top:18px;
+    right:18px;
+
+    background:#EF4444;
+
+    color:#fff;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.8px;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    animation:pulseBadge 1.8s infinite;
+
+}
+
+
+
+/* ==========================================================
+   TOP
+========================================================== */
+
+.notification-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+}
+
+.notification-left{
+
+    display:flex;
+
+    gap:18px;
+
+    flex:1;
+
+}
+
+.notification-icon{
+
+    width:62px;
+    height:62px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:25px;
+
+    flex-shrink:0;
+
+}
+
+.notification-info{
+
+    flex:1;
+
+}
+
+
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
+.notification-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+.notification-title h3{
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+
+
+/* ==========================================================
+   TYPE
+========================================================== */
+
+.notification-type{
+
+    background:#EEF2FF;
+
+    color:#4338CA;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+
+
+/* ==========================================================
+   TIME
+========================================================== */
+
+.notification-time{
+
+    margin-top:10px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#6B7280;
+
+    font-size:14px;
+
+}
+
+
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+.notification-body{
+
+    margin-top:20px;
+
+    padding-top:18px;
+
+    border-top:1px solid #E5E7EB;
+
+}
+
+.notification-body p{
+
+    color:#4B5563;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+
+
+/* ==========================================================
+   ACTION
+========================================================== */
+
+.notification-action{
+
+    display:flex;
+
+    align-items:flex-start;
+
+}
+
+.delete-btn{
+
+    border:none;
+
+    background:#FEF2F2;
+
+    color:#DC2626;
+
+    padding:10px 18px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.delete-btn:hover{
+
+    background:#DC2626;
+
+    color:#fff;
+
+}
+
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:768px){
+
+    .notification-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .notification-top{
+
+        flex-direction:column;
+
+    }
+
+    .notification-left{
+
+        width:100%;
+
+    }
+
+    .notification-action{
+
+        width:100%;
+
+    }
+
+    .delete-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+/* ==========================================================
+   EMPTY NOTIFICATION
+========================================================== */
+
+.empty-notification{
+
+    background:#fff;
+
+    border-radius:28px;
+
+    padding:70px 30px;
+
+    text-align:center;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.06);
+
+}
+
+.empty-icon{
+
+    width:120px;
+    height:120px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #F59E0B,
+        #FB923C
+    );
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:52px;
+
+}
+
+.empty-notification h2{
+
+    color:#1F2937;
+
+    font-size:30px;
+
+    margin-bottom:12px;
+
+}
+
+.empty-notification p{
+
+    color:#6B7280;
+
+    max-width:550px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.notification-footer{
+
+    margin-top:15px;
+
+}
+
+.footer-card{
+
+    background:linear-gradient(
+        135deg,
+        #F59E0B,
+        #FB923C
+    );
+
+    color:#fff;
+
+    border-radius:30px;
+
+    padding:35px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    box-shadow:
+        0 18px 35px rgba(245,158,11,.20);
+
+}
+
+.footer-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    right:-80px;
+    top:-80px;
+
+}
+
+.footer-icon{
+
+    width:95px;
+    height:95px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:48px;
+
+    flex-shrink:0;
+
+    backdrop-filter:blur(8px);
+
+}
+
+.footer-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.footer-content h3{
+
+    font-size:30px;
+
+    margin-bottom:12px;
+
+}
+
+.footer-content p{
+
+    line-height:1.8;
+
+    color:rgba(255,255,255,.95);
+
+}
+
+
+/* ==========================================================
+   TIPS
+========================================================== */
+
+.tips-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+.tips-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.tips-title i{
+
+    color:#F59E0B;
+
+    font-size:28px;
+
+}
+
+.tips-title h3{
+
+    font-size:28px;
+
+    color:#1F2937;
+
+}
+
+.tips-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+
+}
+
+.tip-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    text-align:center;
+
+    box-shadow:
+        0 10px 28px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+}
+
+.tip-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.tip-icon{
+
+    width:70px;
+    height:70px;
+
+    margin:auto auto 18px;
+
+    border-radius:18px;
+
+    background:#FFF7ED;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+}
+
+.tip-card h4{
+
+    color:#1F2937;
+
+    margin-bottom:10px;
+
+    font-size:20px;
+
+}
+
+.tip-card p{
+
+    color:#6B7280;
+
+    line-height:1.7;
+
+}
+
+
+/* ==========================================================
+   QUOTE
+========================================================== */
+
+.quote-card{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.06);
+
+}
+
+.quote-card i{
+
+    font-size:42px;
+
+    color:#F59E0B;
+
+    margin-bottom:18px;
+
+}
+
+.quote-card blockquote{
+
+    font-size:20px;
+
+    color:#374151;
+
+    line-height:1.9;
+
+    font-style:italic;
+
+}
+
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.notification-page>*{
+
+    animation:fadeUp .6s ease both;
+
+}
+
+.notification-page>*:nth-child(2){
+
+    animation-delay:.1s;
+
+}
+
+.notification-page>*:nth-child(3){
+
+    animation-delay:.2s;
+
+}
+
+.notification-page>*:nth-child(4){
+
+    animation-delay:.3s;
+
+}
+
+.notification-page>*:nth-child(5){
+
+    animation-delay:.4s;
+
+}
+
+.notification-page>*:nth-child(6){
+
+    animation-delay:.5s;
+
+}
+
+@keyframes pulseBadge{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.12);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   CUSTOM SCROLLBAR
+========================================================== */
+
+.notification-list::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.notification-list::-webkit-scrollbar-thumb{
+
+    background:#F59E0B;
+
+    border-radius:20px;
+
+}
+
+.notification-list::-webkit-scrollbar-track{
+
+    background:#FFF4E5;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:992px){
+
+    .tips-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .footer-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .notification-page{
+
+        padding:16px;
+
+    }
+
+    .hero-left h1{
+
+        font-size:28px;
+
+    }
+
+    .footer-content h3{
+
+        font-size:24px;
+
+    }
+
+    .quote-card blockquote{
+
+        font-size:17px;
+
+    }
+
+    .empty-icon{
+
+        width:90px;
+
+        height:90px;
+
+        font-size:42px;
+
+    }
+
+}
+.notification-card.read{
+
+    background:#F8FAFC;
+
+    opacity:.75;
+
+}
+
+.read-label{
+
+    background:#DCFCE7;
+
+    color:#166534;
+
+}

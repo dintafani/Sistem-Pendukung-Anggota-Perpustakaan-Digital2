@@ -1,0 +1,697 @@
+/* =========================================================
+   SIDEBAR.CSS
+   ========================================================= */
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+:root{
+
+    --font-main:'Poppins',sans-serif;
+    --font-title:'Nunito',sans-serif;
+
+    --primary:#f97316;
+    --primary-dark:#ea580c;
+
+    --secondary:#38bdf8;
+
+    --text:#1f2937;
+    --text-light:#6b7280;
+
+    --white:#ffffff;
+
+    --bg:#f8fafc;
+
+    --border:#e5e7eb;
+
+    --shadow-sm:
+        0 4px 12px rgba(0,0,0,.05);
+
+    --shadow-md:
+        0 12px 28px rgba(0,0,0,.08);
+
+    --transition:.25s ease;
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar{
+
+    position:fixed;
+
+    top:18px;
+    left:18px;
+    bottom:18px;
+
+    width:84px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding:20px 12px;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:28px;
+
+    box-shadow:var(--shadow-md);
+
+    z-index:999;
+}
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.sidebar-logo{
+
+    width:54px;
+    height:54px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            #fb923c
+        );
+
+    color:#fff;
+
+    box-shadow:
+        0 10px 20px rgba(249,115,22,.25);
+}
+
+.sidebar-logo i{
+
+    font-size:22px;
+
+    margin-bottom:2px;
+}
+
+.sidebar-logo span{
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+}
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.sidebar-divider{
+
+    width:42px;
+    height:1px;
+
+    background:#ececec;
+
+    margin:24px 0;
+}
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.sidebar-menu{
+
+    width:100%;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:12px;
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+}
+
+.sidebar-menu li{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+}
+
+/* =========================================================
+   MENU LINK
+   ========================================================= */
+
+.sidebar-menu a{
+
+    position:relative;
+
+    width:54px;
+    height:54px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:16px;
+
+    color:var(--text-light);
+
+    text-decoration:none;
+
+    transition:all var(--transition);
+}
+
+.sidebar-menu a i{
+
+    font-size:20px;
+
+    transition:all var(--transition);
+}
+
+/* =========================================================
+   ACTIVE
+   ========================================================= */
+
+.sidebar-menu li.active a,
+.sidebar-menu a.active,
+.sidebar-menu a[aria-current="page"]{
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            #fb923c
+        );
+
+    color:#fff;
+
+    box-shadow:
+        0 8px 18px rgba(249,115,22,.25);
+}
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.sidebar-menu a:hover{
+
+    background:#fff3eb;
+
+    color:var(--primary);
+
+    transform:translateY(-2px);
+}
+
+.sidebar-menu li.active a:hover,
+.sidebar-menu a.active:hover{
+
+    color:#fff;
+}
+
+/* =========================================================
+   TOOLTIP
+   ========================================================= */
+
+.sidebar-menu a span{
+
+    position:absolute;
+
+    left:68px;
+    top:50%;
+
+    transform:
+        translateY(-50%)
+        translateX(-8px);
+
+    background:#111827;
+
+    color:#fff;
+
+    padding:8px 14px;
+
+    border-radius:10px;
+
+    white-space:nowrap;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+    transition:all .25s ease;
+
+    z-index:999;
+}
+
+.sidebar-menu a span::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-5px;
+    top:50%;
+
+    width:10px;
+    height:10px;
+
+    background:#111827;
+
+    transform:
+        translateY(-50%)
+        rotate(45deg);
+}
+
+.sidebar-menu a:hover span{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:
+        translateY(-50%)
+        translateX(0);
+}
+/* =========================================================
+   SIDEBAR BOTTOM
+========================================================= */
+
+.sidebar-bottom{
+
+    width:100%;
+
+    margin-top:auto;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:12px;
+}
+
+/* =========================================================
+   NOTIFICATION BUTTON
+========================================================= */
+
+.notification-button{
+
+    position:relative;
+
+    width:54px;
+    height:54px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:16px;
+
+    color:var(--text-light);
+
+    background:transparent;
+
+    text-decoration:none;
+
+    transition:all var(--transition);
+}
+
+.notification-button i{
+
+    font-size:20px;
+}
+
+.notification-button:hover{
+
+    background:#fff3eb;
+
+    color:var(--primary);
+
+    transform:translateY(-2px);
+}
+
+.notification-dot{
+
+    position:absolute;
+
+    top:10px;
+    right:10px;
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:#ef4444;
+
+    border:2px solid #fff;
+}
+
+/* =========================================================
+   PROFILE BUTTON
+========================================================= */
+
+.profile-button{
+
+    position:relative;
+
+    width:54px;
+    height:54px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #38bdf8,
+            #0ea5e9
+        );
+
+    color:#fff;
+
+    font-weight:800;
+
+    font-size:15px;
+
+    text-decoration:none;
+
+    box-shadow:
+        0 8px 20px rgba(14,165,233,.25);
+
+    transition:all var(--transition);
+}
+
+.profile-button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 12px 24px rgba(14,165,233,.35);
+}
+
+.online-dot{
+
+    position:absolute;
+
+    right:3px;
+    bottom:3px;
+
+    width:11px;
+    height:11px;
+
+    border-radius:50%;
+
+    background:#22c55e;
+
+    border:2px solid #fff;
+}
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.logout-form{
+
+    width:100%;
+
+    margin:0;
+
+    display:flex;
+
+    justify-content:center;
+}
+
+.logout-button{
+
+    width:54px;
+    height:54px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:none;
+    outline:none;
+
+    cursor:pointer;
+
+    border-radius:16px;
+
+    background:transparent;
+
+    color:var(--text-light);
+
+    transition:all var(--transition);
+}
+
+.logout-button i{
+
+    font-size:20px;
+}
+
+.logout-button:hover{
+
+    background:#fff3eb;
+
+    color:#ef4444;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(239,68,68,.15);
+}
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.sidebar-menu a:focus-visible,
+.notification-button:focus-visible,
+.profile-button:focus-visible,
+.logout-button:focus-visible{
+
+    outline:3px solid rgba(249,115,22,.25);
+
+    outline-offset:4px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:900px){
+
+    .sidebar{
+
+        width:74px;
+
+        top:12px;
+        left:12px;
+        bottom:12px;
+
+        padding:16px 8px;
+
+        border-radius:22px;
+    }
+
+    .sidebar-logo{
+
+        width:48px;
+        height:48px;
+
+        border-radius:15px;
+    }
+
+    .sidebar-logo i{
+
+        font-size:20px;
+    }
+
+    .sidebar-menu a,
+    .notification-button,
+    .profile-button,
+    .logout-button{
+
+        width:48px;
+        height:48px;
+
+        border-radius:14px;
+    }
+
+    .sidebar-menu a i,
+    .notification-button i,
+    .logout-button i{
+
+        font-size:18px;
+    }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:768px){
+
+    .sidebar{
+
+        top:auto;
+        left:10px;
+        right:10px;
+        bottom:10px;
+
+        width:auto;
+        height:72px;
+
+        flex-direction:row;
+
+        justify-content:space-between;
+
+        padding:8px 12px;
+
+        border-radius:20px;
+    }
+
+    .sidebar-logo,
+    .sidebar-divider{
+
+        display:none;
+    }
+
+    .sidebar-menu{
+
+        flex-direction:row;
+
+        width:auto;
+
+        gap:6px;
+    }
+
+    .sidebar-menu li{
+
+        width:auto;
+    }
+
+    .sidebar-bottom{
+
+        width:auto;
+
+        margin-top:0;
+
+        flex-direction:row;
+
+        gap:6px;
+    }
+
+    .sidebar-menu a span{
+
+        display:none;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:480px){
+
+    .sidebar{
+
+        left:8px;
+        right:8px;
+        bottom:8px;
+
+        height:66px;
+    }
+
+    .sidebar-menu{
+
+        gap:2px;
+    }
+
+    .sidebar-bottom{
+
+        gap:2px;
+    }
+
+    .sidebar-menu a,
+    .notification-button,
+    .profile-button,
+    .logout-button{
+
+        width:44px;
+        height:44px;
+    }
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes sidebarFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-18px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+    }
+}
+
+.sidebar{
+
+    animation:
+        sidebarFade
+        .4s
+        ease;
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+
+        animation-duration:.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        transition-duration:.01ms !important;
+    }
+}
+

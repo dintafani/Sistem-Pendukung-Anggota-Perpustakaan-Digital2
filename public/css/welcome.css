@@ -1,0 +1,6046 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #fffbf5;
+    color: #1e293b;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   APP
+========================================================= */
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+
+    background: #fffbf5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.main-content {
+    width: 100%;
+    max-width: 1025px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    width: 100%;
+
+    background: rgba(255, 251, 245, 0.92);
+
+    border-bottom: 1px solid #ffedd4;
+}
+
+.navbar-container {
+    width: 100%;
+    max-width: 1280px;
+
+    margin: 0 auto;
+    padding: 16px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* =========================================================
+   LOGO & BRAND
+========================================================= */
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+
+    background: linear-gradient(
+        135deg,
+        #ff8904 0%,
+        #ffb900 100%
+    );
+
+    box-shadow:
+        0 4px 6px -4px rgba(0, 0, 0, 0.1),
+        0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+    border-radius: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-title {
+    color: #1e293b;
+
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+
+    line-height: 18px;
+}
+
+.brand-school {
+    color: #ff6900;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    line-height: 16px;
+}
+
+
+/* =========================================================
+   NAVBAR MENU
+========================================================= */
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-link {
+    color: #45556c;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    line-height: 20px;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #f97316;
+}
+
+
+/* =========================================================
+   NAVBAR BUTTONS
+========================================================= */
+
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/* LOGIN */
+
+.btn-login {
+    padding: 10px 20px;
+
+    border-radius: 16px;
+
+    outline: 2px solid #ffb86a;
+    outline-offset: -2px;
+
+    color: #f54900;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 20px;
+
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-login:hover {
+    background: #fff7ed;
+}
+
+
+/* REGISTER */
+
+.btn-register {
+    padding: 10px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #f97316 0%,
+        #f59e0b 100%
+    );
+
+    box-shadow:
+        0 4px 6px -4px rgba(0, 0, 0, 0.1),
+        0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+    border-radius: 16px;
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 20px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.btn-register:hover {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ANNOUNCEMENT BAR
+========================================================= */
+
+.announcement-bar {
+    width: 100%;
+    height: 36px;
+
+    padding: 8px 0;
+
+    background: linear-gradient(
+        90deg,
+        #ff6900 0%,
+        #fe9a00 50%,
+        #ff6900 100%
+    );
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+}
+
+.announcement-track {
+    display: flex;
+
+    width: max-content;
+
+    flex-shrink: 0;
+
+    animation:
+        announcement-scroll 35s linear infinite;
+}
+
+.announcement-group {
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+
+    padding-right: 32px;
+
+    flex-shrink: 0;
+}
+
+.announcement-group span {
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    line-height: 20px;
+
+    white-space: nowrap;
+}
+
+@keyframes announcement-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* =========================================================
+   WELCOME PAGE / HERO
+========================================================= */
+
+.welcome-page {
+    position: relative;
+
+    width: 100%;
+    min-height: 842px;
+
+    padding: 64px 24px 96px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(255, 237, 213, 0.55),
+            transparent 35%
+        ),
+        #fffaf3;
+}
+
+.hero-section {
+    width: 100%;
+
+    min-height: 842px;
+
+    padding: 64px 24px 96px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.glow {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter: blur(64px);
+}
+
+.glow-yellow {
+    width: 384px;
+    height: 384px;
+
+    right: 5%;
+    top: -80px;
+
+    opacity: 0.2;
+
+    background: radial-gradient(
+        circle,
+        #fcd34d 0%,
+        rgba(252, 211, 77, 0) 70%
+    );
+
+    animation:
+        glowMove 7s ease-in-out infinite;
+}
+
+.glow-orange {
+    width: 320px;
+    height: 320px;
+
+    left: -100px;
+    bottom: 20px;
+
+    opacity: 0.15;
+
+    background: radial-gradient(
+        circle,
+        #f97316 0%,
+        rgba(249, 115, 22, 0) 70%
+    );
+
+    animation:
+        glowMove 9s ease-in-out infinite reverse;
+}
+
+.glow-blue {
+    width: 256px;
+    height: 256px;
+
+    left: 40%;
+    top: 300px;
+
+    opacity: 0.1;
+
+    background: radial-gradient(
+        circle,
+        #a5f3fc 0%,
+        rgba(165, 243, 252, 0) 70%
+    );
+
+    animation:
+        glowMove 8s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   HERO CONTAINER
+========================================================= */
+
+.hero-container {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+    max-width: 1280px;
+
+    min-height: 682px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 10;
+
+    width: 52%;
+    max-width: 600px;
+}
+
+
+/* =========================================================
+   WELCOME BADGE
+========================================================= */
+
+.welcome-badge {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 16px;
+
+    background: #ffedd4;
+
+    border-radius: 999px;
+
+    color: #f54900;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 20px;
+
+    animation:
+        fadeDown 0.8s ease both;
+}
+
+.wave {
+    display: inline-block;
+
+    font-size: 18px;
+
+    animation:
+        waveHand 2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.hero-title {
+    position: relative;
+
+    margin-top: 18px;
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: clamp(44px, 5vw, 60px);
+
+    font-weight: 900;
+
+    line-height: 1.18;
+
+    letter-spacing: -1.5px;
+
+    animation:
+        fadeUp 0.9s ease both;
+}
+
+.title-dark {
+    color: #1e293b;
+}
+
+.title-orange {
+    position: relative;
+
+    display: inline-block;
+
+    color: #f97316;
+}
+
+.title-line {
+    width: 200px;
+    height: 6px;
+
+    margin-top: 3px;
+    margin-left: 78px;
+
+    border-radius: 20px;
+
+    background: #f59e0b;
+
+    transform: rotate(-1deg);
+
+    animation:
+        lineGrow 1.2s ease-out 0.5s both,
+        lineWave 3s ease-in-out 1.7s infinite;
+}
+
+.title-last {
+    margin-top: -4px;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.hero-description {
+    max-width: 510px;
+
+    margin-top: 24px;
+
+    color: #45556c;
+
+    font-size: 18px;
+
+    line-height: 1.625;
+
+    animation:
+        fadeUp 1s ease 0.2s both;
+}
+
+
+/* =========================================================
+   LOGIN BUTTONS
+========================================================= */
+
+.login-buttons {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin-top: 32px;
+
+    animation:
+        fadeUp 1s ease 0.35s both;
+}
+
+.login-btn {
+    min-width: 285px;
+
+    padding: 16px 28px;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 12px;
+
+    border-radius: 16px;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    line-height: 24px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.login-btn:hover {
+    transform: translateY(-4px);
+}
+
+
+/* STUDENT */
+
+.student-btn {
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #f97316 0%,
+        #f59e0b 100%
+    );
+
+    box-shadow:
+        0 8px 10px -6px rgba(0, 0, 0, 0.1),
+        0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.student-btn:hover {
+    box-shadow:
+        0 14px 20px -8px rgba(249, 115, 22, 0.45),
+        0 25px 30px -8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* STAFF */
+
+.staff-btn {
+    color: #009689;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border: 2px solid #00d5be;
+}
+
+.staff-btn:hover {
+    background: #ecfffb;
+
+    box-shadow:
+        0 10px 20px rgba(0, 213, 190, 0.15);
+}
+
+/* =========================================================
+   DAFTAR HADIR
+========================================================= */
+
+.attendance-btn {
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #adaee6 0%,
+        #3c2968 100%
+    );
+
+    border: 2px solid #6366f1;
+
+    min-width: 285px;
+    padding: 16px 28px;
+
+    box-shadow:
+        0 8px 10px -6px rgba(99, 102, 241, 0.25),
+        0 15px 25px -8px rgba(99, 102, 241, 0.25);
+}
+
+.attendance-btn:hover {
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5 0%,
+        #7c3aed 100%
+    );
+
+    border-color: #4f46e5;
+
+    box-shadow:
+        0 14px 20px -8px rgba(99, 102, 241, 0.45),
+        0 25px 30px -8px rgba(0, 0, 0, 0.15);
+}
+
+
+.button-icon {
+    font-size: 20px;
+}
+
+
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.statistics {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 32px;
+
+    margin-top: 40px;
+
+    animation:
+        fadeUp 1s ease 0.5s both;
+}
+
+.stat-item {
+    min-width: 75px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.stat-item strong {
+    color: #f97316;
+
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+
+    line-height: 28px;
+}
+
+.stat-item span {
+    color: #62748e;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    line-height: 16px;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+.stat-large {
+    min-width: 132px;
+}
+
+
+/* =========================================================
+   HERO ILLUSTRATION
+========================================================= */
+
+.hero-illustration {
+    position: relative;
+
+    width: 520px;
+    height: 500px;
+
+    margin-top: 75px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   BOOK STACK
+========================================================= */
+
+.book-stack {
+    position: absolute;
+
+    width: 288px;
+    height: 288px;
+
+    left: 70px;
+    top: 90px;
+}
+
+
+/* =========================================================
+   BOOK CARD
+========================================================= */
+
+.book-card {
+    position: absolute;
+
+    width: 192px;
+    height: 240px;
+
+    padding: 16px;
+
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+    transform-origin: center;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.book-card:hover {
+    z-index: 20;
+
+    transform:
+        translateY(-12px)
+        rotate(0deg)
+        scale(1.04);
+
+    box-shadow:
+        0 35px 60px -15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================================
+   BOOK COLORS
+========================================================= */
+
+.book-orange {
+    left: 0;
+    top: 35px;
+
+    z-index: 1;
+
+    background: linear-gradient(
+        135deg,
+        #f97316 0%,
+        #ea580c 100%
+    );
+
+    animation:
+        floatingBook1 5s ease-in-out infinite;
+}
+
+.book-purple {
+    left: 25px;
+    top: 12px;
+
+    z-index: 2;
+
+    transform: rotate(-3deg);
+
+    background: linear-gradient(
+        135deg,
+        #8b5cf6 0%,
+        #6d28d9 100%
+    );
+
+    animation:
+        floatingBook2 5.5s ease-in-out infinite;
+}
+
+.book-teal {
+    left: 61px;
+    top: 2px;
+
+    z-index: 3;
+
+    transform: rotate(-1deg);
+
+    background: linear-gradient(
+        135deg,
+        #0d9488 0%,
+        #0891b2 100%
+    );
+
+    animation:
+        floatingBook3 6s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   BOOK DETAILS
+========================================================= */
+
+.book-top-line {
+    width: 32px;
+    height: 5px;
+
+    background: rgba(255, 255, 255, 0.6);
+
+    border-radius: 999px;
+}
+
+.book-small-line {
+    width: 48px;
+    height: 5px;
+
+    background: rgba(255, 255, 255, 0.4);
+
+    border-radius: 999px;
+}
+
+.book-center {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.book-icon {
+    font-size: 30px;
+
+    line-height: 36px;
+
+    opacity: 0.8;
+
+    animation:
+        iconFloat 3s ease-in-out infinite;
+}
+
+.book-title {
+    margin-top: 8px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    line-height: 16px;
+
+    text-align: center;
+}
+
+.book-author {
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 12px;
+    font-weight: 400;
+
+    line-height: 16px;
+}
+
+
+/* =========================================================
+   RATING BADGE
+========================================================= */
+
+.rating-badge {
+    position: absolute;
+
+    left: 0;
+    top: 30px;
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+
+    padding: 8px 12px;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 4px 6px -4px rgba(0, 0, 0, 0.1),
+        0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+    animation:
+        badgeFloat 4s ease-in-out infinite;
+}
+
+.rating-badge span {
+    font-size: 16px;
+}
+
+.rating-badge strong {
+    color: #314158;
+
+    font-size: 12px;
+
+    line-height: 16px;
+}
+
+
+/* =========================================================
+   BOOK COUNT BADGE
+========================================================= */
+
+.book-count-badge {
+    position: absolute;
+
+    left: 250px;
+    top: 290px;
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+
+    padding: 8px 12px;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 4px 6px -4px rgba(0, 0, 0, 0.1),
+        0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+    animation:
+        badgeFloat 4.5s ease-in-out infinite reverse;
+}
+
+.book-count-badge span {
+    font-size: 16px;
+}
+
+.book-count-badge strong {
+    color: #314158;
+
+    font-size: 12px;
+
+    line-height: 16px;
+}
+
+
+/* =========================================================
+   MASCOT
+========================================================= */
+
+.mascot {
+    position: absolute;
+
+    right: 40px;
+    top: 0;
+
+    width: 85px;
+    height: 90px;
+
+    z-index: 15;
+
+    transform: rotate(-3deg);
+
+    animation:
+        mascotFloat 4s ease-in-out infinite;
+}
+
+.mascot-body {
+    position: relative;
+
+    width: 85px;
+    height: 85px;
+}
+
+
+/* BODY */
+
+.mascot-face {
+    position: absolute;
+
+    width: 48px;
+    height: 45px;
+
+    left: 18px;
+    top: 20px;
+
+    border-radius: 40% 40% 45% 45%;
+
+    background: #4ade80;
+
+    border: 2px solid #22c55e;
+
+    z-index: 3;
+}
+
+
+/* EYES */
+
+.eye {
+    position: absolute;
+
+    width: 12px;
+    height: 14px;
+
+    top: 11px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+}
+
+.eye-left {
+    left: 8px;
+}
+
+.eye-right {
+    right: 8px;
+}
+
+.eye::after {
+    content: "";
+
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    top: 4px;
+    left: 3px;
+
+    background: #1e293b;
+
+    border-radius: 50%;
+}
+
+
+/* SMILE */
+
+.smile {
+    position: absolute;
+
+    width: 14px;
+    height: 7px;
+
+    left: 16px;
+    top: 27px;
+
+    border-bottom: 2px solid #166534;
+
+    border-radius: 0 0 20px 20px;
+}
+
+
+/* MASCOT BOOK */
+
+.mascot-book {
+    position: absolute;
+
+    width: 30px;
+    height: 26px;
+
+    left: 28px;
+    top: 52px;
+
+    background: #86efac;
+
+    border: 2px solid #4ade80;
+
+    transform: skew(-4deg);
+
+    z-index: 2;
+}
+
+
+/* HAT */
+
+.mascot-hat {
+    position: absolute;
+
+    left: 24px;
+    top: 7px;
+
+    z-index: 5;
+
+    font-size: 23px;
+
+    transform: rotate(-5deg);
+}
+
+
+/* ARM */
+
+.mascot-arm {
+    position: absolute;
+
+    width: 15px;
+    height: 10px;
+
+    right: 7px;
+    top: 38px;
+
+    background: #f97316;
+
+    border-radius: 10px;
+
+    transform: rotate(25deg);
+}
+
+
+/* =========================================================
+   FLOATING EMOJIS
+========================================================= */
+
+.floating-emoji {
+    position: absolute;
+
+    z-index: 3;
+
+    user-select: none;
+    pointer-events: none;
+}
+
+.emoji-star {
+    left: 6%;
+    top: 145px;
+
+    font-size: 24px;
+
+    transform: rotate(-3deg);
+
+    animation:
+        emojiFloat 4s ease-in-out infinite;
+}
+
+.emoji-note {
+    left: 4%;
+    top: 505px;
+
+    font-size: 24px;
+
+    animation:
+        emojiFloat 5s ease-in-out 0.5s infinite;
+}
+
+.emoji-light {
+    left: 15%;
+    top: 560px;
+
+    font-size: 19px;
+
+    animation:
+        emojiFloat 4.5s ease-in-out 1s infinite;
+}
+
+.emoji-graduate {
+    right: 9%;
+    top: 625px;
+
+    font-size: 32px;
+
+    transform: rotate(-1deg);
+
+    animation:
+        emojiFloat 4s ease-in-out 1.5s infinite;
+}
+
+
+/* =========================================================
+   LITTLE STARS
+========================================================= */
+
+.little-star {
+    position: absolute;
+
+    z-index: 12;
+
+    color: #fcd34d;
+
+    font-size: 30px;
+
+    animation:
+        starPulse 2.5s ease-in-out infinite;
+}
+
+.star-one {
+    right: 75px;
+    top: 210px;
+}
+
+.star-two {
+    right: 20px;
+    top: 360px;
+
+    font-size: 22px;
+
+    animation-delay: 0.8s;
+}
+
+
+/* =========================================================
+   KOLEKSI TERPILIH
+========================================================= */
+
+.koleksi-section {
+    width: 100%;
+
+    padding: 64px 24px;
+
+    background: #ffffff;
+}
+
+.koleksi-container {
+    width: 100%;
+    max-width: 1025px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   KOLEKSI HEADER
+========================================================= */
+
+.koleksi-header {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.koleksi-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 8px 16px;
+
+    background: #fef3c6;
+
+    border-radius: 999999px;
+
+    color: #bb4d00;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 20px;
+}
+
+.badge-icon {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.koleksi-header h2 {
+    margin: 12px 0 0;
+
+    color: #1e293b;
+
+    font-family: "Nunito", sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+
+    line-height: 40px;
+}
+
+.koleksi-header p {
+    width: 100%;
+    max-width: 512px;
+
+    margin: 12px 0 0;
+
+    color: #62748e;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 24px;
+}
+
+/* =========================================================
+   SEARCH + CATEGORY
+========================================================= */
+
+.koleksi-filter {
+    width: 100%;
+
+    margin-top: 32px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 16px;
+
+    /*
+     * Jangan membuat seluruh section ikut melebar
+     */
+    min-width: 0;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.koleksi-search {
+    flex: 0 0 448px;
+
+    width: 448px;
+    max-width: 448px;
+
+    min-width: 0;
+}
+
+.koleksi-search form {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+}
+
+.koleksi-search input {
+    width: 100%;
+    height: 52px;
+
+    padding: 14px 16px 14px 44px;
+
+    background: #ffffff;
+
+    border: 2px solid #ffd6a8;
+    border-radius: 16px;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    color: #334155;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.koleksi-search input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.koleksi-search input:focus {
+    border-color: #f97316;
+
+    box-shadow:
+        0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+
+/* =========================================================
+   CATEGORY LIST
+========================================================= */
+
+.kategori-list {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-wrap: nowrap;
+
+    /*
+     * Kategori tetap satu baris
+     */
+    white-space: nowrap;
+
+    /*
+     * Jika kategori banyak, geser ke samping
+     */
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 6px 2px 8px;
+
+    /*
+     * Supaya scroll HP lebih nyaman
+     */
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: thin;
+
+    /*
+     * Jangan sampai scroll kategori
+     * menyebabkan seluruh halaman melebar
+     */
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CATEGORY BUTTON
+========================================================= */
+
+.kategori-btn {
+    flex: 0 0 auto;
+
+    height: 40px;
+
+    padding: 8px 16px;
+
+    border: 2px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: #45556c;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    line-height: 20px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    text-decoration: none;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* =========================================================
+   CATEGORY HOVER
+========================================================= */
+
+.kategori-btn:hover {
+    border-color: #f97316;
+
+    color: #f97316;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   CATEGORY ACTIVE
+========================================================= */
+
+.kategori-btn.active {
+    border-color: transparent;
+
+    background: linear-gradient(
+        135deg,
+        #f97316 0%,
+        #f59e0b 100%
+    );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 4px 6px -4px rgba(0, 0, 0, 0.1),
+        0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================================================
+   CATEGORY SCROLLBAR
+========================================================= */
+
+.kategori-list::-webkit-scrollbar {
+    height: 4px;
+}
+
+.kategori-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.kategori-list::-webkit-scrollbar-thumb {
+    background: #e2d5ca;
+
+    border-radius: 20px;
+}
+
+.kategori-list::-webkit-scrollbar-thumb:hover {
+    background: #f97316;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .koleksi-filter {
+        width: 100%;
+
+        margin-top: 24px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 12px;
+
+        min-width: 0;
+    }
+
+
+    /* SEARCH FULL WIDTH */
+
+    .koleksi-search {
+        width: 100%;
+
+        max-width: none;
+
+        flex: none;
+
+        min-width: 0;
+    }
+
+
+    .koleksi-search form {
+        width: 100%;
+    }
+
+
+    .koleksi-search input {
+        width: 100%;
+
+        height: 48px;
+
+        font-size: 13px;
+    }
+
+
+    /* CATEGORY DI BAWAH SEARCH */
+
+    .kategori-list {
+        width: 100%;
+
+        flex: none;
+
+        display: flex;
+
+        flex-direction: row;
+
+        flex-wrap: nowrap;
+
+        align-items: center;
+
+        gap: 7px;
+
+        min-width: 0;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        padding: 2px 2px 6px;
+
+        white-space: nowrap;
+
+        /*
+         * Sangat penting:
+         * jangan sampai kategori membungkus
+         */
+        scrollbar-width: thin;
+    }
+
+
+    .kategori-btn {
+        flex: 0 0 auto;
+
+        height: 38px;
+
+        padding: 7px 13px;
+
+        font-size: 12px;
+
+        border-radius: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .koleksi-filter {
+
+        /*
+         * Jarak Search → Kategori
+         * dibuat kecil
+         */
+        margin-top: 18px;
+
+        gap: 8px;
+    }
+
+
+    .koleksi-search {
+
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+
+    .koleksi-search input {
+
+        width: 100%;
+
+        height: 44px;
+
+        padding: 10px 14px;
+
+        border-radius: 12px;
+
+        font-size: 12px;
+    }
+
+
+    /* ==========================================
+       CATEGORY
+    ========================================== */
+
+    .kategori-list {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        height: 42px;
+
+        display: flex;
+
+        flex-wrap: nowrap;
+
+        gap: 6px;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        padding: 1px 2px 5px;
+
+        box-sizing: border-box;
+
+        /*
+         * Hanya kategori yang scroll,
+         * bukan seluruh halaman
+         */
+        touch-action: pan-x;
+
+        scrollbar-width: none;
+    }
+
+
+    /*
+     * Hilangkan scrollbar di HP
+     */
+    .kategori-list::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    /* ==========================================
+       BUTTON KATEGORI
+    ========================================== */
+
+    .kategori-btn {
+
+        flex: 0 0 auto;
+
+        height: 36px;
+
+        min-height: 36px;
+
+        padding: 6px 12px;
+
+        border-width: 1px;
+
+        border-radius: 9px;
+
+        font-size: 10px;
+
+        line-height: 18px;
+
+        white-space: nowrap;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE SANGAT KECIL
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .koleksi-filter {
+
+        margin-top: 16px;
+
+        gap: 7px;
+    }
+
+
+    .koleksi-search input {
+
+        height: 42px;
+
+        font-size: 11px;
+
+        padding-left: 13px;
+
+        padding-right: 13px;
+    }
+
+
+    .kategori-list {
+
+        height: 40px;
+
+        gap: 5px;
+    }
+
+
+    .kategori-btn {
+
+        height: 34px;
+
+        min-height: 34px;
+
+        padding: 5px 10px;
+
+        font-size: 9px;
+
+        border-radius: 8px;
+    }
+
+}
+
+/* =========================================================
+   BOOK GRID
+========================================================= */
+
+.buku-grid {
+    width: 100%;
+
+    margin-top: 40px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================================================
+   BOOK CARD
+========================================================= */
+
+.buku-card {
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #ffedd4;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 1px 2px -1px rgba(0, 0, 0, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.1);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.buku-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 15px -5px rgba(0, 0, 0, 0.12),
+        0 5px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   BOOK COVER
+========================================================= */
+
+.buku-cover {
+    width: 100%;
+    height: 192px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buku-cover img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0.8;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.buku-card:hover .buku-cover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   COVER COLORS
+========================================================= */
+
+.cover-yellow {
+    background: #fde68a;
+}
+
+.cover-red {
+    background: #fca5a5;
+}
+
+.cover-cyan {
+    background: #a5f3fc;
+}
+
+.cover-purple {
+    background: #c4b5fd;
+}
+
+.cover-green {
+    background: #86efac;
+}
+
+.cover-orange {
+    background: #fed7aa;
+}
+
+
+/* =========================================================
+   BOOK CONTENT
+========================================================= */
+
+.buku-content {
+    padding: 20px;
+}
+
+.buku-top {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   CATEGORY LABEL
+========================================================= */
+
+.buku-kategori {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 3px 8px;
+
+    background: #fff7ed;
+
+    border-radius: 999999px;
+
+    color: #ff6900;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    line-height: 16px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   BOOK RATING
+========================================================= */
+
+.buku-rating {
+    display: flex;
+    align-items: center;
+
+    gap: 2px;
+
+    white-space: nowrap;
+}
+
+.buku-rating span {
+    color: #ffb900;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 24px;
+}
+
+.buku-rating .star-empty {
+    color: #d1d5dc;
+}
+
+
+/* =========================================================
+   BOOK TITLE
+========================================================= */
+
+.buku-content h3 {
+    margin: 12px 0 0;
+
+    color: #1d293d;
+
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+
+    line-height: 22.5px;
+}
+
+
+/* =========================================================
+   AUTHOR
+========================================================= */
+
+.buku-penulis {
+    margin: 4px 0 0;
+
+    color: #62748e;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 20px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.buku-deskripsi {
+    min-height: 46px;
+
+    margin: 12px 0 0;
+
+    color: #45556c;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 22.75px;
+
+    display: -webkit-box;
+
+        line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   BOOK FOOTER
+========================================================= */
+
+.buku-footer {
+    margin-top: 16px;
+    padding-top: 12px;
+
+    border-top: 1px solid #fff7ed;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+.buku-ulasan {
+    color: #90a1b9;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    line-height: 16px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   BUTTON PINJAM
+========================================================= */
+
+.btn-pinjam {
+    padding: 8px 16px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #f97316 0%,
+        #f59e0b 100%
+    );
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 20px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.btn-pinjam:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 10px -6px rgba(0, 0, 0, 0.15),
+        0 12px 18px -6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-antri {
+    background: #f1f5f9;
+
+    color: #90a1b9;
+
+    box-shadow: none;
+}
+
+.btn-antri:hover {
+    transform: none;
+
+    background: #e2e8f0;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   LIHAT SEMUA KOLEKSI
+========================================================= */
+
+.koleksi-more {
+    width: 100%;
+
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.btn-semua-koleksi {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 16px 32px;
+
+    background: linear-gradient(
+        135deg,
+        #f97316 0%,
+        #f59e0b 100%
+    );
+
+    border-radius: 16px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+
+    line-height: 24px;
+
+    box-shadow:
+        0 8px 10px -6px rgba(0, 0, 0, 0.1),
+        0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.btn-semua-koleksi:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 15px -6px rgba(0, 0, 0, 0.15),
+        0 20px 25px -5px rgba(0, 0, 0, 0.12);
+}
+
+.btn-semua-koleksi .arrow {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes lineGrow {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 200px;
+    }
+}
+
+@keyframes lineWave {
+    0%,
+    100% {
+        transform: rotate(-1deg) scaleX(1);
+    }
+
+    50% {
+        transform: rotate(1deg) scaleX(1.05);
+    }
+}
+
+@keyframes waveHand {
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(15deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes floatingBook1 {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes floatingBook2 {
+    0%,
+    100% {
+        transform: rotate(-3deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(-1deg) translateY(-12px);
+    }
+}
+
+@keyframes floatingBook3 {
+    0%,
+    100% {
+        transform: rotate(-1deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(1deg) translateY(-15px);
+    }
+}
+
+@keyframes iconFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes mascotFloat {
+    0%,
+    100% {
+        transform: rotate(-3deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(3deg) translateY(-12px);
+    }
+}
+
+@keyframes badgeFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes emojiFloat {
+    0%,
+    100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(5deg);
+    }
+}
+
+@keyframes starPulse {
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.25) rotate(15deg);
+        opacity: 1;
+    }
+}
+
+@keyframes glowMove {
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(20px, -20px) scale(1.08);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .welcome-page {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .hero-container {
+        gap: 20px;
+    }
+
+    .hero-content {
+        width: 55%;
+    }
+
+    .hero-illustration {
+        width: 430px;
+
+        transform: scale(0.88);
+        transform-origin: top left;
+    }
+
+    .koleksi-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .koleksi-search {
+        max-width: none;
+    }
+
+    .kategori-list {
+        width: 100%;
+
+        overflow-x: auto;
+
+        padding-bottom: 5px;
+    }
+
+    .buku-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar-menu {
+        display: none;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .welcome-page {
+        min-height: auto;
+
+        padding:
+            35px
+            20px
+            70px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 50px;
+    }
+
+    .hero-content {
+        width: 100%;
+
+        max-width: 600px;
+
+        text-align: center;
+    }
+
+    .welcome-badge {
+        margin: 0 auto;
+    }
+
+    .hero-title {
+        font-size: 46px;
+    }
+
+    .title-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .login-buttons {
+        align-items: center;
+    }
+
+    .statistics {
+        justify-content: center;
+    }
+
+    .hero-illustration {
+        width: 500px;
+
+        margin-top: 0;
+    }
+
+    .emoji-star,
+    .emoji-note,
+    .emoji-light,
+    .emoji-graduate {
+        display: none;
+    }
+
+    .koleksi-section {
+        padding: 48px 16px;
+    }
+
+    .koleksi-header h2 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .koleksi-header p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .buku-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .buku-cover {
+        height: 210px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .navbar-container {
+        padding: 12px 16px;
+    }
+
+    .brand-school {
+        display: none;
+    }
+
+    .btn-login,
+    .btn-register {
+        padding: 8px 12px;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    .welcome-page {
+        padding:
+            30px
+            16px
+            60px;
+    }
+
+    .hero-title {
+        font-size: 38px;
+
+        letter-spacing: -1px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .login-btn {
+        width: 100%;
+
+        min-width: 0;
+
+        justify-content: center;
+    }
+
+    .statistics {
+        gap: 18px;
+    }
+
+    .stat-item strong {
+        font-size: 17px;
+    }
+
+    .stat-item span {
+        font-size: 10px;
+
+        white-space: normal;
+    }
+
+    .hero-illustration {
+        width: 360px;
+        height: 430px;
+
+        transform: scale(0.78);
+        transform-origin: top center;
+
+        margin-bottom: -70px;
+    }
+
+    .koleksi-section {
+        padding: 40px 12px;
+    }
+
+    .koleksi-header h2 {
+        font-size: 25px;
+        line-height: 31px;
+    }
+
+    .buku-content {
+        padding: 16px;
+    }
+
+    .buku-footer {
+        align-items: flex-end;
+    }
+
+    .btn-pinjam {
+        padding: 8px 12px;
+
+        font-size: 12px;
+    }
+
+    .btn-semua-koleksi {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   CARA KERJA
+========================================================= */
+
+.cara-kerja-section {
+    width: 100%;
+    padding: 64px 24px;
+
+    background: linear-gradient(
+        135deg,
+        #FFF7ED 0%,
+        #FEF3C7 100%
+    );
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.cara-kerja-container {
+    width: 100%;
+    max-width: 1280px;
+
+    margin: 0 auto;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.cara-kerja-header {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* Judul */
+
+.cara-kerja-header h2 {
+    margin: 0;
+
+    color: #1E293B;
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 36px;
+
+    font-weight: 900;
+
+    line-height: 40px;
+}
+
+
+/* Deskripsi */
+
+.cara-kerja-header p {
+    margin: 12px 0 0;
+
+    color: #62748E;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    line-height: 24px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   GRID 3 KARTU
+========================================================= */
+
+.cara-kerja-grid {
+    width: 100%;
+
+    padding-top: 48px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.cara-kerja-card {
+    width: 100%;
+
+    min-height: 350px;
+
+    padding: 32px;
+
+    background: #FFFFFF;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0px 1px 2px -1px rgba(0, 0, 0, 0.10),
+        0px 1px 3px rgba(0, 0, 0, 0.10);
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Hover */
+
+.cara-kerja-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0px 8px 15px -5px rgba(0, 0, 0, 0.12),
+        0px 5px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   ICON WRAPPER
+========================================================= */
+
+.cara-kerja-icon-wrap {
+    width: 64px;
+    height: 64px;
+
+    margin-bottom: 20px;
+
+    border-radius: 16px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+        0px 4px 6px -4px rgba(0, 0, 0, 0.10),
+        0px 10px 15px -3px rgba(0, 0, 0, 0.10);
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   ICON BACKGROUND
+========================================================= */
+
+.icon-orange {
+    background: rgba(249, 115, 22, 0.08);
+}
+
+
+.icon-purple {
+    background: rgba(139, 92, 246, 0.08);
+}
+
+
+.icon-teal {
+    background: rgba(13, 148, 136, 0.08);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.cara-kerja-icon {
+    color: #000000;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+    line-height: 36px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   NOMOR LANGKAH
+========================================================= */
+
+.cara-kerja-number {
+    width: 32px;
+    height: 32px;
+
+    margin-bottom: 16px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    color: #FFFFFF;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 900;
+
+    line-height: 20px;
+
+    box-shadow:
+        0px 2px 4px -2px rgba(0, 0, 0, 0.10),
+        0px 4px 6px -1px rgba(0, 0, 0, 0.10);
+
+    flex-shrink: 0;
+}
+
+
+/* Warna nomor */
+
+.number-orange {
+    background: #F97316;
+}
+
+
+.number-purple {
+    background: #8B5CF6;
+}
+
+
+.number-teal {
+    background: #0D9488;
+}
+
+
+/* =========================================================
+   JUDUL CARD
+========================================================= */
+
+.cara-kerja-title {
+    width: 100%;
+
+    color: #1E293B;
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+    line-height: 28px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   DESKRIPSI CARD
+========================================================= */
+
+.cara-kerja-description {
+    width: 100%;
+
+    max-width: 241px;
+
+    margin: 12px auto 0;
+
+    color: #62748E;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    line-height: 22.75px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   RESPONSIVE TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .cara-kerja-section {
+        padding: 56px 24px;
+    }
+
+
+    .cara-kerja-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 20px;
+    }
+
+
+    .cara-kerja-card:last-child {
+        grid-column: 1 / -1;
+
+        max-width: 420px;
+
+        margin: 0 auto;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .cara-kerja-section {
+        padding: 48px 16px;
+    }
+
+
+    .cara-kerja-header h2 {
+        font-size: 30px;
+
+        line-height: 36px;
+    }
+
+
+    .cara-kerja-header p {
+        font-size: 14px;
+
+        line-height: 22px;
+    }
+
+
+    .cara-kerja-grid {
+        grid-template-columns: 1fr;
+
+        padding-top: 36px;
+
+        gap: 18px;
+    }
+
+
+    .cara-kerja-card {
+        min-height: auto;
+
+        padding: 28px 24px;
+    }
+
+
+    .cara-kerja-card:last-child {
+        grid-column: auto;
+
+        max-width: none;
+    }
+
+
+    .cara-kerja-description {
+        max-width: 300px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .cara-kerja-section {
+        padding: 40px 12px;
+    }
+
+
+    .cara-kerja-header h2 {
+        font-size: 26px;
+
+        line-height: 32px;
+    }
+
+
+    .cara-kerja-header p {
+        font-size: 13px;
+    }
+
+
+    .cara-kerja-card {
+        padding: 24px 18px;
+
+        border-radius: 20px;
+    }
+
+
+    .cara-kerja-title {
+        font-size: 18px;
+
+        line-height: 26px;
+    }
+
+
+    .cara-kerja-description {
+        font-size: 13px;
+
+        line-height: 21px;
+    }
+
+}
+
+/* =========================================================
+   CTA / AJAKAN MEMBACA
+========================================================= */
+
+.cta-section {
+    width: 100%;
+
+    padding: 64px 24px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.cta-container {
+    width: 100%;
+
+    max-width: 1025px;
+
+    margin: 0 auto;
+
+    padding-left: 24px;
+    padding-right: 24px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   CTA CARD
+========================================================= */
+
+.cta-card {
+    width: 100%;
+
+    max-width: 896px;
+
+    min-height: 392px;
+
+    padding: 48px;
+
+    position: relative;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background: linear-gradient(
+        135deg,
+        #F97316 0%,
+        #F59E0B 50%,
+        #FCD34D 100%
+    );
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   CTA CONTENT
+========================================================= */
+
+.cta-content {
+    width: 100%;
+
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.cta-title {
+    width: 100%;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 36px;
+
+    font-weight: 900;
+
+    line-height: 40px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.cta-description {
+    width: 100%;
+
+    max-width: 512px;
+
+    margin: 16px 0 0;
+
+    color: rgba(255, 255, 255, 0.90);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    line-height: 28px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   BUTTON CONTAINER
+========================================================= */
+
+.cta-buttons {
+    width: 100%;
+
+    margin-top: 32px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    gap: 16px;
+}
+
+
+/* =========================================================
+   BUTTON GENERAL
+========================================================= */
+
+.cta-button {
+    min-height: 60px;
+
+    padding: 16px 32px;
+
+    box-sizing: border-box;
+
+    border-radius: 16px;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 16px;
+
+    line-height: 24px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.cta-button-primary {
+    background: #ffffff;
+
+    color: #F54900;
+
+    font-weight: 900;
+
+    box-shadow:
+        0px 8px 10px -6px rgba(0, 0, 0, 0.10),
+        0px 20px 25px -5px rgba(0, 0, 0, 0.10);
+}
+
+
+.cta-button-primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0px 12px 15px -6px rgba(0, 0, 0, 0.15),
+        0px 20px 30px -5px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.cta-button-secondary {
+    background: rgba(255, 255, 255, 0.20);
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    border: 2px solid rgba(255, 255, 255, 0.40);
+
+    box-shadow: none;
+}
+
+
+.cta-button-secondary:hover {
+    background: rgba(255, 255, 255, 0.30);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0px 8px 15px -5px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   DECORATION GENERAL
+========================================================= */
+
+.cta-decoration {
+    position: absolute;
+
+    z-index: 2;
+
+    user-select: none;
+
+    pointer-events: none;
+
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================================
+   BOOK
+========================================================= */
+
+.decoration-book {
+    left: 44px;
+
+    top: 30px;
+
+    font-size: 32px;
+
+    line-height: 43px;
+
+    transform: rotate(-2deg);
+
+    animation: ctaFloatBook 4s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   STAR
+========================================================= */
+
+.decoration-star {
+    right: 78px;
+
+    top: 72px;
+
+    font-size: 24px;
+
+    line-height: 32px;
+
+    transform: rotate(-1deg);
+
+    animation: ctaStarPulse 3s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   GRADUATION
+========================================================= */
+
+.decoration-graduate {
+    left: 72px;
+
+    bottom: 68px;
+
+    font-size: 24px;
+
+    line-height: 32px;
+
+    transform: rotate(2deg);
+
+    animation: ctaFloat 4.5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   SPARKLE
+========================================================= */
+
+.decoration-sparkle {
+    right: 78px;
+
+    bottom: 55px;
+
+    font-size: 32px;
+
+    line-height: 43px;
+
+    transform: rotate(-2deg);
+
+    animation: ctaStarPulse 3.5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   ROCKET
+========================================================= */
+
+.decoration-rocket {
+    left: 50%;
+
+    top: 38px;
+
+    font-size: 48px;
+
+    line-height: 48px;
+
+    transform: translateX(-50%) rotate(-1deg);
+
+    animation: ctaRocketFloat 3s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   ANIMATION - FLOAT
+========================================================= */
+
+@keyframes ctaFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(2deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(4deg);
+    }
+
+}
+
+
+/* =========================================================
+   ANIMATION - BOOK
+========================================================= */
+
+@keyframes ctaFloatBook {
+
+    0%,
+    100% {
+        transform: rotate(-2deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(2deg) translateY(-8px);
+    }
+
+}
+
+
+/* =========================================================
+   ANIMATION - STAR
+========================================================= */
+
+@keyframes ctaStarPulse {
+
+    0%,
+    100% {
+        opacity: 0.8;
+
+        transform: scale(1) rotate(-2deg);
+    }
+
+    50% {
+        opacity: 1;
+
+        transform: scale(1.15) rotate(8deg);
+    }
+
+}
+
+
+/* =========================================================
+   ANIMATION - ROCKET
+========================================================= */
+
+@keyframes ctaRocketFloat {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0) rotate(-1deg);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-8px) rotate(3deg);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .cta-section {
+        padding: 56px 20px;
+    }
+
+
+    .cta-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    .cta-card {
+        max-width: 100%;
+
+        padding: 48px 32px;
+    }
+
+
+    .cta-title {
+        font-size: 32px;
+
+        line-height: 38px;
+    }
+
+
+    .cta-description {
+        font-size: 16px;
+
+        line-height: 26px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .cta-section {
+        padding: 48px 16px;
+    }
+
+
+    .cta-card {
+        min-height: auto;
+
+        padding: 48px 24px;
+
+        border-radius: 20px;
+    }
+
+
+    .cta-title {
+        font-size: 28px;
+
+        line-height: 34px;
+    }
+
+
+    .cta-description {
+        max-width: 400px;
+
+        font-size: 15px;
+
+        line-height: 24px;
+    }
+
+
+    .cta-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 12px;
+    }
+
+
+    .cta-button {
+        width: 100%;
+
+        min-height: 56px;
+
+        padding: 14px 20px;
+    }
+
+
+    .decoration-book {
+        left: 20px;
+
+        top: 22px;
+
+        font-size: 26px;
+    }
+
+
+    .decoration-star {
+        right: 20px;
+
+        top: 28px;
+
+        font-size: 20px;
+    }
+
+
+    .decoration-graduate {
+        left: 20px;
+
+        bottom: 22px;
+
+        font-size: 20px;
+    }
+
+
+    .decoration-sparkle {
+        right: 20px;
+
+        bottom: 22px;
+
+        font-size: 26px;
+    }
+
+
+    .decoration-rocket {
+        top: 18px;
+
+        font-size: 34px;
+
+        line-height: 38px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .cta-section {
+        padding: 40px 12px;
+    }
+
+
+    .cta-card {
+        padding: 42px 18px;
+
+        border-radius: 18px;
+    }
+
+
+    .cta-title {
+        font-size: 24px;
+
+        line-height: 31px;
+    }
+
+
+    .cta-description {
+        margin-top: 12px;
+
+        font-size: 14px;
+
+        line-height: 22px;
+    }
+
+
+    .cta-buttons {
+        margin-top: 24px;
+    }
+
+
+    .cta-button {
+        font-size: 14px;
+
+        line-height: 22px;
+    }
+
+
+    .decoration-book {
+        left: 14px;
+
+        top: 16px;
+    }
+
+
+    .decoration-star {
+        right: 14px;
+
+        top: 20px;
+    }
+
+
+    .decoration-graduate {
+        left: 14px;
+
+        bottom: 14px;
+    }
+
+
+    .decoration-sparkle {
+        right: 14px;
+
+        bottom: 14px;
+    }
+
+}
+
+/* =========================================================
+   MODAL LOGIN & REGISTER
+========================================================= */
+
+/* Modal dalam keadaan TERSEMBUNYI */
+.modal {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(15, 23, 42, 0.65);
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    z-index: 99999;
+
+    overflow-y: auto;
+}
+
+
+/* Modal ketika DIBUKA */
+.modal.modal-show {
+    display: flex;
+}
+
+
+/* Body ketika modal dibuka */
+body.modal-open {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   KOTAK MODAL
+========================================================= */
+
+.modal-content {
+    position: relative;
+
+    width: 100%;
+    max-width: 480px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    border-radius: 24px;
+
+    padding: 32px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.25);
+
+    animation: modalOpenAnimation 0.25s ease;
+}
+
+
+/* Animasi */
+@keyframes modalOpenAnimation {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-20px) scale(0.97);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.close-btn {
+
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    background: #f1f5f9;
+
+    color: #334155;
+
+    border-radius: 50%;
+
+    font-size: 27px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.close-btn:hover {
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    transform: rotate(90deg);
+
+}
+
+
+/* =========================================================
+   HEADER MODAL
+========================================================= */
+
+.modal-header {
+
+    text-align: center;
+
+    margin-bottom: 24px;
+
+}
+
+
+.modal-icon {
+
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #fff7ed;
+
+    font-size: 28px;
+}
+
+
+.modal-header h2 {
+
+    margin: 0 0 7px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+    color: #1e293b;
+
+}
+
+
+.modal-header p {
+
+    margin: 0;
+
+    font-family: "Nunito", sans-serif;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   FORM REGISTER
+========================================================= */
+
+.register-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+
+}
+
+
+.input-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.input-group label {
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #334155;
+
+}
+
+
+.input-group input {
+
+    width: 100%;
+
+    height: 46px;
+
+    padding: 0 14px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 11px;
+
+    outline: none;
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 14px;
+
+    color: #1e293b;
+
+    background: #ffffff;
+
+    transition: 0.2s ease;
+}
+
+
+.input-group input:focus {
+
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+
+}
+
+
+/* =========================================================
+   BUTTON REGISTER
+========================================================= */
+
+.register-submit {
+
+    width: 100%;
+
+    min-height: 48px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.register-submit:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =========================================================
+   LINK LOGIN
+========================================================= */
+
+.register-link {
+
+    text-align: center;
+
+    margin-top: 2px;
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 14px;
+
+    color: #64748b;
+
+}
+
+
+.register-link a {
+
+    color: #2563eb;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    margin-left: 4px;
+
+}
+
+
+.register-link a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   PESAN SUKSES
+========================================================= */
+
+.register-success {
+
+    background: #dcfce7;
+
+    color: #166534;
+
+    border: 1px solid #86efac;
+
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    margin-bottom: 18px;
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   PESAN ERROR
+========================================================= */
+
+.register-error {
+
+    background: #fee2e2;
+
+    color: #991b1b;
+
+    border: 1px solid #fecaca;
+
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    margin-bottom: 18px;
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 14px;
+
+}
+
+
+.register-error ul {
+
+    margin: 7px 0 0 18px;
+
+    padding: 0;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .modal {
+
+        padding: 12px;
+
+    }
+
+
+    .modal-content {
+
+        max-width: 100%;
+
+        padding: 25px 20px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .modal-header h2 {
+
+        font-size: 23px;
+
+    }
+
+}
+
+
+.role-section {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 64px 24px;
+    background: linear-gradient(
+        135deg,
+        #f0fdfa 0%,
+        #ecfdf5 100%
+    );
+}
+
+.role-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.role-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.role-header h2 {
+    margin: 0;
+    color: #1e293b;
+    font-family: "Nunito", sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 40px;
+}
+
+.role-header p {
+    margin: 12px 0 0;
+    color: #62748e;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+
+/* =========================================================
+   CARD WRAPPER
+========================================================= */
+
+.role-cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   CARD UTAMA
+========================================================= */
+
+.role-card {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    padding: 32px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.role-card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   CARD SISWA
+========================================================= */
+
+.role-card-siswa {
+    background: linear-gradient(
+        135deg,
+        #fff7ed 0%,
+        #fef3c7 100%
+    );
+}
+
+.role-card-siswa:hover {
+    box-shadow: 0 15px 35px rgba(249, 115, 22, 0.15);
+}
+
+
+/* =========================================================
+   CARD PETUGAS
+========================================================= */
+
+.role-card-petugas {
+    background: linear-gradient(
+        135deg,
+        #f0fdfa 0%,
+        #ccfbf1 100%
+    );
+}
+
+.role-card-petugas:hover {
+    box-shadow: 0 15px 35px rgba(13, 148, 136, 0.15);
+}
+
+
+/* =========================================================
+   HEADER CARD
+========================================================= */
+
+.role-card-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.role-icon {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+
+    box-shadow:
+        0 1px 2px -1px rgba(0, 0, 0, 0.10),
+        0 1px 3px rgba(0, 0, 0, 0.10);
+}
+
+.role-icon-siswa {
+    background: #ffedd4;
+}
+
+.role-icon-petugas {
+    background: #cbfbf1;
+}
+
+
+/* =========================================================
+   JUDUL CARD
+========================================================= */
+
+.role-title {
+    min-width: 0;
+}
+
+.role-title h3 {
+    margin: 0;
+
+    color: #1e293b;
+    font-family: "Nunito", sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 32px;
+}
+
+.role-title span {
+    display: block;
+    margin-top: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.role-card-siswa .role-title span {
+    color: #ff6900;
+}
+
+.role-card-petugas .role-title span {
+    color: #009689;
+}
+
+
+/* =========================================================
+   FITUR
+========================================================= */
+
+.role-features {
+    width: 100%;
+    margin-top: 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.role-feature {
+    color: #314158;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+
+    min-height: 20px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================================================
+   BUTTON WRAPPER
+========================================================= */
+
+.role-button-wrapper {
+    width: 100%;
+    margin-top: 32px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.role-button {
+    width: 100%;
+    min-height: 52px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+
+    box-shadow:
+        0 4px 6px -4px rgba(0, 0, 0, 0.10),
+        0 10px 15px -3px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.role-button:hover {
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.role-button:active {
+    transform: translateY(0);
+}
+
+
+/* SISWA */
+
+.role-button-siswa {
+    background: linear-gradient(
+        135deg,
+        #f97316 0%,
+        #f59e0b 100%
+    );
+}
+
+.role-button-siswa:hover {
+    box-shadow:
+        0 8px 12px -4px rgba(249, 115, 22, 0.25),
+        0 15px 20px -5px rgba(249, 115, 22, 0.20);
+}
+
+
+/* PETUGAS */
+
+.role-button-petugas {
+    background: linear-gradient(
+        135deg,
+        #0d9488 0%,
+        #0891b2 100%
+    );
+}
+
+.role-button-petugas:hover {
+    box-shadow:
+        0 8px 12px -4px rgba(13, 148, 136, 0.25),
+        0 15px 20px -5px rgba(13, 148, 136, 0.20);
+}
+
+
+/* =========================================================
+   DEKORASI EMOJI BESAR
+========================================================= */
+
+.role-decoration {
+    position: absolute;
+    right: -8px;
+    top: -16px;
+
+    opacity: 0.10;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 96px;
+    line-height: 96px;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .role-section {
+        padding: 50px 20px;
+    }
+
+    .role-cards {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .role-card {
+        padding: 28px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE HP
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .role-section {
+        padding: 40px 16px;
+    }
+
+    .role-header {
+        margin-bottom: 32px;
+    }
+
+    .role-header h2 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .role-header p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .role-card {
+        padding: 24px;
+        border-radius: 20px;
+    }
+
+    .role-card-header {
+        gap: 12px;
+    }
+
+    .role-icon {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        border-radius: 14px;
+        font-size: 26px;
+    }
+
+    .role-title h3 {
+        font-size: 21px;
+        line-height: 28px;
+    }
+
+    .role-title span {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .role-features {
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .role-feature {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    .role-button-wrapper {
+        margin-top: 28px;
+    }
+
+    .role-button {
+        min-height: 50px;
+        font-size: 14px;
+    }
+
+    .role-decoration {
+        font-size: 75px;
+        line-height: 75px;
+    }
+
+}
+
+
+/* =========================================================
+   FOOTER PERPUSTAKAAN
+========================================================= */
+
+.library-footer {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 48px 24px;
+    background: #0f172b;
+
+    /* FIX FOOTER */
+    margin-top: 0;
+    flex-shrink: 0;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FOOTER CONTENT
+========================================================= */
+
+.footer-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(0, 1fr)
+        minmax(0, 1.2fr);
+    gap: 48px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.footer-brand {
+    width: 100%;
+    min-width: 0;
+}
+
+.footer-brand-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #ff8904 0%,
+        #ffb900 100%
+    );
+
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.footer-brand-text {
+    min-width: 0;
+}
+
+.footer-brand-text h3 {
+    margin: 0;
+
+    color: #ffffff;
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 28px;
+}
+
+.footer-brand-text span {
+    display: block;
+    margin: 0;
+
+    color: #ff8904;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.footer-description {
+    max-width: 305px;
+    margin: 16px 0 0;
+
+    color: #90a1b9;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22.75px;
+}
+
+
+/* =========================================================
+   FOOTER COLUMN
+========================================================= */
+
+.footer-column {
+    width: 100%;
+    min-width: 0;
+}
+
+.footer-column h4 {
+    margin: 0;
+
+    color: #ffffff;
+    font-family: "Nunito", sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 20px;
+}
+
+
+/* =========================================================
+   MENU LINKS
+========================================================= */
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-top: 16px;
+}
+
+.footer-links a {
+    display: block;
+
+    color: #90a1b9;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #ff8904;
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   JAM OPERASIONAL
+========================================================= */
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-top: 16px;
+}
+
+.footer-info div {
+    color: #90a1b9;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+    width: 100%;
+    box-sizing: border-box;
+
+    margin-top: 32px;
+    padding-top: 24px;
+
+    border-top: 1px solid #1d293d;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.footer-copyright,
+.footer-made {
+    color: #62748e;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.footer-made {
+    text-align: right;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .library-footer {
+        padding: 44px 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 36px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-description {
+        max-width: 500px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-made {
+        text-align: left;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .library-footer {
+        padding: 40px 16px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-description {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        margin-top: 28px;
+        padding-top: 20px;
+        gap: 10px;
+    }
+
+    .footer-copyright,
+    .footer-made {
+        font-size: 12px;
+        line-height: 19px;
+    }
+
+}
+
+
+/* =========================================================
+   SECTION ROLE SISWA & PETUGAS
+========================================================= */
+
+.role-section {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 64px 24px;
+    background: linear-gradient(
+        135deg,
+        #f0fdfa 0%,
+        #ecfdf5 100%
+    );
+}
+
+.role-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.role-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.role-header h2 {
+    margin: 0;
+    color: #1e293b;
+    font-family: "Nunito", sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 40px;
+}
+
+.role-header p {
+    margin: 12px 0 0;
+    color: #62748e;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+
+/* =========================================================
+   CARD WRAPPER
+========================================================= */
+
+.role-cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   CARD UTAMA
+========================================================= */
+
+.role-card {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    padding: 32px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.role-card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   CARD SISWA
+========================================================= */
+
+.role-card-siswa {
+    background: linear-gradient(
+        135deg,
+        #fff7ed 0%,
+        #fef3c7 100%
+    );
+}
+
+.role-card-siswa:hover {
+    box-shadow: 0 15px 35px rgba(249, 115, 22, 0.15);
+}
+
+
+/* =========================================================
+   CARD PETUGAS
+========================================================= */
+
+.role-card-petugas {
+    background: linear-gradient(
+        135deg,
+        #f0fdfa 0%,
+        #ccfbf1 100%
+    );
+}
+
+.role-card-petugas:hover {
+    box-shadow: 0 15px 35px rgba(13, 148, 136, 0.15);
+}
+
+
+/* =========================================================
+   HEADER CARD
+========================================================= */
+
+.role-card-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.role-icon {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+
+    box-shadow:
+        0 1px 2px -1px rgba(0, 0, 0, 0.10),
+        0 1px 3px rgba(0, 0, 0, 0.10);
+}
+
+.role-icon-siswa {
+    background: #ffedd4;
+}
+
+.role-icon-petugas {
+    background: #cbfbf1;
+}
+
+
+/* =========================================================
+   JUDUL CARD
+========================================================= */
+
+.role-title {
+    min-width: 0;
+}
+
+.role-title h3 {
+    margin: 0;
+
+    color: #1e293b;
+    font-family: "Nunito", sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 32px;
+}
+
+.role-title span {
+    display: block;
+    margin-top: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.role-card-siswa .role-title span {
+    color: #ff6900;
+}
+
+.role-card-petugas .role-title span {
+    color: #009689;
+}
+
+
+/* =========================================================
+   FITUR
+========================================================= */
+
+.role-features {
+    width: 100%;
+    margin-top: 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.role-feature {
+    color: #314158;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+
+    min-height: 20px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================================================
+   BUTTON WRAPPER
+========================================================= */
+
+.role-button-wrapper {
+    width: 100%;
+    margin-top: 32px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.role-button {
+    width: 100%;
+    min-height: 52px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+
+    box-shadow:
+        0 4px 6px -4px rgba(0, 0, 0, 0.10),
+        0 10px 15px -3px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.role-button:hover {
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.role-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   SISWA
+========================================================= */
+
+.role-button-siswa {
+    background: linear-gradient(
+        135deg,
+        #f97316 0%,
+        #f59e0b 100%
+    );
+}
+
+.role-button-siswa:hover {
+    box-shadow:
+        0 8px 12px -4px rgba(249, 115, 22, 0.25),
+        0 15px 20px -5px rgba(249, 115, 22, 0.20);
+}
+
+
+/* =========================================================
+   PETUGAS
+========================================================= */
+
+.role-button-petugas {
+    background: linear-gradient(
+        135deg,
+        #0d9488 0%,
+        #0891b2 100%
+    );
+}
+
+.role-button-petugas:hover {
+    box-shadow:
+        0 8px 12px -4px rgba(13, 148, 136, 0.25),
+        0 15px 20px -5px rgba(13, 148, 136, 0.20);
+}
+
+
+/* =========================================================
+   DEKORASI EMOJI BESAR
+========================================================= */
+
+.role-decoration {
+    position: absolute;
+    right: -8px;
+    top: -16px;
+
+    opacity: 0.10;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 96px;
+    line-height: 96px;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .role-section {
+        padding: 50px 20px;
+    }
+
+    .role-cards {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .role-card {
+        padding: 28px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE HP
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .role-section {
+        padding: 40px 16px;
+    }
+
+    .role-header {
+        margin-bottom: 32px;
+    }
+
+    .role-header h2 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .role-header p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .role-card {
+        padding: 24px;
+        border-radius: 20px;
+    }
+
+    .role-card-header {
+        gap: 12px;
+    }
+
+    .role-icon {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        border-radius: 14px;
+        font-size: 26px;
+    }
+
+    .role-title h3 {
+        font-size: 21px;
+        line-height: 28px;
+    }
+
+    .role-title span {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .role-features {
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .role-feature {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    .role-button-wrapper {
+        margin-top: 28px;
+    }
+
+    .role-button {
+        min-height: 50px;
+        font-size: 14px;
+    }
+
+    .role-decoration {
+        font-size: 75px;
+        line-height: 75px;
+    }
+
+}
+
+
+/* =========================================================
+   FIX AGAR FOOTER BERADA DI BAGIAN PALING BAWAH
+========================================================= */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.welcome-page {
+    width: 100%;
+    flex: 1 0 auto;
+}
+
+.library-footer {
+    width: 100%;
+    flex-shrink: 0;
+    margin-top: auto;
+    box-sizing: border-box;
+}
+/* =========================================================
+   RESPONSIVE TAMBAHAN - AGAR HP MIRIP DESKTOP
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* =========================
+       GLOBAL
+    ========================= */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .app,
+    .main-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .navbar-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px 16px;
+    }
+
+    .navbar-brand {
+        min-width: 0;
+    }
+
+    .brand-text {
+        min-width: 0;
+    }
+
+    .brand-title {
+        font-size: 16px;
+    }
+
+    .navbar-buttons {
+        gap: 8px;
+    }
+
+    .btn-login,
+    .btn-register {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .welcome-page {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero-section {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .hero-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: clamp(32px, 9vw, 46px);
+        word-break: normal;
+    }
+
+    .hero-description {
+        width: 100%;
+        max-width: 510px;
+        font-size: 15px;
+    }
+
+    .login-buttons {
+        width: 100%;
+    }
+
+    .login-btn {
+        width: 285px;
+        max-width: 100%;
+    }
+
+
+    /* =========================
+       STATISTIK
+    ========================= */
+
+    .statistics {
+        width: 100%;
+        max-width: 100%;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+
+    /* =========================
+       ILUSTRASI
+    ========================= */
+
+    .hero-illustration {
+        max-width: 100%;
+        transform: scale(0.75);
+        transform-origin: top center;
+    }
+
+
+    /* =========================
+       KOLEKSI
+    ========================= */
+
+    .koleksi-section {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .koleksi-container {
+        width: 100%;
+        max-width: 1025px;
+    }
+
+
+    /* =========================
+       SEARCH + KATEGORI
+    ========================= */
+
+    .koleksi-filter {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        overflow: visible;
+    }
+
+    .koleksi-search {
+        width: 100%;
+        max-width: 100%;
+        flex: 1 1 auto;
+    }
+
+    .koleksi-search form,
+    .koleksi-search input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .kategori-list {
+        width: 100%;
+        max-width: 100%;
+        flex-wrap: wrap;
+        overflow: visible;
+    }
+
+    .kategori-btn {
+        flex-shrink: 0;
+    }
+
+
+    /* =========================
+       GRID BUKU
+    ========================= */
+
+    .buku-grid {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .buku-card {
+        min-width: 0;
+    }
+
+    .buku-cover {
+        height: 192px;
+    }
+
+    .buku-content {
+        padding: 16px;
+    }
+
+    .buku-content h3 {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .buku-penulis,
+    .buku-deskripsi {
+        font-size: 13px;
+    }
+
+    .buku-footer {
+        flex-wrap: wrap;
+    }
+
+
+    /* =========================
+       CARA KERJA
+    ========================= */
+
+    .cara-kerja-section,
+    .cara-kerja-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cara-kerja-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .cara-kerja-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .cara-kerja-card {
+        min-width: 0;
+        padding: 24px;
+    }
+
+
+    /* =========================
+       ROLE
+    ========================= */
+
+    .role-section,
+    .role-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .role-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .role-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .role-card {
+        min-width: 0;
+        padding: 24px;
+    }
+
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta-section {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .cta-container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .cta-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 40px 24px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .library-footer {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .footer-container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* =========================================================
+   HP KECIL
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .buku-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cara-kerja-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .role-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-illustration {
+        transform: scale(0.65);
+    }
+
+}
+/* =========================================================
+   FIX MOBILE - SEARCH & KATEGORI
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* Container search + kategori */
+    .koleksi-filter {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+
+        margin-top: 16px !important;
+        margin-bottom: 0 !important;
+
+        gap: 4px !important;
+
+        padding: 0 !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+
+    /* =========================
+       SEARCH
+    ========================= */
+
+    .koleksi-search {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        flex: none !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    .koleksi-search form {
+        width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        height: auto !important;
+    }
+
+    .koleksi-search input {
+        width: 100% !important;
+
+        height: 44px !important;
+
+        margin: 0 !important;
+
+        padding: 10px 14px !important;
+
+        border-radius: 12px !important;
+
+        font-size: 12px !important;
+
+        display: block !important;
+    }
+
+
+    /* =========================
+       KATEGORI
+    ========================= */
+
+    .kategori-list {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        flex: none !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+
+        align-items: center !important;
+
+        flex-wrap: nowrap !important;
+
+        gap: 6px !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        height: 38px !important;
+        min-height: 38px !important;
+        max-height: 38px !important;
+
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+
+        white-space: nowrap !important;
+
+        box-sizing: border-box !important;
+
+        scrollbar-width: none !important;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    .kategori-list::-webkit-scrollbar {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+    }
+
+
+    /* =========================
+       TOMBOL KATEGORI
+    ========================= */
+
+    .kategori-btn {
+        flex: 0 0 auto !important;
+
+        height: 34px !important;
+        min-height: 34px !important;
+
+        margin: 0 !important;
+
+        padding: 5px 11px !important;
+
+        border-width: 1px !important;
+
+        border-radius: 9px !important;
+
+        font-size: 10px !important;
+
+        line-height: 18px !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* =========================
+       JARAK KE GRID BUKU
+    ========================= */
+
+    .buku-grid {
+        margin-top: 20px !important;
+    }
+}
+
+
+/* =========================================================
+   HP SANGAT KECIL
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .koleksi-filter {
+        margin-top: 14px !important;
+        gap: 3px !important;
+    }
+
+    .koleksi-search input {
+        height: 42px !important;
+        font-size: 11px !important;
+    }
+
+    .kategori-list {
+        height: 36px !important;
+        min-height: 36px !important;
+        max-height: 36px !important;
+
+        gap: 5px !important;
+    }
+
+    .kategori-btn {
+        height: 32px !important;
+        min-height: 32px !important;
+
+        padding: 4px 9px !important;
+
+        font-size: 9px !important;
+    }
+
+    .buku-grid {
+        margin-top: 16px !important;
+    }
+}
+/* =========================================================
+   MULTIPLE KATEGORI BUKU
+========================================================= */
+
+.buku-kategori-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    min-width: 0;
+}
+
+.buku-kategori {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 11px;
+    border-radius: 999px;
+    background: #fff1e7;
+    color: #ff7414;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+}

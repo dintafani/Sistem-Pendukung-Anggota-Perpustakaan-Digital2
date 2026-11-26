@@ -1,0 +1,1149 @@
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #F59E0B;
+    --primary-dark: #D97706;
+    --cream: #FFF8EE;
+    --white: #FFFFFF;
+    --text: #1F2937;
+    --text-light: #6B7280;
+    --green: #22C55E;
+    --red: #EF4444;
+    --border: #ECECEC;
+    --shadow: 0 10px 35px rgba(0,0,0,.08);
+    --radius: 22px;
+    --transition: .35s ease;
+}
+
+body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: "Poppins", sans-serif;
+}
+
+/* ==========================================================
+   HALAMAN
+========================================================== */
+
+.detail-page {
+    width: min(1300px, 94%);
+    max-width: 100%;
+    margin: 35px auto 70px;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================================
+   TOMBOL KEMBALI
+========================================================== */
+
+.detail-top {
+    margin-bottom: 28px;
+}
+
+.back-link {
+    width: 52px;
+    height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: #FFFFFF;
+    color: #F59E0B;
+    border: 2px solid #FDE7BE;
+    border-radius: 16px;
+    font-size: 1.15rem;
+    box-shadow: 0 8px 22px rgba(245,158,11,.12);
+    transition: .3s ease;
+    position: relative;
+}
+
+.back-link i {
+    transition: transform .3s ease;
+}
+
+.back-link:hover {
+    background: linear-gradient(135deg, #F59E0B, #EA580C);
+    color: #FFFFFF;
+    border-color: transparent;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(245,158,11,.30);
+}
+
+.back-link:hover i {
+    transform: translateX(-3px);
+}
+
+.back-link:active {
+    transform: translateY(0) scale(.94);
+}
+
+/* ==========================================================
+   ALERT
+========================================================== */
+
+.alert-success,
+.alert-error {
+    padding: 18px 22px;
+    border-radius: 16px;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+
+.alert-success {
+    background: #DCFCE7;
+    color: #166534;
+}
+
+.alert-error {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+/* ==========================================================
+   HERO DETAIL
+========================================================== */
+
+.detail-hero {
+    display: grid;
+    grid-template-columns: 340px minmax(0, 1fr);
+    gap: 45px;
+    background: var(--white);
+    border-radius: 32px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================================
+   COVER
+========================================================== */
+
+.detail-cover {
+    position: relative;
+    min-width: 0;
+    width: 100%;
+}
+
+.detail-cover img {
+    display: block;
+    width: 100%;
+    height: 510px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0 18px 45px rgba(0,0,0,.15);
+}
+
+.book-status {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    padding: 9px 18px;
+    border-radius: 999px;
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.available {
+    background: #22C55E;
+}
+
+.empty {
+    background: #EF4444;
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* ==========================================================
+   TAG
+========================================================== */
+
+.book-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.book-tags span {
+    background: #FEF3C7;
+    color: #92400E;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .3px;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================================
+   JUDUL BUKU
+========================================================== */
+
+.book-title {
+    font-size: 2.6rem;
+    line-height: 1.3;
+    color: #111827;
+    font-family: "Fraunces", serif;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    box-sizing: border-box;
+}
+
+.book-subtitle {
+    color: #6B7280;
+    line-height: 1.9;
+    font-size: 1rem;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================================
+   RATING
+========================================================== */
+
+.book-rating {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    min-width: 0;
+}
+
+.stars {
+    color: #FBBF24;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+}
+
+.book-rating span {
+    font-weight: 700;
+    color: #111827;
+    font-size: 1.05rem;
+}
+
+.book-rating small {
+    color: #6B7280;
+}
+
+/* ==========================================================
+   CARD INFORMASI BUKU
+========================================================== */
+
+.book-info-card {
+    background: #FFFDF9;
+    border: 1px solid #F3E8D8;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,.05);
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 24px;
+    border-bottom: 1px solid #F1F5F9;
+    transition: var(--transition);
+    min-width: 0;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-row:hover {
+    background: #FFF8EC;
+}
+
+.info-row > span {
+    color: var(--text-light);
+    font-size: .95rem;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.info-row strong {
+    color: var(--text);
+    font-weight: 700;
+    text-align: right;
+    min-width: 0;
+    max-width: 65%;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+.category-text-list {
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+/* ==========================================================
+   STATUS STOK
+========================================================== */
+
+.stock-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--green);
+    flex-wrap: wrap;
+    overflow-wrap: anywhere;
+}
+
+.stock-text i {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.stock-text .fa-circle-xmark {
+    color: var(--red);
+}
+
+/* ==========================================================
+   ACTION BUTTON
+========================================================== */
+
+.book-action {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    min-width: 0;
+}
+
+.borrow-form {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ==========================================================
+   BUTTON PINJAM
+========================================================== */
+
+.btn-borrow {
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #F59E0B, #EA580C);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 18px;
+    border-radius: 18px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 12px 30px rgba(245,158,11,.35);
+}
+
+.btn-borrow:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(245,158,11,.45);
+}
+
+.btn-borrow:active {
+    transform: scale(.98);
+}
+
+/* ==========================================================
+   BUTTON DISABLED
+========================================================== */
+
+.btn-disabled {
+    width: 100%;
+    border: none;
+    border-radius: 18px;
+    padding: 18px;
+    background: #CBD5E1;
+    color: #fff;
+    font-weight: 700;
+    cursor: not-allowed;
+}
+
+/* ==========================================================
+   FAVORITE BUTTON
+========================================================== */
+
+.btn-favorite {
+    width: 64px;
+    height: 64px;
+    border: 2px solid #FED7AA;
+    cursor: pointer;
+    border-radius: 18px;
+    background: #FFF7ED;
+    color: #EA580C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    transition: var(--transition);
+}
+
+.btn-favorite:hover {
+    background: #EA580C;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(234,88,12,.25);
+}
+
+/* ==========================================================
+   FITUR BUKU
+========================================================== */
+
+.book-feature {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+    min-width: 0;
+}
+
+.book-feature div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #FFFDF8;
+    border: 1px solid #F4E8D7;
+    border-radius: 16px;
+    padding: 16px 18px;
+    color: #4B5563;
+    font-size: .95rem;
+    font-weight: 500;
+    transition: var(--transition);
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.book-feature div:hover {
+    background: #FFF4DE;
+    transform: translateY(-2px);
+}
+
+.book-feature i {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #FEF3C7;
+    color: #D97706;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+/* ==========================================================
+   ANIMASI MASUK
+========================================================== */
+
+.detail-cover {
+    animation: fadeLeft .6s ease;
+}
+
+.detail-content {
+    animation: fadeRight .6s ease;
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ==========================================================
+   TAB MENU
+========================================================== */
+
+.detail-tabs {
+    display: flex;
+    gap: 18px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    min-width: 0;
+}
+
+.tab-btn {
+    border: 1px solid #ECECEC;
+    background: #ffffff;
+    color: #6B7280;
+    padding: 16px 28px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: .95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+}
+
+.tab-btn:hover {
+    background: #FFF5E8;
+    color: var(--primary-dark);
+    border-color: #FBBF24;
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, #F59E0B, #EA580C);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 12px 28px rgba(245,158,11,.28);
+}
+
+/* ==========================================================
+   CONTENT TAB
+========================================================== */
+
+.tab-content-wrapper {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeTab .4s ease;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeTab {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 340px);
+    gap: 30px;
+    align-items: start;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.detail-left,
+.detail-right {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* ==========================================================
+   CONTENT CARD
+========================================================== */
+
+.content-card {
+    background: #fff;
+    border-radius: 22px;
+    padding: 35px;
+    box-shadow: var(--shadow);
+    border: 1px solid #EFEFEF;
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.content-card h2 {
+    font-size: 1.6rem;
+    color: #111827;
+    margin-bottom: 22px;
+    font-weight: 700;
+}
+
+.content-card p {
+    color: #6B7280;
+    line-height: 2;
+    text-align: justify;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================================
+   LOCATION CARD
+========================================================== */
+
+.location-card {
+    position: sticky;
+    top: 30px;
+    background: linear-gradient(180deg, #F59E0B, #EA580C);
+    color: #fff;
+    border-radius: 24px;
+    padding: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(245,158,11,.30);
+    min-width: 0;
+}
+
+.location-card::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.12);
+    right: -60px;
+    top: -60px;
+}
+
+.location-label {
+    display: inline-block;
+    font-size: .82rem;
+    background: rgba(255,255,255,.22);
+    padding: 8px 16px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.location-card h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.location-card p {
+    color: rgba(255,255,255,.92);
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+.location-stock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,.25);
+    font-size: 1rem;
+}
+
+.location-stock strong {
+    font-size: 1.25rem;
+}
+
+.green-check {
+    color: #BBF7D0;
+    font-size: 1.2rem;
+}
+
+/* ==========================================================
+   DETAIL TABLE
+========================================================== */
+
+.detail-table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.detail-table tr {
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.detail-table tr:last-child {
+    border-bottom: none;
+}
+
+.detail-table th {
+    width: 220px;
+    padding: 18px 12px 18px 0;
+    text-align: left;
+    color: #6B7280;
+    font-weight: 600;
+    vertical-align: top;
+}
+
+.detail-table td {
+    padding: 18px 0;
+    color: #111827;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    vertical-align: top;
+}
+
+.detail-category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-width: 0;
+}
+
+.detail-category-badge {
+    display: inline-block;
+    background: #FEF3C7;
+    color: #92400E;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: .85rem;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================================
+   HOVER EFFECT
+========================================================== */
+
+.content-card:hover {
+    transform: translateY(-3px);
+    transition: var(--transition);
+}
+
+.location-card:hover {
+    transform: translateY(-4px);
+    transition: var(--transition);
+}
+
+/* ==========================================================
+   REVIEW
+========================================================== */
+
+.review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    min-width: 0;
+}
+
+.review-card {
+    background: #fff;
+    border-radius: 22px;
+    padding: 28px;
+    border: 1px solid #ECECEC;
+    box-shadow: 0 8px 24px rgba(0,0,0,.05);
+    transition: var(--transition);
+    min-width: 0;
+    max-width: 100%;
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0,0,0,.08);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 18px;
+    min-width: 0;
+}
+
+.review-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #F59E0B, #EA580C);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.review-user {
+    flex: 1;
+    min-width: 0;
+}
+
+.review-user h4 {
+    margin-bottom: 6px;
+    color: #111827;
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+}
+
+.review-stars {
+    display: flex;
+    gap: 5px;
+}
+
+.review-stars i {
+    color: #FBBF24;
+    font-size: .95rem;
+}
+
+.review-body {
+    color: #6B7280;
+    line-height: 1.9;
+    padding-top: 18px;
+    border-top: 1px solid #F3F4F6;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================================
+   EMPTY REVIEW
+========================================================== */
+
+.empty-review {
+    background: #fff;
+    border-radius: 22px;
+    padding: 60px 30px;
+    text-align: center;
+    border: 2px dashed #E5E7EB;
+    max-width: 100%;
+}
+
+.empty-review i {
+    font-size: 4rem;
+    color: #F59E0B;
+    margin-bottom: 20px;
+}
+
+.empty-review h3 {
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.empty-review p {
+    color: #6B7280;
+    max-width: 420px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #F59E0B;
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FFF7ED;
+}
+
+/* ==========================================================
+   RESPONSIVE TABLET
+========================================================== */
+
+@media (max-width: 1100px) {
+    .detail-hero {
+        grid-template-columns: 300px minmax(0, 1fr);
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .detail-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .location-card {
+        position: static;
+    }
+
+    .book-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* ==========================================================
+   RESPONSIVE MOBILE
+========================================================== */
+
+@media (max-width: 768px) {
+    .detail-page {
+        width: 95%;
+        margin: 20px auto 50px;
+    }
+
+    .detail-hero {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 24px;
+        border-radius: 22px;
+        gap: 28px;
+    }
+
+    .detail-cover {
+        max-width: 280px;
+        margin: auto;
+    }
+
+    .detail-cover img {
+        height: 420px;
+    }
+
+    .detail-content {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .book-title {
+        font-size: 2rem;
+        overflow-wrap: anywhere;
+    }
+
+    .book-info-card {
+        border-radius: 16px;
+    }
+
+    .info-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        padding: 16px 18px;
+    }
+
+    .info-row strong {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .book-action {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .borrow-form {
+        width: 100%;
+    }
+
+    .btn-favorite {
+        width: 100%;
+        height: 56px;
+    }
+
+    .book-feature {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .detail-tabs {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .tab-btn {
+        justify-content: center;
+    }
+
+    .content-card {
+        padding: 24px;
+    }
+
+    .detail-table th {
+        width: 110px;
+        font-size: .9rem;
+    }
+
+    .detail-table td {
+        font-size: .9rem;
+    }
+
+    .review-header {
+        align-items: flex-start;
+    }
+}
+
+/* ==========================================================
+   RESPONSIVE HP KECIL
+========================================================== */
+
+@media (max-width: 480px) {
+    .detail-page {
+        width: 94%;
+    }
+
+    .detail-hero {
+        padding: 18px;
+    }
+
+    .book-title {
+        font-size: 1.7rem;
+        line-height: 1.35;
+    }
+
+    .book-subtitle {
+        font-size: .9rem;
+    }
+
+    .content-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .location-card {
+        padding: 24px;
+    }
+
+    .location-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .review-card {
+        padding: 20px;
+    }
+
+    .review-avatar {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .btn-borrow {
+        font-size: .95rem;
+    }
+
+    .detail-table th {
+        width: 95px;
+        font-size: .82rem;
+    }
+
+    .detail-table td {
+        font-size: .82rem;
+    }
+
+    .book-tags span {
+        font-size: .7rem;
+        padding: 7px 12px;
+    }
+}
+
+/* ==========================================================
+   ANIMASI AKHIR
+========================================================== */
+
+.detail-hero,
+.content-card,
+.review-card,
+.location-card {
+    animation: fadeUp .5s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================
+   PENCEGAHAN OVERFLOW GLOBAL HALAMAN DETAIL
+========================================================== */
+
+.detail-page,
+.detail-page * {
+    min-width: 0;
+}
+
+.detail-page img {
+    max-width: 100%;
+}
+
+.detail-page {
+    overflow-x: clip;
+}
+
+.no-cover {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #fff1e5;
+    color: #c47745;
+    border: 1px dashed #e5b995;
+    border-radius: 12px;
+}
+
+.no-cover i {
+    font-size: 55px;
+}
+
+.no-cover span {
+    font-size: 13px;
+    font-weight: 600;
+}

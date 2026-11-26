@@ -1,0 +1,1649 @@
+
+/* =========================================================
+   KOLEKSI BUKU PETUGAS
+   DATABASE: BOOKS & BOOK_COPIES
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.book-page,
+.book-page * {
+    box-sizing: border-box;
+}
+
+.book-page {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.book-page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    margin-bottom: 24px;
+}
+
+.book-page-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.book-title-icon {
+    width: 50px;
+    height: 50px;
+    flex: 0 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #e87532;
+    border-radius: 14px;
+    background: #fff0e4;
+    color: #e96d24;
+    font-size: 23px;
+    box-shadow: 0 5px 14px rgba(233, 109, 36, .13);
+}
+
+.book-page-title h1 {
+    margin: 0;
+    color: #24201e;
+    font-size: 30px;
+    font-weight: 850;
+    line-height: 1.2;
+    letter-spacing: -.5px;
+}
+
+.book-page-title p {
+    margin: 6px 0 0;
+    color: #71665f;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   HEADER ACTION
+========================================================= */
+
+.book-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.book-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.book-search {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+}
+
+.book-search i {
+    position: absolute;
+    left: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #716762;
+    font-size: 17px;
+    pointer-events: none;
+}
+
+.book-search input {
+    width: 100%;
+    height: 50px;
+    padding: 0 17px 0 46px;
+    border: 2px solid #cfc1b9;
+    border-radius: 12px;
+    outline: none;
+    background: #fff;
+    color: #302925;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 3px 12px rgba(83, 49, 24, .05);
+    transition: .2s ease;
+}
+
+.book-search input::placeholder {
+    color: #8b7d75;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.book-search input:hover {
+    border-color: #b7a69c;
+}
+
+.book-search input:focus {
+    border-color: #e87532;
+    box-shadow: 0 0 0 4px rgba(232, 117, 50, .12);
+}
+
+
+/* =========================================================
+   VIEW SWITCH
+========================================================= */
+
+.book-view-switch {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    border: 2px solid #cfc1b9;
+    border-radius: 12px;
+    background: #fff;
+    flex-shrink: 0;
+}
+
+.view-btn {
+    width: 40px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #716762;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .2s ease;
+}
+
+.view-btn:hover {
+    color: #e76e27;
+}
+
+.view-btn.active {
+    background: #e96d24;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(233, 109, 36, .20);
+}
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.book-categories {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 3px;
+    margin-bottom: 20px;
+    scrollbar-width: none;
+}
+
+.book-categories::-webkit-scrollbar {
+    display: none;
+}
+
+.category-btn {
+    flex-shrink: 0;
+    height: 38px;
+    padding: 0 16px;
+    border: 2px solid #d2c3bb;
+    border-radius: 20px;
+    background: #fff;
+    color: #4e4641;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.category-btn:hover {
+    border-color: #e89968;
+    background: #fff8f3;
+    color: #d96824;
+}
+
+.category-btn.active {
+    border-color: #d45c17;
+    background: linear-gradient(135deg, #e96d24, #f28b36);
+    color: #fff;
+    box-shadow: 0 5px 13px rgba(232, 109, 36, .20);
+}
+
+
+/* =========================================================
+   BOOK GRID
+========================================================= */
+
+.book-grid {
+    width: 100%;
+    min-width: 0;
+    display: grid;
+
+    grid-template-rows: repeat(2, minmax(278px, auto));
+    grid-auto-columns: calc((100% - 32px) / 3);
+    grid-auto-flow: column;
+
+    gap: 16px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    height: auto;
+    max-height: none;
+
+    padding: 3px 5px 12px 3px;
+
+    scrollbar-width: thin;
+    scrollbar-color: #e96d24 #f4e8e1;
+}
+
+
+/* =========================================================
+   HORIZONTAL SCROLLBAR
+========================================================= */
+
+.book-grid:not(.book-list-view)::-webkit-scrollbar {
+    height: 9px;
+}
+
+.book-grid:not(.book-list-view)::-webkit-scrollbar-track {
+    background: #f4e8e1;
+    border-radius: 20px;
+}
+
+.book-grid:not(.book-list-view)::-webkit-scrollbar-thumb {
+    background: #e96d24;
+    border-radius: 20px;
+}
+
+.book-grid:not(.book-list-view)::-webkit-scrollbar-thumb:hover {
+    background: #d85d19;
+}
+
+
+/* =========================================================
+   BOOK CARD
+========================================================= */
+
+.book-grid:not(.book-list-view) .book-card {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    min-height: 278px;
+    height: auto;
+    overflow: visible;
+    background: #fff;
+    border: 2px solid #cfc1b9;
+    border-radius: 15px;
+    box-shadow: 0 5px 14px rgba(69, 44, 27, .07);
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+}
+
+.book-grid:not(.book-list-view) .book-card:hover {
+    transform: translateY(-3px);
+    border-color: #b8a69b;
+    box-shadow: 0 12px 25px rgba(69, 44, 27, .13);
+}
+
+
+/* =========================================================
+   GRID CONTENT
+========================================================= */
+
+.book-grid:not(.book-list-view) .book-grid-content {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* =========================================================
+   COVER
+========================================================= */
+
+.book-grid:not(.book-list-view) .book-cover {
+    position: relative;
+    width: 100%;
+    height: 108px;
+    overflow: hidden;
+    background: #f1ebe7;
+    border-bottom: 2px solid #cfc1b9;
+    border-radius: 13px 13px 0 0;
+}
+
+.book-grid:not(.book-list-view) .book-cover::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, .02),
+        transparent 55%,
+        rgba(0, 0, 0, .10)
+    );
+}
+
+.book-grid:not(.book-list-view) .book-cover img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s ease;
+}
+
+.book-grid:not(.book-list-view) .book-card:hover .book-cover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   EMPTY COVER
+========================================================= */
+
+.book-grid:not(.book-list-view) .book-cover-empty {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #81746d;
+    background: linear-gradient(135deg, #fff5ed, #f3eae4);
+}
+
+.book-grid:not(.book-list-view) .book-cover-empty i {
+    font-size: 26px;
+}
+
+.book-grid:not(.book-list-view) .book-cover-empty span {
+    font-size: 10px;
+    font-weight: 650;
+}
+
+
+/* =========================================================
+   STOCK BADGE
+========================================================= */
+
+.book-grid:not(.book-list-view) .stock-badge {
+    position: absolute;
+    z-index: 2;
+    top: 7px;
+    right: 7px;
+    padding: 5px 8px;
+    border-radius: 18px;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 800;
+    line-height: 1;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .18);
+}
+
+.stock-high {
+    background: #079b83;
+}
+
+.stock-medium {
+    background: #e96d24;
+}
+
+.stock-low {
+    background: #e8465c;
+}
+
+
+/* =========================================================
+   CARD BODY
+========================================================= */
+
+.book-grid:not(.book-list-view) .book-card-body {
+    padding: 10px 12px 12px;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.book-grid:not(.book-list-view) .book-title {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #28221f;
+    font-size: 14px;
+    font-weight: 850;
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   AUTHOR
+========================================================= */
+
+.book-grid:not(.book-list-view) .book-author {
+    margin: 3px 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #70645d;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   META
+========================================================= */
+
+.book-grid:not(.book-list-view) .book-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 6px;
+}
+
+
+/* =========================================================
+   CATEGORY BADGE
+========================================================= */
+
+.book-grid:not(.book-list-view) .book-category {
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
+    max-width: 100%;
+    padding: 3px 7px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 1.5px solid #e5a77f;
+    border-radius: 15px;
+    background: #fff5ed;
+    color: #d96520;
+    font-size: 8px;
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   TYPE
+========================================================= */
+
+.book-grid:not(.book-list-view) .book-type {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 3px 7px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 1.5px solid #8ee5d1;
+    border-radius: 15px;
+    background: #effcf8;
+    color: #07866f;
+    font-size: 8px;
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   SEMESTER
+========================================================= */
+
+.book-grid:not(.book-list-view) .book-semester {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 7px;
+    border: 1.5px solid #c8b8ed;
+    border-radius: 15px;
+    background: #f6f2ff;
+    color: #674bc4;
+    font-size: 8px;
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+.book-grid:not(.book-list-view) .book-year {
+    color: #665b55;
+    font-size: 9px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   RAK
+========================================================= */
+
+.book-grid:not(.book-list-view) .book-rack {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 6px;
+    color: #5d534e;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.book-grid:not(.book-list-view) .book-rack i {
+    color: #e87932;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   DIPINJAM
+========================================================= */
+
+.book-grid:not(.book-list-view) .book-borrowed {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 6px;
+    color: #39322e;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.book-grid:not(.book-list-view) .book-borrowed i {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #d2c5f0;
+    border-radius: 6px;
+    background: #f5f1ff;
+    color: #674bc4;
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   RINGKASAN EKSEMPLAR
+========================================================= */
+
+.copy-summary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    margin: 12px 0 8px;
+}
+
+.copy-summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    padding: 8px;
+    border: 1px solid #eee1d8;
+    border-radius: 9px;
+    background: #fffaf6;
+}
+
+.copy-summary-item span {
+    color: #82746c;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.copy-summary-item strong {
+    color: #342a24;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   DAFTAR EKSEMPLAR
+========================================================= */
+
+.copy-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 9px;
+}
+
+.copy-list-title {
+    margin: 0 0 5px;
+    color: #45372f;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.copy-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    min-width: 0;
+    padding: 8px 9px;
+    border: 1px solid #eee1d8;
+    border-radius: 9px;
+    background: #fffaf7;
+}
+
+.copy-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+
+.copy-item-info strong {
+    overflow-wrap: anywhere;
+    color: #3d3029;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.copy-item-info small {
+    color: #81736b;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   STATUS EKSEMPLAR
+========================================================= */
+
+.copy-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.copy-status.tersedia {
+    border: 1px solid #a7e5c3;
+    background: #edfff4;
+    color: #13834a;
+}
+
+.copy-status.dipinjam {
+    border: 1px solid #c8b8ed;
+    background: #f5f1ff;
+    color: #674bc4;
+}
+
+.copy-status.rusak {
+    border: 1px solid #f3d18d;
+    background: #fff8e8;
+    color: #a66a08;
+}
+
+.copy-status.hilang {
+    border: 1px solid #edb1b9;
+    background: #fff2f3;
+    color: #dc3f52;
+}
+
+
+/* =========================================================
+   EKSEMPLAR KOSONG
+========================================================= */
+
+.copy-empty {
+    padding: 10px;
+    border: 1px dashed #d8c5b9;
+    border-radius: 9px;
+    background: #fffaf7;
+    color: #92847b;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+/* =========================================================
+   TOMBOL DETAIL EKSEMPLAR
+========================================================= */
+
+.copy-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 9px;
+    padding: 8px 10px;
+    border: 1px solid #e8c5ad;
+    border-radius: 9px;
+    background: #fff5ed;
+    color: #d96824;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 750;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.copy-toggle:hover {
+    border-color: #e96d24;
+    background: #ffeadb;
+}
+
+
+/* =========================================================
+   ACTION
+========================================================= */
+
+.book-grid:not(.book-list-view) .book-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    margin-top: 7px;
+}
+
+.book-grid:not(.book-list-view) .book-actions form {
+    margin: 0;
+}
+
+.book-grid:not(.book-list-view) .book-action {
+    width: 29px;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 10px;
+    transition: .2s ease;
+}
+
+.book-grid:not(.book-list-view) .book-action:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   EDIT
+========================================================= */
+
+.book-grid:not(.book-list-view) .edit-action {
+    border: 2px solid #c6b5ef;
+    background: #f5f1ff;
+    color: #674bc4;
+}
+
+.book-grid:not(.book-list-view) .edit-action:hover {
+    background: #7054d1;
+    border-color: #7054d1;
+    color: #fff;
+}
+
+
+/* =========================================================
+   DELETE
+========================================================= */
+
+.book-grid:not(.book-list-view) .delete-action {
+    border: 2px solid #edb1b9;
+    background: #fff2f3;
+    color: #dc3f52;
+}
+
+.book-grid:not(.book-list-view) .delete-action:hover {
+    background: #dc3f52;
+    border-color: #dc3f52;
+    color: #fff;
+}
+
+
+/* =========================================================
+   LIST HEADER
+========================================================= */
+
+.book-list-header {
+    display: none;
+}
+
+
+/* =========================================================
+   LIST CONTENT
+========================================================= */
+
+.book-list-content {
+    display: none;
+}
+
+
+/* =========================================================
+   LIST VIEW
+========================================================= */
+
+.book-grid.book-list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: visible;
+    border: 2px solid #f1d9ca;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(69, 44, 27, .06);
+    padding: 0;
+}
+
+
+/* =========================================================
+   LIST HEADER
+========================================================= */
+
+.book-grid.book-list-view .book-list-header {
+    display: grid;
+    grid-template-columns:
+        65px
+        minmax(150px, 1.4fr)
+        minmax(120px, 1fr)
+        minmax(100px, .9fr)
+        minmax(105px, .9fr)
+        90px
+        85px
+        145px;
+    align-items: center;
+    min-height: 52px;
+    padding: 0 16px;
+    border-bottom: 2px solid #f1ded3;
+    background: #fffaf7;
+    color: #756860;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .3px;
+    min-width: 900px;
+}
+
+
+/* =========================================================
+   LIST CARD
+========================================================= */
+
+.book-grid.book-list-view .book-card {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: #fff;
+    transform: none;
+    overflow: visible;
+    min-width: 900px;
+    height: auto;
+}
+
+.book-grid.book-list-view .book-card + .book-card {
+    border-top: 1px solid #f0e1d9;
+}
+
+.book-grid.book-list-view .book-card:hover {
+    border-color: transparent;
+    box-shadow: none;
+    background: #fffaf7;
+}
+
+
+/* =========================================================
+   HIDE GRID
+========================================================= */
+
+.book-grid.book-list-view .book-grid-content {
+    display: none;
+}
+
+
+/* =========================================================
+   SHOW LIST
+========================================================= */
+
+.book-grid.book-list-view .book-list-content {
+    display: grid;
+    grid-template-columns:
+        65px
+        minmax(150px, 1.4fr)
+        minmax(120px, 1fr)
+        minmax(100px, .9fr)
+        minmax(105px, .9fr)
+        90px
+        85px
+        145px;
+    align-items: center;
+    min-height: 70px;
+    padding: 0 16px;
+    min-width: 900px;
+}
+
+
+/* =========================================================
+   LIST ID
+========================================================= */
+
+.list-id {
+    color: #ff5a00;
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   LIST TITLE
+========================================================= */
+
+.list-title {
+    min-width: 0;
+    padding-right: 15px;
+}
+
+.list-title strong {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #28221f;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   LIST AUTHOR
+========================================================= */
+
+.list-author {
+    min-width: 0;
+    padding-right: 15px;
+    overflow: hidden;
+    color: #625851;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   LIST CATEGORY
+========================================================= */
+
+.list-category {
+    min-width: 0;
+    padding-right: 10px;
+}
+
+.list-category-badge {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 5px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 1.5px solid #ffb78e;
+    border-radius: 15px;
+    background: #fff5ef;
+    color: #ff6b1a;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   LIST TYPE
+========================================================= */
+
+.list-type {
+    min-width: 0;
+    padding-right: 10px;
+}
+
+.list-type-badge {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 5px 9px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 1.5px solid #8ee5d1;
+    border-radius: 15px;
+    background: #effcf8;
+    color: #07866f;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   LIST SEMESTER
+========================================================= */
+
+.list-semester {
+    min-width: 0;
+}
+
+.list-semester-badge {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 5px 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 1.5px solid #c8b8ed;
+    border-radius: 15px;
+    background: #f6f2ff;
+    color: #674bc4;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   EMPTY TEXT
+========================================================= */
+
+.list-empty-text {
+    color: #99908a;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   LIST YEAR
+========================================================= */
+
+.list-year {
+    color: #716762;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   LIST ACTION
+========================================================= */
+
+.list-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 7px;
+}
+
+
+/* =========================================================
+   LIST EDIT
+========================================================= */
+
+.list-edit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 47px;
+    height: 31px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 9px;
+    background: #fff0e4;
+    color: #d96824;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 800;
+    transition: .2s ease;
+}
+
+.list-edit-btn:hover {
+    background: #e96d24;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   LIST DELETE
+========================================================= */
+
+.list-delete-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 58px;
+    height: 31px;
+    padding: 0 10px;
+    border: 1.5px solid #edb1b9;
+    border-radius: 9px;
+    background: #fff2f3;
+    color: #dc3f52;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.list-delete-btn:hover {
+    background: #dc3f52;
+    border-color: #dc3f52;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   EMPTY BOOK
+========================================================= */
+
+.book-empty {
+    grid-column: 1 / -1;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px dashed #d5a78e;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #fffaf6, #fff1e7);
+    text-align: center;
+}
+
+.book-empty-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    border: 3px solid #efc1a7;
+    border-radius: 16px;
+    background: #fff0e4;
+    color: #e96d24;
+    font-size: 27px;
+}
+
+.book-empty h3 {
+    margin: 0;
+    color: #403833;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.book-empty p {
+    margin: 7px 0 17px;
+    color: #766b65;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.btn-add-empty {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 17px;
+    border: 2px solid #d85d19;
+    border-radius: 10px;
+    background: #e96d24;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   MENU KELOLA KOLEKSI
+========================================================= */
+
+.collection-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.collection-menu-button {
+    border: 1px solid #fed7aa;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: #fff7ed;
+    color: #ea580c;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all .2s ease;
+}
+
+.collection-menu-button:hover {
+    background: #ffedd5;
+    border-color: #fdba74;
+    transform: translateY(-1px);
+}
+
+.collection-menu-button .menu-chevron {
+    font-size: 10px;
+    transition: transform .2s ease;
+}
+
+.collection-menu-button.active .menu-chevron {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   DROPDOWN
+========================================================= */
+
+.collection-menu-dropdown {
+    position: absolute;
+    top: calc(100% + 9px);
+    right: 0;
+    width: 285px;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    box-shadow: 0 16px 35px rgba(15, 23, 42, .14);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-7px);
+    transition:
+        opacity .2s ease,
+        visibility .2s ease,
+        transform .2s ease;
+}
+
+.collection-menu-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   DROPDOWN ITEM
+========================================================= */
+
+.collection-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 11px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #1f2937;
+    transition: background .2s ease;
+}
+
+.collection-menu-item:hover {
+    background: #fff7ed;
+}
+
+.collection-menu-item-icon {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #fff7ed;
+    color: #ea580c;
+    font-size: 15px;
+}
+
+.collection-menu-item-content {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.collection-menu-item-content strong {
+    color: #111827;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.collection-menu-item-content small {
+    color: #6b7280;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.collection-menu-divider {
+    height: 1px;
+    margin: 5px 8px;
+    background: #f1f5f9;
+}
+
+
+/* =========================================================
+   ACADEMIC
+========================================================= */
+
+.collection-menu-item.academic-item {
+    background: #f8fafc;
+}
+
+.collection-menu-item.academic-item:hover {
+    background: #eff6ff;
+}
+
+.collection-menu-item.academic-item .collection-menu-item-icon {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   RESPONSIVE - 1300 PX
+========================================================= */
+
+@media (max-width: 1300px) {
+    .book-grid:not(.book-list-view) {
+        grid-auto-columns: calc((100% - 30px) / 3);
+        gap: 15px;
+    }
+
+    .book-grid:not(.book-list-view) .book-cover {
+        height: 104px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 1100 PX
+========================================================= */
+
+@media (max-width: 1100px) {
+    .book-page-header {
+        gap: 15px;
+    }
+
+    .book-page-title h1 {
+        font-size: 28px;
+    }
+
+    .book-grid:not(.book-list-view) {
+        grid-auto-columns: calc((100% - 28px) / 3);
+        gap: 14px;
+    }
+
+    .book-grid:not(.book-list-view) .book-cover {
+        height: 98px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 900 PX
+========================================================= */
+
+@media (max-width: 900px) {
+    .book-page-header {
+        align-items: flex-start;
+    }
+
+    .book-grid:not(.book-list-view) {
+        grid-auto-columns: calc((100% - 24px) / 3);
+        gap: 12px;
+    }
+
+    .book-grid:not(.book-list-view) .book-cover {
+        height: 92px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 800 PX
+========================================================= */
+
+@media (max-width: 800px) {
+    .book-page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .book-header-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .collection-menu {
+        width: 100%;
+    }
+
+    .collection-menu-button {
+        width: 100%;
+    }
+
+    .collection-menu-dropdown {
+        width: 100%;
+        left: 0;
+        right: auto;
+    }
+
+    .book-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .book-view-switch {
+        align-self: flex-end;
+    }
+
+    .book-grid:not(.book-list-view) {
+        grid-auto-columns: calc((100% - 12px) / 2);
+        gap: 12px;
+        grid-template-rows: repeat(2, minmax(255px, auto));
+    }
+
+    .book-grid:not(.book-list-view) .book-cover {
+        height: 95px;
+    }
+
+    .copy-summary {
+        gap: 6px;
+    }
+
+    .copy-summary-item {
+        padding: 7px;
+    }
+
+    .copy-item {
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 600 PX
+========================================================= */
+
+@media (max-width: 600px) {
+    .book-page-title {
+        gap: 11px;
+    }
+
+    .book-title-icon {
+        width: 45px;
+        height: 45px;
+        flex-basis: 45px;
+        font-size: 20px;
+    }
+
+    .book-page-title h1 {
+        font-size: 25px;
+    }
+
+    .book-page-title p {
+        font-size: 12px;
+    }
+
+    .book-header-actions {
+        width: 100%;
+    }
+
+    .book-grid:not(.book-list-view) {
+        grid-auto-columns: calc((100% - 10px) / 2);
+        gap: 10px;
+        grid-template-rows: repeat(2, minmax(245px, auto));
+    }
+
+    .book-grid:not(.book-list-view) .book-cover {
+        height: 90px;
+    }
+
+    .book-grid:not(.book-list-view) .book-card-body {
+        padding: 9px 10px 11px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 450 PX
+========================================================= */
+
+@media (max-width: 450px) {
+    .book-grid:not(.book-list-view) {
+        grid-auto-columns: calc((100% - 8px) / 2);
+        gap: 8px;
+        grid-template-rows: repeat(2, minmax(238px, auto));
+    }
+
+    .book-grid:not(.book-list-view) .book-cover {
+        height: 86px;
+    }
+
+    .book-grid:not(.book-list-view) .book-card-body {
+        padding: 8px 9px 10px;
+    }
+
+    .book-grid:not(.book-list-view) .book-title {
+        font-size: 13px;
+    }
+
+    .book-grid:not(.book-list-view) .book-author {
+        font-size: 9px;
+    }
+
+    .book-grid:not(.book-list-view) .book-meta {
+        gap: 3px;
+        margin-top: 5px;
+    }
+
+    .book-grid:not(.book-list-view) .book-category,
+    .book-grid:not(.book-list-view) .book-type,
+    .book-grid:not(.book-list-view) .book-semester {
+        padding: 3px 6px;
+        font-size: 8px;
+    }
+
+    .book-grid:not(.book-list-view) .book-borrowed {
+        font-size: 8px;
+    }
+
+    .copy-summary-item span {
+        font-size: 8px;
+    }
+
+    .copy-summary-item strong {
+        font-size: 12px;
+    }
+
+    .copy-item-info strong {
+        font-size: 9px;
+    }
+
+    .copy-status {
+        padding: 4px 6px;
+        font-size: 8px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 400 PX
+========================================================= */
+
+@media (max-width: 400px) {
+    .book-grid:not(.book-list-view) {
+        grid-auto-columns: calc((100% - 6px) / 2);
+        gap: 6px;
+        grid-template-rows: repeat(2, minmax(230px, auto));
+    }
+
+    .book-grid:not(.book-list-view) .book-cover {
+        height: 82px;
+    }
+
+    .book-grid:not(.book-list-view) .book-card-body {
+        padding: 7px 8px 9px;
+    }
+
+    .book-grid:not(.book-list-view) .book-action {
+        width: 27px;
+        height: 27px;
+        font-size: 9px;
+    }
+}

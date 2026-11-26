@@ -1,0 +1,1302 @@
+/* =========================================================
+   PETUGAS - NOTIFIKASI
+========================================================= */
+
+.notification-page {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+
+    color: #211d1a;
+}
+
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.alert-success,
+.alert-error {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 18px;
+    margin-bottom: 20px;
+
+    box-sizing: border-box;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
+}
+
+.alert-success {
+    background: #ecfdf3;
+
+    border: 1px solid #86efac;
+
+    color: #15803d;
+}
+
+.alert-error {
+    background: #fef2f2;
+
+    border: 1px solid #fca5a5;
+
+    color: #dc2626;
+}
+
+.alert-success i,
+.alert-error i {
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   WELCOME
+========================================================= */
+
+.notification-welcome {
+    width: 100%;
+    min-height: 165px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 32px 36px;
+    margin-bottom: 26px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #f5c7a7;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf7 0%,
+            #fff0e4 100%
+        );
+
+    box-shadow:
+        0 8px 25px rgba(78, 46, 25, .08);
+}
+
+
+/* =========================================================
+   WELCOME LEFT
+========================================================= */
+
+.notification-welcome-content {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    min-width: 0;
+}
+
+.notification-welcome-icon {
+    width: 66px;
+    height: 66px;
+
+    flex: 0 0 66px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff6810,
+            #ff8a3d
+        );
+
+    color: #ffffff;
+
+    font-size: 25px;
+
+    box-shadow:
+        0 8px 20px rgba(255, 104, 16, .28);
+}
+
+
+/* =========================================================
+   WELCOME TEXT
+========================================================= */
+
+.notification-welcome-text {
+    min-width: 0;
+}
+
+.notification-welcome h1 {
+    margin: 0;
+
+    color: #171310;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    line-height: 1.25;
+
+    letter-spacing: -.6px;
+}
+
+.notification-welcome p {
+    max-width: 720px;
+
+    margin: 9px 0 0;
+
+    color: #62574f;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   HERO RIGHT
+========================================================= */
+
+.notification-header-icon {
+    width: 76px;
+    height: 76px;
+
+    flex: 0 0 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    border: 2px solid #f4c6a4;
+
+    color: #f5660c;
+
+    font-size: 30px;
+
+    box-shadow:
+        0 7px 20px rgba(78, 46, 25, .10);
+}
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.notification-card {
+    width: 100%;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #dfd3ca;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 8px 25px rgba(67, 45, 30, .08);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.notification-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding-bottom: 23px;
+    margin-bottom: 23px;
+
+    border-bottom: 2px solid #eee5df;
+}
+
+.notification-card-title {
+    min-width: 0;
+}
+
+.notification-card-title h2 {
+    margin: 0;
+
+    color: #1d1916;
+
+    font-size: 24px;
+    font-weight: 800;
+
+    letter-spacing: -.3px;
+}
+
+.notification-card-title p {
+    margin: 7px 0 0;
+
+    color: #756a62;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.notification-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+.notification-header-actions form {
+    margin: 0;
+}
+
+
+/* =========================================================
+   UNREAD COUNT
+========================================================= */
+
+.notification-count {
+    min-height: 50px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 16px;
+
+    box-sizing: border-box;
+
+    border-radius: 11px;
+
+    background: #fff1e8;
+
+    border: 2px solid #ffc49e;
+
+    color: #df5607;
+
+    white-space: nowrap;
+}
+
+.notification-count i {
+    font-size: 18px;
+}
+
+.notification-count-text {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+}
+
+.notification-count-text strong {
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.notification-count-text span {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   TOP BUTTON BASE
+========================================================= */
+
+.read-all-btn,
+.delete-all-btn {
+    min-height: 50px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 16px;
+
+    border-radius: 11px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+}
+
+.read-all-btn i,
+.delete-all-btn i {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   BACA SEMUA
+========================================================= */
+
+.read-all-btn {
+    background: #ecfdf3;
+
+    border: 2px solid #86efac;
+
+    color: #15803d;
+}
+
+.read-all-btn:hover {
+    background: #16a34a;
+
+    border-color: #16a34a;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 14px rgba(22, 163, 74, .20);
+}
+
+
+/* =========================================================
+   HAPUS SEMUA
+========================================================= */
+
+.delete-all-btn {
+    background: #fff1f2;
+
+    border: 2px solid #fca5a5;
+
+    color: #dc2626;
+}
+
+.delete-all-btn:hover {
+    background: #dc2626;
+
+    border-color: #dc2626;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 14px rgba(220, 38, 38, .20);
+}
+
+
+/* =========================================================
+   LIST
+========================================================= */
+
+.notification-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 17px;
+}
+
+
+/* =========================================================
+   ITEM
+========================================================= */
+
+.notification-item {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 18px;
+
+    width: 100%;
+
+    padding: 23px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dcd1ca;
+
+    border-radius: 17px;
+
+    background: #fffaf7;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+}
+
+.notification-item:hover {
+    transform: translateY(-2px);
+
+    border-color: #f2b890;
+
+    box-shadow:
+        0 9px 24px rgba(67, 45, 30, .10);
+}
+
+
+/* =========================================================
+   UNREAD
+========================================================= */
+
+.notification-unread {
+    border: 2px solid #ffc49e;
+
+    border-left: 6px solid #ff6810;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8f2,
+            #ffffff
+        );
+
+    box-shadow:
+        0 5px 18px rgba(255, 104, 16, .08);
+}
+
+.notification-unread::before {
+    content: '';
+
+    position: absolute;
+
+    top: 19px;
+    right: 19px;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #ef2222;
+
+    box-shadow:
+        0 0 0 5px rgba(239, 34, 34, .10);
+}
+
+
+/* =========================================================
+   READ
+========================================================= */
+
+.notification-read {
+    border-left: 6px solid #c9c1bb;
+
+    background: #ffffff;
+
+    opacity: .96;
+}
+
+.notification-read:hover {
+    border-color: #d6c6ba;
+
+    border-left-color: #b5aaa2;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.notification-status {
+    position: absolute;
+
+    top: 17px;
+    right: 18px;
+
+    z-index: 2;
+}
+
+.notification-new-badge,
+.notification-read-badge {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 11px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: .2px;
+}
+
+.notification-new-badge {
+    background: #fff0e7;
+
+    border: 1px solid #ffb98b;
+
+    color: #dc5105;
+}
+
+.notification-read-badge {
+    background: #f1f0ee;
+
+    border: 1px solid #d5d0cb;
+
+    color: #6e6761;
+}
+
+.new-dot {
+    width: 7px;
+    height: 7px;
+
+    flex: 0 0 7px;
+
+    border-radius: 50%;
+
+    background: #ef2222;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.notification-item-icon {
+    width: 54px;
+    height: 54px;
+
+    flex: 0 0 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2px;
+
+    border-radius: 14px;
+
+    border-width: 2px;
+    border-style: solid;
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.notification-item-content {
+    flex: 1;
+
+    min-width: 0;
+
+    padding-right: 95px;
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.notification-item-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    min-width: 0;
+}
+
+.notification-title-wrapper {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.notification-title-wrapper h3 {
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    line-height: 1.45;
+
+    letter-spacing: -.2px;
+}
+
+.notification-type {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 5px 10px;
+
+    border-radius: 7px;
+
+    background: #f5f1ee;
+
+    border: 1px solid #ded6d0;
+
+    color: #716860;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.notification-date {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    flex-shrink: 0;
+
+    padding: 7px 11px;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    border: 1px solid #dcd4ce;
+
+    color: #716860;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.notification-date i {
+    color: #f5660c;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+.notification-body {
+    margin-top: 11px;
+}
+
+.notification-body p {
+    margin: 0;
+
+    color: #504740;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    line-height: 1.75;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   ITEM ACTION
+========================================================= */
+
+.notification-item-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 18px;
+    padding-top: 15px;
+
+    border-top: 1px solid #e6ddd7;
+}
+
+.notification-item-actions form {
+    margin: 0;
+}
+
+.notification-item-actions button {
+    min-height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 16px;
+
+    border-radius: 9px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+}
+
+
+/* =========================================================
+   READ BUTTON
+========================================================= */
+
+.read-btn {
+    background: #ecfdf3;
+
+    border: 2px solid #86efac;
+
+    color: #15803d;
+}
+
+.read-btn:hover {
+    background: #16a34a;
+
+    border-color: #16a34a;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(22, 163, 74, .20);
+}
+
+
+/* =========================================================
+   DELETE BUTTON
+========================================================= */
+
+.delete-btn {
+    background: #fff1f2;
+
+    border: 2px solid #fca5a5;
+
+    color: #dc2626;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+
+    border-color: #dc2626;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(220, 38, 38, .20);
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.notification-empty {
+    min-height: 320px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 35px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    border: 2px dashed #d7cbc2;
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf7,
+            #fff4ed
+        );
+}
+
+.notification-empty-icon {
+    width: 74px;
+    height: 74px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 17px;
+
+    border-radius: 19px;
+
+    background: #fff0e4;
+
+    border: 2px solid #ffd0b2;
+
+    color: #f5660c;
+
+    font-size: 29px;
+}
+
+.notification-empty h3 {
+    margin: 0;
+
+    color: #332b26;
+
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.notification-empty p {
+    max-width: 470px;
+
+    margin: 9px 0 0;
+
+    color: #766b63;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   RESPONSIVE 1100PX
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .notification-header-actions {
+        flex-wrap: wrap;
+
+        justify-content: flex-end;
+    }
+
+    .notification-count {
+        min-height: 46px;
+    }
+
+    .read-all-btn,
+    .delete-all-btn {
+        min-height: 46px;
+
+        padding: 0 13px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE 900PX
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .notification-page {
+        max-width: 100%;
+    }
+
+
+    .notification-welcome {
+        padding: 27px;
+    }
+
+
+    .notification-welcome h1 {
+        font-size: 27px;
+    }
+
+
+    .notification-card {
+        padding: 25px;
+    }
+
+
+    .notification-card-header {
+        align-items: flex-start;
+    }
+
+
+    .notification-header-actions {
+        max-width: 100%;
+    }
+
+
+    .notification-item-content {
+        padding-right: 80px;
+    }
+
+
+    .notification-item-top {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .notification-date {
+        align-self: flex-start;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE 700PX
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .notification-card-header {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .notification-header-actions {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+    }
+
+
+    .notification-count {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .notification-header-actions form {
+        width: 100%;
+    }
+
+
+    .read-all-btn,
+    .delete-all-btn {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE 650PX
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .notification-welcome {
+        padding: 22px;
+
+        min-height: auto;
+    }
+
+
+    .notification-header-icon {
+        display: none;
+    }
+
+
+    .notification-welcome-icon {
+        width: 55px;
+        height: 55px;
+
+        flex-basis: 55px;
+
+        font-size: 21px;
+    }
+
+
+    .notification-welcome h1 {
+        font-size: 23px;
+    }
+
+
+    .notification-welcome p {
+        font-size: 13px;
+    }
+
+
+    .notification-card {
+        padding: 20px;
+
+        border-radius: 17px;
+    }
+
+
+    .notification-card-title h2 {
+        font-size: 21px;
+    }
+
+
+    .notification-card-title p {
+        font-size: 13px;
+    }
+
+
+    .notification-header-actions {
+        grid-template-columns: 1fr;
+    }
+
+
+    .notification-count {
+        min-height: 45px;
+    }
+
+
+    .notification-count-text {
+        justify-content: center;
+    }
+
+
+    .notification-item {
+        padding: 18px;
+
+        gap: 13px;
+    }
+
+
+    .notification-item-icon {
+        width: 46px;
+        height: 46px;
+
+        flex-basis: 46px;
+
+        font-size: 17px;
+    }
+
+
+    .notification-item-content {
+        padding-right: 0;
+    }
+
+
+    .notification-status {
+        position: static;
+
+        width: 100%;
+
+        margin-bottom: 4px;
+    }
+
+
+    .notification-item {
+        flex-wrap: wrap;
+    }
+
+
+    .notification-title-wrapper h3 {
+        font-size: 16px;
+    }
+
+
+    .notification-body p {
+        font-size: 13px;
+    }
+
+
+    .notification-item-actions {
+        justify-content: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE 450PX
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .notification-welcome {
+        padding: 18px;
+    }
+
+
+    .notification-welcome-content {
+        align-items: flex-start;
+
+        gap: 13px;
+    }
+
+
+    .notification-welcome-icon {
+        width: 48px;
+        height: 48px;
+
+        flex-basis: 48px;
+
+        font-size: 18px;
+    }
+
+
+    .notification-welcome h1 {
+        font-size: 20px;
+    }
+
+
+    .notification-welcome p {
+        font-size: 12px;
+    }
+
+
+    .notification-card {
+        padding: 16px;
+    }
+
+
+    .notification-card-title h2 {
+        font-size: 19px;
+    }
+
+
+    .notification-header-actions {
+        gap: 8px;
+    }
+
+
+    .notification-count {
+        min-height: 44px;
+
+        padding: 0 12px;
+    }
+
+
+    .notification-count-text strong {
+        font-size: 17px;
+    }
+
+
+    .notification-count-text span {
+        font-size: 11px;
+    }
+
+
+    .read-all-btn,
+    .delete-all-btn {
+        min-height: 44px;
+
+        font-size: 11px;
+    }
+
+
+    .notification-item {
+        padding: 15px;
+
+        border-left-width: 4px;
+    }
+
+
+    .notification-item-icon {
+        width: 42px;
+        height: 42px;
+
+        flex-basis: 42px;
+    }
+
+
+    .notification-title-wrapper h3 {
+        font-size: 15px;
+    }
+
+
+    .notification-body p {
+        font-size: 12px;
+    }
+
+
+    .notification-item-actions {
+        width: 100%;
+    }
+
+
+    .notification-item-actions button {
+        min-height: 40px;
+
+        padding: 0 12px;
+
+        font-size: 11px;
+    }
+
+
+    .notification-empty h3 {
+        font-size: 19px;
+    }
+
+
+    .notification-empty p {
+        font-size: 13px;
+    }
+
+}

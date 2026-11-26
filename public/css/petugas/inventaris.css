@@ -1,0 +1,2008 @@
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+.inventaris-page {
+    --inv-orange: #ff7a00;
+    --inv-orange-dark: #e85d04;
+    --inv-orange-light: #fff1df;
+
+    --inv-green: #22a447;
+    --inv-green-dark: #16833a;
+    --inv-green-light: #e8f8ed;
+
+    --inv-blue: #3b82f6;
+    --inv-blue-dark: #2563eb;
+    --inv-blue-light: #eff6ff;
+
+    --inv-yellow: #ffc107;
+    --inv-yellow-light: #fff8dc;
+
+    --inv-red: #ef4444;
+    --inv-red-dark: #dc2626;
+    --inv-red-light: #fff0f0;
+
+    --inv-dark: #20352a;
+    --inv-text: #34443b;
+    --inv-muted: #7a8a80;
+
+    --inv-border: #e4ebe5;
+    --inv-white: #ffffff;
+
+    --inv-shadow: 0 8px 25px rgba(36, 72, 49, 0.08);
+    --inv-shadow-hover: 0 15px 35px rgba(36, 72, 49, 0.13);
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding: 5px 0 40px;
+
+    position: relative;
+
+    color: var(--inv-text);
+
+    font-family: "Poppins", sans-serif;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   RESET KHUSUS HALAMAN
+========================================================= */
+
+.inventaris-page,
+.inventaris-page *,
+.inventaris-page *::before,
+.inventaris-page *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATION
+========================================================= */
+
+.inventaris-page::before {
+    content: "";
+
+    position: absolute;
+
+    top: -40px;
+    right: -90px;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 122, 0, 0.06);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.inventaris-page::after {
+    content: "";
+
+    position: absolute;
+
+    top: 300px;
+    left: -110px;
+
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    background: rgba(34, 164, 71, 0.05);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.inventaris-page > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   HERO / WELCOME
+========================================================= */
+
+.inventaris-page .welcome-box {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    width: 100%;
+    min-height: 215px;
+
+    padding: 35px 40px;
+    margin-bottom: 18px;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff7a00 0%,
+            #ff8f1f 45%,
+            #22a447 100%
+        );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 16px 35px rgba(255, 122, 0, 0.18);
+}
+
+
+/* HERO DECORATION */
+
+.inventaris-page .welcome-box::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    top: -105px;
+    right: 90px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.inventaris-page .welcome-box::after {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    right: -45px;
+    bottom: -75px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.13);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.inventaris-page .welcome-content {
+    position: relative;
+    z-index: 2;
+
+    flex: 1;
+    min-width: 0;
+}
+
+.inventaris-page .page-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 7px 13px;
+    margin-bottom: 12px;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.17);
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+.inventaris-page .page-label i {
+    font-size: 13px;
+}
+
+.inventaris-page .welcome-content h1 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: clamp(25px, 3vw, 36px);
+
+    line-height: 1.25;
+
+    font-weight: 800;
+
+    letter-spacing: -0.6px;
+}
+
+.inventaris-page .welcome-content p {
+    max-width: 760px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.92);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   HERO ICON
+========================================================= */
+
+.inventaris-page .welcome-icon {
+    position: relative;
+
+    z-index: 2;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.inventaris-page .icon-circle {
+    width: 125px;
+    height: 125px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 38px;
+
+    background: rgba(255, 255, 255, 0.16);
+
+    border: 2px solid rgba(255, 255, 255, 0.28);
+
+    box-shadow:
+        inset 0 0 30px rgba(255, 255, 255, 0.08),
+        0 15px 30px rgba(0, 0, 0, 0.08);
+
+    transform: rotate(3deg);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.inventaris-page .icon-circle:hover {
+    transform: rotate(0deg) scale(1.05);
+
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.inventaris-page .icon-circle i {
+    color: #ffffff;
+
+    font-size: 58px;
+}
+
+
+/* =========================================================
+   TOMBOL KEMBALI
+========================================================= */
+
+.inventaris-page .inventory-back-wrapper {
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    margin-bottom: 20px;
+}
+
+.inventaris-page .inventory-back-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 40px;
+
+    padding: 9px 15px;
+
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--inv-border);
+
+    color: var(--inv-dark);
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    box-shadow: 0 5px 15px rgba(36, 72, 49, 0.06);
+
+    transition:
+        0.2s ease;
+}
+
+.inventaris-page .inventory-back-button i {
+    color: var(--inv-orange);
+}
+
+.inventaris-page .inventory-back-button:hover {
+    color: var(--inv-orange-dark);
+
+    border-color: #ffd1a3;
+
+    background: var(--inv-orange-light);
+
+    transform: translateX(-2px);
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.inventaris-page .card-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+    width: 100%;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   STAT CARD
+========================================================= */
+
+.inventaris-page .card {
+    position: relative;
+
+    min-width: 0;
+
+    padding: 22px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--inv-border);
+
+    box-shadow: var(--inv-shadow);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.inventaris-page .card::after {
+    content: "";
+
+    position: absolute;
+
+    right: -30px;
+    bottom: -35px;
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: rgba(34, 164, 71, 0.06);
+
+    pointer-events: none;
+}
+
+.inventaris-page .card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(34, 164, 71, 0.25);
+
+    box-shadow: var(--inv-shadow-hover);
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.inventaris-page .card-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   CARD ICON
+========================================================= */
+
+.inventaris-page .card-icon {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    font-size: 21px;
+}
+
+.inventaris-page .card-icon.blue {
+    color: var(--inv-blue);
+
+    background: var(--inv-blue-light);
+}
+
+.inventaris-page .card-icon.green {
+    color: var(--inv-green);
+
+    background: var(--inv-green-light);
+}
+
+.inventaris-page .card-icon.orange {
+    color: var(--inv-orange);
+
+    background: var(--inv-orange-light);
+}
+
+
+/* =========================================================
+   PERIOD BADGE
+========================================================= */
+
+.inventaris-page .period-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 10px;
+
+    border-radius: 999px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.inventaris-page .period-badge.month {
+    color: var(--inv-blue);
+
+    background: var(--inv-blue-light);
+}
+
+.inventaris-page .period-badge.success {
+    color: var(--inv-green-dark);
+
+    background: var(--inv-green-light);
+}
+
+.inventaris-page .period-badge.current {
+    color: var(--inv-orange-dark);
+
+    background: var(--inv-orange-light);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.inventaris-page .card-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+.inventaris-page .card-content small {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--inv-muted);
+
+    font-size: 11px;
+
+    font-weight: 500;
+}
+
+.inventaris-page .card-content h2 {
+    margin: 0;
+
+    color: var(--inv-dark);
+
+    font-size: 32px;
+
+    line-height: 1;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   TABLE CARD
+========================================================= */
+
+.inventaris-page .table-card {
+    width: 100%;
+
+    margin-bottom: 22px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--inv-border);
+
+    box-shadow: var(--inv-shadow);
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.inventaris-page .card-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 24px 28px;
+
+    border-bottom: 1px solid var(--inv-border);
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #fbfdfb 100%
+        );
+}
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.inventaris-page .section-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 6px;
+
+    color: var(--inv-orange-dark);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+}
+
+.inventaris-page .section-label i {
+    color: var(--inv-green);
+}
+
+.inventaris-page .card-header h3 {
+    margin: 0;
+
+    color: var(--inv-dark);
+
+    font-size: 20px;
+
+    line-height: 1.3;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.inventaris-page .inventory-header-actions {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   SEMUA BUTTON HEADER
+========================================================= */
+
+.inventaris-page .inventory-header-actions a {
+    min-height: 42px;
+}
+
+
+/* =========================================================
+   BUTTON TAMBAH
+========================================================= */
+
+.inventaris-page .inventory-header-actions .btn-view-all {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 42px;
+
+    padding: 10px 17px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--inv-orange),
+            var(--inv-orange-dark)
+        );
+
+    color: #ffffff !important;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 7px 17px rgba(255, 122, 0, 0.22);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.inventaris-page .inventory-header-actions .btn-view-all:hover {
+    transform: translateY(-2px);
+
+    color: #ffffff !important;
+
+    box-shadow:
+        0 10px 22px rgba(255, 122, 0, 0.30);
+}
+
+
+/* =========================================================
+   EXCEL
+========================================================= */
+
+.inventaris-page .inventory-header-actions .inventory-export-btn {
+    background:
+        linear-gradient(
+            135deg,
+            #20a85a,
+            #16833a
+        ) !important;
+
+    border: 1px solid #16833a !important;
+
+    color: #ffffff !important;
+
+    box-shadow:
+        0 7px 17px rgba(34, 164, 71, 0.20);
+}
+
+.inventaris-page .inventory-header-actions .inventory-export-btn:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #16833a,
+            #10662d
+        ) !important;
+
+    color: #ffffff !important;
+
+    box-shadow:
+        0 10px 22px rgba(34, 164, 71, 0.30);
+}
+
+.inventaris-page .inventory-export-btn i {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FILTER AREA
+========================================================= */
+
+.inventaris-page .archive-filter {
+    width: 100%;
+
+    padding: 22px 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7fcf8,
+            #fffaf4
+        );
+
+    border-bottom: 1px solid var(--inv-border);
+}
+
+
+/* =========================================================
+   FILTER FORM
+========================================================= */
+
+.inventaris-page .inventory-filter-form {
+    display: grid;
+
+    grid-template-columns:
+        minmax(220px, 1.7fr)
+        minmax(130px, 1fr)
+        minmax(130px, 1fr)
+        minmax(140px, 1fr)
+        minmax(130px, 1fr)
+        minmax(110px, 0.8fr)
+        90px
+        90px;
+
+    align-items: end;
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   FILTER GROUP
+========================================================= */
+
+.inventaris-page .filter-group {
+    min-width: 0;
+}
+
+.inventaris-page .filter-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--inv-dark);
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.inventaris-page .search-box {
+    position: relative;
+
+    width: 100%;
+}
+
+.inventaris-page .search-box > i {
+    position: absolute;
+
+    left: 14px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--inv-green);
+
+    font-size: 13px;
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   INPUT + SELECT
+========================================================= */
+
+.inventaris-page .search-box input,
+.inventaris-page .archive-filter select,
+.inventaris-page .archive-filter input[type="date"],
+.inventaris-page .archive-filter input[type="number"] {
+    width: 100%;
+
+    height: 44px;
+
+    padding: 0 12px;
+
+    border: 1px solid #dce7df;
+
+    border-radius: 11px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: var(--inv-dark);
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* SEARCH PADDING */
+
+.inventaris-page .search-box input {
+    padding-left: 39px;
+}
+
+.inventaris-page .search-box input::placeholder {
+    color: #9ba9a1;
+}
+
+
+/* SELECT */
+
+.inventaris-page .archive-filter select {
+    cursor: pointer;
+}
+
+
+/* DATE */
+
+.inventaris-page .archive-filter input[type="date"] {
+    cursor: pointer;
+}
+
+.inventaris-page .archive-filter input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+
+    opacity: 0.65;
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.inventaris-page .search-box input:focus,
+.inventaris-page .archive-filter select:focus,
+.inventaris-page .archive-filter input:focus {
+    border-color: var(--inv-green);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(34, 164, 71, 0.10);
+}
+
+
+/* =========================================================
+   FILTER ACTION
+========================================================= */
+
+.inventaris-page .filter-action {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   FILTER BUTTON
+========================================================= */
+
+.inventaris-page .filter-button {
+    width: 100%;
+
+    height: 44px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 0 12px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--inv-green),
+            var(--inv-green-dark)
+        );
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 7px 17px rgba(34, 164, 71, 0.20);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.inventaris-page .filter-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px rgba(34, 164, 71, 0.28);
+}
+
+
+/* =========================================================
+   RESET FILTER
+========================================================= */
+
+.inventaris-page .inventory-reset-filter {
+    width: 100%;
+
+    height: 44px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 0 10px;
+
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce7df;
+
+    color: var(--inv-muted);
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.inventaris-page .inventory-reset-filter:hover {
+    color: var(--inv-orange-dark);
+
+    border-color: #ffd2a3;
+
+    background: var(--inv-orange-light);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.inventaris-page .table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        var(--inv-green)
+        #edf3ef;
+}
+
+.inventaris-page .table-wrapper::-webkit-scrollbar {
+    height: 7px;
+}
+
+.inventaris-page .table-wrapper::-webkit-scrollbar-track {
+    background: #edf3ef;
+}
+
+.inventaris-page .table-wrapper::-webkit-scrollbar-thumb {
+    background: var(--inv-green);
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.inventaris-page table {
+    width: 100%;
+
+    min-width: 1150px;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+
+    font-size: 12px;
+}
+
+.inventaris-page table thead {
+    background:
+        linear-gradient(
+            90deg,
+            #f0faf3,
+            #fff8ed
+        );
+}
+
+.inventaris-page table th {
+    padding: 15px 14px;
+
+    border-bottom: 2px solid #dfe9e2;
+
+    color: #506158;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.45px;
+
+    text-align: left;
+
+    white-space: nowrap;
+}
+
+.inventaris-page table td {
+    padding: 15px 14px;
+
+    border-bottom: 1px solid #edf1ee;
+
+    color: var(--inv-text);
+
+    vertical-align: middle;
+
+    white-space: nowrap;
+}
+
+.inventaris-page table tbody tr {
+    background: #ffffff;
+
+    transition:
+        background 0.2s ease;
+}
+
+.inventaris-page table tbody tr:hover {
+    background: #fafffb;
+}
+
+.inventaris-page table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   NOMOR
+========================================================= */
+
+.inventaris-page table td:first-child {
+    width: 50px;
+
+    color: #92a098;
+
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   KODE
+========================================================= */
+
+.inventaris-page table td strong {
+    display: inline-block;
+
+    padding: 6px 9px;
+
+    border-radius: 8px;
+
+    background: var(--inv-green-light);
+
+    color: var(--inv-green-dark);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =========================================================
+   NAMA INVENTARIS
+========================================================= */
+
+.inventaris-page .inventory-name {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    min-width: 180px;
+}
+
+.inventaris-page .inventory-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff1df,
+            #e8f8ed
+        );
+
+    color: var(--inv-orange-dark);
+
+    font-size: 15px;
+}
+
+.inventaris-page .inventory-name span {
+    color: var(--inv-dark);
+
+    font-weight: 700;
+
+    white-space: normal;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.inventaris-page .badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 27px;
+
+    padding: 5px 10px;
+
+    border-radius: 999px;
+
+    background: #eef2ef;
+
+    color: #65736b;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.inventaris-page .badge.info {
+    background: var(--inv-blue-light);
+
+    color: var(--inv-blue-dark);
+}
+
+.inventaris-page .badge.success {
+    background: var(--inv-green-light);
+
+    color: var(--inv-green-dark);
+}
+
+.inventaris-page .badge.warning {
+    background: var(--inv-yellow-light);
+
+    color: #b77900;
+}
+
+.inventaris-page .badge.danger {
+    background: var(--inv-red-light);
+
+    color: var(--inv-red-dark);
+}
+
+
+/* =========================================================
+   ACTION
+========================================================= */
+
+.inventaris-page .action-buttons {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    gap: 7px;
+}
+
+.inventaris-page .action-buttons form {
+    display: inline-flex;
+
+    margin: 0;
+    padding: 0;
+}
+
+.inventaris-page .action-button {
+    width: 35px;
+    height: 35px;
+
+    flex-shrink: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid transparent;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.inventaris-page .action-button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* EDIT */
+
+.inventaris-page .action-button.edit {
+    color: var(--inv-orange-dark);
+
+    background: var(--inv-orange-light);
+
+    border-color: #ffe0ba;
+}
+
+.inventaris-page .action-button.edit:hover {
+    background: #ffe7ca;
+
+    box-shadow:
+        0 5px 12px rgba(255, 122, 0, 0.15);
+}
+
+
+/* DELETE */
+
+.inventaris-page .action-button.delete {
+    color: var(--inv-red-dark);
+
+    background: var(--inv-red-light);
+
+    border-color: #ffd3d3;
+}
+
+.inventaris-page .action-button.delete:hover {
+    background: #ffe0e0;
+
+    box-shadow:
+        0 5px 12px rgba(239, 68, 68, 0.15);
+}
+
+
+/* =========================================================
+   EMPTY TABLE
+========================================================= */
+
+.inventaris-page .empty-table {
+    min-height: 330px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 40px 20px;
+
+    text-align: center;
+}
+
+.inventaris-page .empty-table-icon {
+    width: 75px;
+    height: 75px;
+
+    margin-bottom: 7px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--inv-orange-light),
+            var(--inv-green-light)
+        );
+
+    color: var(--inv-orange);
+
+    font-size: 30px;
+}
+
+.inventaris-page .empty-table strong {
+    color: var(--inv-dark);
+
+    font-size: 15px;
+
+    font-weight: 800;
+}
+
+.inventaris-page .empty-table span {
+    max-width: 430px;
+
+    margin-bottom: 10px;
+
+    color: var(--inv-muted);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   PAGINATION
+========================================================= */
+
+.inventaris-page .pagination-wrapper {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 25px;
+
+    border-top: 1px solid var(--inv-border);
+
+    background: #fcfefc;
+}
+
+.inventaris-page .pagination-wrapper nav {
+    width: 100%;
+}
+
+.inventaris-page .pagination-wrapper svg {
+    width: 17px;
+    height: 17px;
+}
+
+.inventaris-page .pagination-wrapper a,
+.inventaris-page .pagination-wrapper span {
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================================
+   INFORMATION
+========================================================= */
+
+.inventaris-page .archive-information {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 17px;
+
+    width: 100%;
+
+    padding: 22px 25px;
+
+    margin-bottom: 10px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8ed,
+            #effaf2
+        );
+
+    border: 1px solid #e4ede6;
+
+    box-shadow:
+        0 6px 18px rgba(36, 72, 49, 0.05);
+}
+
+.inventaris-page .archive-information-icon {
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #ffffff;
+
+    color: var(--inv-green);
+
+    box-shadow:
+        0 5px 15px rgba(34, 164, 71, 0.10);
+
+    font-size: 18px;
+}
+
+.inventaris-page .archive-information-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.inventaris-page .archive-information-content h4 {
+    margin: 0 0 6px;
+
+    color: var(--inv-dark);
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+.inventaris-page .archive-information-content p {
+    margin: 0;
+
+    color: #68786f;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.inventaris-page a:focus-visible,
+.inventaris-page button:focus-visible,
+.inventaris-page input:focus-visible,
+.inventaris-page select:focus-visible {
+    outline: 3px solid rgba(34, 164, 71, 0.22);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   TABLET BESAR
+========================================================= */
+
+@media (max-width: 1250px) {
+
+    .inventaris-page .inventory-filter-form {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+    }
+
+    .inventaris-page .filter-search {
+        grid-column: span 2;
+    }
+
+    .inventaris-page .filter-button,
+    .inventaris-page .inventory-reset-filter {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .inventaris-page .welcome-box {
+        padding: 30px;
+    }
+
+    .inventaris-page .inventory-filter-form {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+    .inventaris-page .filter-search {
+        grid-column: span 3;
+    }
+
+    .inventaris-page .card-grid {
+        gap: 15px;
+    }
+
+    .inventaris-page .card {
+        padding: 19px;
+    }
+
+    .inventaris-page .inventory-header-actions {
+        flex-wrap: wrap;
+    }
+}
+
+
+/* =========================================================
+   TABLET KECIL
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .inventaris-page .welcome-box {
+        min-height: auto;
+
+        padding: 27px;
+
+        border-radius: 20px;
+    }
+
+    .inventaris-page .welcome-icon {
+        display: none;
+    }
+
+    .inventaris-page .card-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .inventaris-page .card-grid .card:last-child {
+        grid-column: span 2;
+    }
+
+    .inventaris-page .card-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .inventaris-page .inventory-header-actions {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .inventaris-page .inventory-header-actions a {
+        width: 100%;
+    }
+
+    .inventaris-page .inventory-filter-form {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .inventaris-page .filter-search {
+        grid-column: span 2;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .inventaris-page {
+        padding-bottom: 25px;
+    }
+
+
+    /* HERO */
+
+    .inventaris-page .welcome-box {
+        padding: 24px 20px;
+
+        border-radius: 18px;
+
+        margin-bottom: 15px;
+    }
+
+    .inventaris-page .page-label {
+        font-size: 10px;
+    }
+
+    .inventaris-page .welcome-content h1 {
+        font-size: 24px;
+    }
+
+    .inventaris-page .welcome-content p {
+        font-size: 11px;
+
+        line-height: 1.7;
+    }
+
+
+    /* BACK */
+
+    .inventaris-page .inventory-back-wrapper {
+        margin-bottom: 15px;
+    }
+
+    .inventaris-page .inventory-back-button {
+        width: 100%;
+    }
+
+
+    /* STATISTICS */
+
+    .inventaris-page .card-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        margin-bottom: 18px;
+    }
+
+    .inventaris-page .card-grid .card:last-child {
+        grid-column: auto;
+    }
+
+    .inventaris-page .card {
+        padding: 18px;
+    }
+
+    .inventaris-page .card-content h2 {
+        font-size: 28px;
+    }
+
+
+    /* TABLE CARD */
+
+    .inventaris-page .table-card {
+        border-radius: 17px;
+    }
+
+    .inventaris-page .card-header {
+        padding: 20px;
+    }
+
+    .inventaris-page .card-header h3 {
+        font-size: 17px;
+    }
+
+
+    /* HEADER BUTTONS */
+
+    .inventaris-page .inventory-header-actions {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+    .inventaris-page .inventory-header-actions a {
+        width: 100%;
+    }
+
+
+    /* FILTER */
+
+    .inventaris-page .archive-filter {
+        padding: 18px;
+    }
+
+    .inventaris-page .inventory-filter-form {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .inventaris-page .filter-search {
+        grid-column: auto;
+    }
+
+    .inventaris-page .filter-button,
+    .inventaris-page .inventory-reset-filter {
+        width: 100%;
+    }
+
+
+    /* TABLE */
+
+    .inventaris-page .table-wrapper {
+        margin: 0;
+    }
+
+    .inventaris-page table {
+        min-width: 1150px;
+    }
+
+
+    /* ACTION */
+
+    .inventaris-page .action-button {
+        width: 34px;
+        height: 34px;
+    }
+
+
+    /* INFORMATION */
+
+    .inventaris-page .archive-information {
+        padding: 18px;
+
+        gap: 12px;
+
+        border-radius: 15px;
+    }
+
+    .inventaris-page .archive-information-icon {
+        width: 38px;
+        height: 38px;
+
+        border-radius: 10px;
+
+        font-size: 15px;
+    }
+
+    .inventaris-page .archive-information-content h4 {
+        font-size: 13px;
+    }
+
+    .inventaris-page .archive-information-content p {
+        font-size: 10px;
+
+        line-height: 1.7;
+    }
+}
+
+
+/* =========================================================
+   MOBILE SANGAT KECIL
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .inventaris-page .welcome-box {
+        padding: 20px 16px;
+    }
+
+    .inventaris-page .welcome-content h1 {
+        font-size: 21px;
+    }
+
+    .inventaris-page .card {
+        padding: 16px;
+    }
+
+    .inventaris-page .card-icon {
+        width: 45px;
+        height: 45px;
+
+        border-radius: 13px;
+    }
+
+    .inventaris-page .period-badge {
+        padding: 6px 8px;
+
+        font-size: 9px;
+    }
+
+    .inventaris-page .card-content h2 {
+        font-size: 26px;
+    }
+
+    .inventaris-page .archive-information {
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes inventarisFadeUp {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+.inventaris-page .welcome-box {
+    animation:
+        inventarisFadeUp 0.45s ease both;
+}
+
+.inventaris-page .card {
+    animation:
+        inventarisFadeUp 0.45s ease both;
+}
+
+.inventaris-page .table-card {
+    animation:
+        inventarisFadeUp 0.5s ease both;
+}
+
+.inventaris-page .archive-information {
+    animation:
+        inventarisFadeUp 0.55s ease both;
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+
+    .inventaris-page .welcome-box {
+        color: #000000;
+
+        background: #ffffff;
+
+        border: 2px solid #dddddd;
+
+        box-shadow: none;
+    }
+
+    .inventaris-page .welcome-content h1,
+    .inventaris-page .welcome-content p,
+    .inventaris-page .page-label {
+        color: #000000;
+    }
+
+    .inventaris-page .inventory-back-wrapper,
+    .inventaris-page .inventory-header-actions,
+    .inventaris-page .archive-filter,
+    .inventaris-page .action-buttons,
+    .inventaris-page .pagination-wrapper {
+        display: none !important;
+    }
+
+    .inventaris-page .table-card,
+    .inventaris-page .card {
+        box-shadow: none;
+    }
+}

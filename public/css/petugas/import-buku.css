@@ -1,0 +1,1405 @@
+
+
+.import-book-page {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding-bottom: 40px;
+}
+
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.import-book-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.import-book-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 0;
+}
+
+.import-book-icon {
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 3px solid #d85d19;
+    border-radius: 16px;
+
+    background: #fff0e4;
+    color: #e96d24;
+
+    font-size: 27px;
+
+    box-shadow:
+        0 6px 16px rgba(233, 109, 36, 0.14);
+}
+
+.import-book-eyebrow {
+    display: block;
+    margin-bottom: 4px;
+
+    color: #e36b25;
+
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: 1.1px;
+}
+
+.import-book-heading h1 {
+    margin: 0;
+
+    color: #28221f;
+
+    font-size: 32px;
+    font-weight: 850;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+}
+
+.import-book-heading p {
+    margin: 7px 0 0;
+
+    color: #71665f;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* ======================================================
+   KEMBALI
+====================================================== */
+
+.back-book-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 46px;
+    padding: 0 18px;
+
+    border: 3px solid #cfc1b9;
+    border-radius: 12px;
+
+    background: #fff;
+    color: #514741;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    box-shadow:
+        0 4px 12px rgba(69, 44, 27, 0.06);
+
+    transition: 0.2s ease;
+}
+
+.back-book-button:hover {
+    transform: translateY(-2px);
+
+    border-color: #e87532;
+
+    background: #fff8f3;
+    color: #df641d;
+}
+
+
+/* ======================================================
+   INFO CARD
+====================================================== */
+
+.import-info-card {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 16px;
+
+    margin-bottom: 22px;
+    padding: 20px 22px;
+
+    border: 3px solid #c7dff1;
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8fcff,
+            #eef8ff
+        );
+
+    box-shadow:
+        0 6px 18px rgba(57, 112, 151, 0.07);
+
+    box-sizing: border-box;
+}
+
+.import-info-icon {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #86b9df;
+    border-radius: 12px;
+
+    background: #e8f5ff;
+    color: #3b8ac5;
+
+    font-size: 18px;
+}
+
+.import-info-content {
+    min-width: 0;
+}
+
+.import-info-content h3 {
+    margin: 0 0 5px;
+
+    color: #294a60;
+
+    font-size: 16px;
+    font-weight: 850;
+}
+
+.import-info-content p {
+    margin: 0;
+
+    color: #5e7180;
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+.import-info-content p + p {
+    margin-top: 7px;
+}
+
+
+/* ======================================================
+   CARD UTAMA
+====================================================== */
+
+.import-book-card {
+    width: 100%;
+    box-sizing: border-box;
+
+    margin-bottom: 22px;
+    padding: 25px;
+
+    border: 3px solid #cfc1b9;
+    border-radius: 19px;
+
+    background: #fff;
+
+    box-shadow:
+        0 7px 22px rgba(69, 44, 27, 0.07);
+}
+
+
+/* ======================================================
+   SECTION HEADING
+====================================================== */
+
+.import-section-heading {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 25px;
+}
+
+.import-section-icon {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 3px solid #e4a77f;
+    border-radius: 13px;
+
+    background: #fff3ea;
+    color: #e96d24;
+
+    font-size: 19px;
+}
+
+.import-section-heading h2 {
+    margin: 0;
+
+    color: #2d2723;
+
+    font-size: 21px;
+    font-weight: 850;
+}
+
+.import-section-heading p {
+    margin: 5px 0 0;
+
+    color: #756a63;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* ======================================================
+   COLUMN GROUP
+====================================================== */
+
+.column-group {
+    margin-top: 22px;
+}
+
+.column-group-title {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 13px;
+
+    font-size: 14px;
+    font-weight: 850;
+}
+
+.required-title {
+    color: #079b83;
+}
+
+.optional-title {
+    color: #6c625c;
+}
+
+
+/* ======================================================
+   SEMESTER GROUP
+====================================================== */
+
+.semester-group {
+    margin-top: 28px;
+}
+
+.semester-title {
+    color: #3b8ac5;
+}
+
+.semester-card {
+    border: 2px solid #c7dff1;
+    background: #f5fbff;
+}
+
+.semester-card .column-card-number {
+    background: #e3f2fc;
+    color: #3b8ac5;
+}
+
+.semester-note {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin-top: 12px;
+    padding: 11px 13px;
+
+    border: 2px solid #c7dff1;
+    border-radius: 10px;
+
+    background: #f7fcff;
+    color: #5f7180;
+
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.semester-note i {
+    margin-top: 2px;
+    color: #3b8ac5;
+}
+
+
+/* ======================================================
+   COLUMN GRID
+====================================================== */
+
+.column-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+
+/* ======================================================
+   COLUMN CARD
+====================================================== */
+
+.column-card {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 0;
+
+    padding: 15px;
+
+    border-radius: 14px;
+
+    box-sizing: border-box;
+
+    transition: 0.2s ease;
+}
+
+.column-card:hover {
+    transform: translateY(-2px);
+}
+
+.column-card.required {
+    border: 2px solid #a8dfd3;
+    background: #f2fcf9;
+}
+
+.column-card.optional {
+    border: 2px solid #ded4ce;
+    background: #fffaf7;
+}
+
+.column-card-number {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    font-size: 11px;
+    font-weight: 850;
+}
+
+.required .column-card-number {
+    background: #dff7f1;
+    color: #078b76;
+}
+
+.optional .column-card-number {
+    background: #f0e8e3;
+    color: #776960;
+}
+
+.column-card-content {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.column-card-content strong {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    color: #302925;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+    font-weight: 850;
+}
+
+.column-card-content span {
+    color: #7b7069;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.required-badge,
+.optional-badge {
+    margin-left: auto;
+    flex-shrink: 0;
+
+    padding: 5px 8px;
+
+    border-radius: 8px;
+
+    font-size: 9px;
+    font-weight: 850;
+}
+
+.required-badge {
+    border: 1px solid #9dded1;
+
+    background: #e7faf6;
+    color: #078d78;
+}
+
+.optional-badge {
+    border: 1px solid #ddd0c8;
+
+    background: #f7f1ed;
+    color: #7b6d64;
+}
+
+
+/* ======================================================
+   OPTIONAL GROUP
+====================================================== */
+
+.optional-group {
+    margin-top: 28px;
+}
+
+
+/* ======================================================
+   EXCEL EXAMPLE
+====================================================== */
+
+.excel-example {
+    margin-top: 28px;
+
+    padding: 20px;
+
+    border: 3px solid #ead2c2;
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf6,
+            #fff5ef
+        );
+
+    box-sizing: border-box;
+}
+
+.excel-example-header {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 16px;
+}
+
+.excel-example-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #fff0df;
+    color: #e96d24;
+
+    font-size: 17px;
+}
+
+.excel-example-header h3 {
+    margin: 0;
+
+    color: #332b27;
+
+    font-size: 15px;
+    font-weight: 850;
+}
+
+.excel-example-header p {
+    margin: 4px 0 0;
+
+    color: #766a63;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* ======================================================
+   EXCEL TABLE
+====================================================== */
+
+.excel-example-table {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border: 2px solid #d9c7bc;
+    border-radius: 11px;
+
+    background: #fff;
+}
+
+.example-row {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1.5fr
+        0.6fr;
+
+    min-width: 460px;
+}
+
+.example-row > div {
+    padding: 11px 14px;
+
+    border-right: 1px solid #eaded7;
+
+    color: #544a44;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    box-sizing: border-box;
+}
+
+.example-row > div:last-child {
+    border-right: none;
+}
+
+.example-row + .example-row {
+    border-top: 1px solid #eaded7;
+}
+
+.example-header {
+    background: #fff0e5;
+}
+
+.example-header > div {
+    color: #d96520;
+    font-weight: 850;
+}
+
+.example-note {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin-top: 13px;
+
+    color: #6d625b;
+
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.example-note i {
+    margin-top: 2px;
+
+    color: #079b83;
+}
+
+
+/* ======================================================
+   TEMPLATE CARD
+====================================================== */
+
+.import-template-card {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+    padding: 21px 24px;
+
+    border: 3px solid #a9ddcf;
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f3fffc,
+            #ecfaf7
+        );
+
+    box-shadow:
+        0 6px 18px rgba(36, 128, 107, 0.07);
+
+    box-sizing: border-box;
+}
+
+.template-icon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 3px solid #82cdbc;
+    border-radius: 13px;
+
+    background: #e2f8f2;
+    color: #078e78;
+
+    font-size: 21px;
+}
+
+.template-content {
+    min-width: 0;
+    flex: 1;
+}
+
+.template-content h2 {
+    margin: 0;
+
+    color: #294b43;
+
+    font-size: 17px;
+    font-weight: 850;
+}
+
+.template-content p {
+    margin: 5px 0 0;
+
+    color: #637871;
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.download-template-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+
+    min-height: 43px;
+    padding: 0 16px;
+
+    border: 3px solid #078b76;
+    border-radius: 11px;
+
+    background: #079b83;
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 850;
+
+    box-shadow:
+        0 5px 12px rgba(7, 155, 131, 0.18);
+
+    transition: 0.2s ease;
+}
+
+.download-template-button:hover {
+    transform: translateY(-2px);
+
+    background: #067f6d;
+    border-color: #067f6d;
+
+    color: #fff;
+}
+
+
+/* ======================================================
+   UPLOAD CARD
+====================================================== */
+
+.upload-card {
+    margin-bottom: 0;
+}
+
+
+/* ======================================================
+   UPLOAD AREA
+====================================================== */
+
+.excel-upload-area {
+    width: 100%;
+}
+
+.excel-upload-box {
+    min-height: 205px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 28px;
+
+    border: 3px dashed #d5a78e;
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf7,
+            #fff3ea
+        );
+
+    cursor: pointer;
+
+    text-align: center;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.excel-upload-box:hover {
+    border-color: #e87532;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8f3,
+            #ffede2
+        );
+
+    transform: translateY(-2px);
+}
+
+.excel-upload-box.dragging {
+    border-color: #e87532;
+
+    background: #fff0e4;
+
+    transform: scale(1.01);
+}
+
+.excel-upload-box.has-file {
+    border-style: solid;
+
+    border-color: #079b83;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f2fffc,
+            #e8faf5
+        );
+}
+
+
+/* ======================================================
+   UPLOAD ICON
+====================================================== */
+
+.excel-upload-icon {
+    width: 68px;
+    height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 13px;
+
+    border: 3px solid #e5a77f;
+    border-radius: 17px;
+
+    background: #fff0e4;
+    color: #e96d24;
+
+    font-size: 30px;
+
+    transition: 0.2s ease;
+}
+
+.excel-upload-box.has-file .excel-upload-icon {
+    border-color: #86d5c6;
+
+    background: #e2f8f2;
+    color: #079b83;
+}
+
+.excel-upload-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 4px;
+
+    min-width: 0;
+    max-width: 100%;
+}
+
+.excel-upload-content strong {
+    display: block;
+
+    max-width: 500px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    color: #342c28;
+
+    font-size: 17px;
+    font-weight: 850;
+}
+
+.excel-upload-content span {
+    color: #766b64;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.excel-upload-content small {
+    margin-top: 4px;
+
+    padding: 5px 9px;
+
+    border-radius: 7px;
+
+    background: #f2e6df;
+    color: #776a62;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+/* ======================================================
+   FORM ERROR
+====================================================== */
+
+.form-error {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin-top: 12px;
+    padding: 11px 14px;
+
+    border: 2px solid #efb5bc;
+    border-radius: 10px;
+
+    background: #fff2f3;
+    color: #c93c4d;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.form-error i {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+
+/* ======================================================
+   SUCCESS
+====================================================== */
+
+.import-success {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin-top: 12px;
+    padding: 11px 14px;
+
+    border: 2px solid #a8dfd3;
+    border-radius: 10px;
+
+    background: #f0fcf9;
+    color: #078b76;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.import-success i {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+
+/* ======================================================
+   IMPORT RULES
+====================================================== */
+
+.import-rules {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+.rule-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    padding: 14px;
+
+    border: 2px solid #e0d5cf;
+    border-radius: 13px;
+
+    background: #fffaf7;
+
+    box-sizing: border-box;
+}
+
+.rule-icon {
+    width: 27px;
+    height: 27px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #e1f7f2;
+    color: #079b83;
+
+    font-size: 11px;
+}
+
+.rule-item strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #403833;
+
+    font-size: 12px;
+    font-weight: 850;
+}
+
+.rule-item span {
+    display: block;
+
+    color: #776c65;
+
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.55;
+}
+
+
+/* ======================================================
+   WARNING
+====================================================== */
+
+.import-warning {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 13px;
+
+    margin-top: 20px;
+    padding: 16px;
+
+    border: 3px solid #f0d19b;
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf0,
+            #fff5df
+        );
+
+    box-sizing: border-box;
+}
+
+.warning-icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #ffedc6;
+    color: #d98a1b;
+
+    font-size: 17px;
+}
+
+.import-warning strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #6c4c1d;
+
+    font-size: 13px;
+    font-weight: 850;
+}
+
+.import-warning p {
+    margin: 0;
+
+    color: #806d51;
+
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+
+/* ======================================================
+   FORM FOOTER
+====================================================== */
+
+.import-form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 14px;
+
+    margin-top: 24px;
+    padding-top: 20px;
+
+    border-top: 2px solid #eee2db;
+}
+
+
+/* ======================================================
+   CANCEL
+====================================================== */
+
+.cancel-import-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 44px;
+    padding: 0 17px;
+
+    border: 3px solid #cfc1b9;
+    border-radius: 11px;
+
+    background: #fff;
+    color: #655b55;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    transition: 0.2s ease;
+}
+
+.cancel-import-button:hover {
+    border-color: #e87532;
+
+    background: #fff7f2;
+    color: #df641d;
+}
+
+
+/* ======================================================
+   SUBMIT
+====================================================== */
+
+.import-submit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 46px;
+    padding: 0 21px;
+
+    border: 3px solid #d85d19;
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e96d24,
+            #f58b32
+        );
+
+    color: #fff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+    font-weight: 850;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 15px rgba(230, 101, 28, 0.20);
+
+    transition: 0.2s ease;
+}
+
+.import-submit-button:hover {
+    transform: translateY(-2px);
+
+    border-color: #c85112;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dc5e17,
+            #ed7926
+        );
+}
+
+.import-submit-button:disabled {
+    opacity: 0.65;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* ======================================================
+   RESPONSIVE 1100
+====================================================== */
+
+@media (max-width: 1100px) {
+
+    .column-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .import-rules {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* ======================================================
+   RESPONSIVE 850
+====================================================== */
+
+@media (max-width: 850px) {
+
+    .import-book-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .back-book-button {
+        align-self: flex-start;
+    }
+
+    .import-template-card {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .template-content {
+        flex: 1 1 calc(100% - 90px);
+    }
+
+    .download-template-button {
+        width: 100%;
+    }
+
+    .import-rules {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ======================================================
+   RESPONSIVE 650
+====================================================== */
+
+@media (max-width: 650px) {
+
+    .import-book-page {
+        padding-bottom: 25px;
+    }
+
+    .import-book-header {
+        margin-bottom: 20px;
+    }
+
+    .import-book-heading {
+        align-items: flex-start;
+    }
+
+    .import-book-icon {
+        width: 50px;
+        height: 50px;
+
+        border-radius: 13px;
+
+        font-size: 22px;
+    }
+
+    .import-book-heading h1 {
+        font-size: 27px;
+    }
+
+    .import-book-heading p {
+        font-size: 12px;
+    }
+
+    .import-book-card {
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .column-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .import-section-heading h2 {
+        font-size: 18px;
+    }
+
+    .import-info-card {
+        padding: 17px;
+    }
+
+    .excel-example {
+        padding: 15px;
+    }
+
+    .import-form-footer {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .cancel-import-button,
+    .import-submit-button {
+        width: 100%;
+    }
+}
+
+
+/* ======================================================
+   RESPONSIVE 450
+====================================================== */
+
+@media (max-width: 450px) {
+
+    .import-book-heading {
+        gap: 11px;
+    }
+
+    .import-book-eyebrow {
+        font-size: 9px;
+    }
+
+    .import-book-heading h1 {
+        font-size: 23px;
+    }
+
+    .import-book-heading p {
+        font-size: 11px;
+    }
+
+    .import-info-card {
+        gap: 10px;
+    }
+
+    .import-info-icon {
+        width: 37px;
+        height: 37px;
+
+        font-size: 15px;
+    }
+
+    .import-info-content h3 {
+        font-size: 14px;
+    }
+
+    .import-info-content p {
+        font-size: 11px;
+    }
+
+    .column-card {
+        padding: 12px;
+    }
+
+    .required-badge,
+    .optional-badge {
+        display: none;
+    }
+
+    .excel-upload-box {
+        min-height: 180px;
+        padding: 20px;
+    }
+
+    .excel-upload-icon {
+        width: 57px;
+        height: 57px;
+
+        font-size: 25px;
+    }
+
+    .excel-upload-content strong {
+        max-width: 250px;
+
+        font-size: 14px;
+    }
+}

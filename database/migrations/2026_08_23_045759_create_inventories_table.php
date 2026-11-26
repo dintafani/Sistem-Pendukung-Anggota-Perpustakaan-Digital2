@@ -1,0 +1,39 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('inventories', function (Blueprint $table) {
+
+            $table->id();
+
+            $table->string('kode_inventaris')->unique();
+
+            $table->string('nama_barang');
+
+            $table->string('kategori');
+
+            $table->integer('jumlah')->default(1);
+
+            $table->string('kondisi');
+
+            $table->string('lokasi')->nullable();
+
+            $table->date('tanggal_pengadaan')->nullable();
+
+            $table->text('keterangan')->nullable();
+
+            $table->timestamps();
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('inventories');
+    }
+};

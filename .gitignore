@@ -1,0 +1,64 @@
+/.phpunit.cache
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.vscode
+
+# Database dan backup
+*.sql
+*.sqlite
+*.sqlite3
+/backup/
+
+# Data unggahan pengguna
+/storage/app/public/
+/public/storage/
+
+# Sesi WhatsApp
+/scripts/wa_bridge/.wwebjs_auth/
+/scripts/wa_bridge/.wwebjs_cache/
+/scripts/wa_bridge/auth_session/
+
+# Dependencies WhatsApp Bridge
+/scripts/wa_bridge/node_modules/
+
+# Jangan unggah foto dan gambar
+/public/images/
+/public/uploads/
+/public/foto/
+/public/covers/
+/storage/app/public/
+/public/storage/
+
+# Jangan unggah database dan data asli
+*.sql
+*.sqlite
+*.sqlite3
+/database/seeders/
+
+# Jangan unggah data WhatsApp
+/scripts/wa_bridge/.env
+/scripts/wa_bridge/.wwebjs_auth/
+/scripts/wa_bridge/.wwebjs_cache/
+/scripts/wa_bridge/auth_session/
+
+# File rahasia
+.env
+.env.*
+!.env.example
+/public/images/
+/public/images/
