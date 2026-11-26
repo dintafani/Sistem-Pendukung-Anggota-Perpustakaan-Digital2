@@ -19,10 +19,6 @@ Aplikasi menyediakan layanan bagi siswa sebagai anggota perpustakaan dan petugas
 - Pengajuan peminjaman buku secara online.
 - Riwayat peminjaman dan pengembalian.
 - Notifikasi aktivitas perpustakaan.
-- Pemberian rating dan ulasan buku.
-- Jurnal literasi.
-- Sistem poin dan leaderboard.
-
 ### 2. Fitur Petugas
 - Dashboard pengelolaan perpustakaan.
 - Verifikasi dan pengelolaan anggota.
@@ -37,11 +33,11 @@ Aplikasi menyediakan layanan bagi siswa sebagai anggota perpustakaan dan petugas
 - Pencatatan kunjungan perpustakaan.
 
 ### 3. Fitur Pendukung
-- Identifikasi anggota menggunakan QR Code.
-- Notifikasi aktivitas perpustakaan.
-- Integrasi WhatsApp melalui WhatsApp Bridge.
 - Sistem poin sebagai pendukung aktivitas literasi.
 - Pengelolaan data secara terpusat melalui basis data.
+- Pemberian rating dan ulasan buku.
+- Jurnal literasi.
+- Sistem poin dan leaderboard.
 
 ## Teknologi yang Digunakan
 
@@ -63,7 +59,7 @@ Pengembangan aplikasi menggunakan metode **Waterfall**, yang terdiri dari lima t
 2. Analisis (*Analysis*)
 3. Perancangan (*Design*)
 4. Implementasi (*Implementation*)
-5. Pemeliharaan (*Maintenance*)
+
 
 ## Persyaratan Sistem
 
